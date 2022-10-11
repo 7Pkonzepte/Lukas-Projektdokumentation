@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.11)  11 OCT 2022 13:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.11)  11 OCT 2022 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1387,19 +1387,6 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 21.
 (pdftex.def)             Requested size: 182.36084pt x 61.42934pt.
 
-! Misplaced alignment tab character &.
-\betriebName ->bits &
-                      likes GmbH
-l.23 \betriebName
-                 \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
 Overfull \hbox (1.35126pt too wide) in paragraph at lines 29--35
 \T1/lmr/m/n/10 Grenzen des Urheberrechtgesetzes ist ohne Zustimmung des Autors 
 unzulässig und strafbar. Das gilt insbesondere
@@ -1418,7 +1405,7 @@ ie Einspeicherung und Verarbeitung in elektronischen
 (./Projektdokumentation.toc
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
-Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 47.
+Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 46.
 (pdftex.def)             Requested size: 36.4716pt x 12.28568pt.
 
 
@@ -1430,7 +1417,7 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=53.63744pt'.
 (scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
-7.
+6.
 
 
 Overfull \vbox (10.95831pt too high) has occurred while \output is active []
@@ -1538,26 +1525,32 @@ Overfull \hbox (51.8193pt too wide) in paragraph at lines 32--33
 il an ([] Entwicklung, Einführung/Schulung,
  []
 
+
+Overfull \hbox (29.03821pt too wide) in paragraph at lines 35--37
+[]\T1/lmr/m/n/10.95 Die Kosten für die Durchführung des Projekts setzen sich so
+wohl aus Personal-, als auch aus Ressourcenkosten
+ []
+
 (./Tabellen/Kostenaufstellung.tex)
-Overfull \hbox (26.97096pt too wide) in paragraph at lines 55--56
+Overfull \hbox (26.97096pt too wide) in paragraph at lines 54--55
 []\T1/lmr/m/n/10.95 Welche monetären Vorteile bietet das Projekt ([] Einsparung
  von Lizenzkosten, Arbeitszeitersparnis,
  []
 
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
-Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 56.
+Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 55.
 (pdftex.def)             Requested size: 36.4716pt x 12.28568pt.
 [3]
-Overfull \hbox (117.61069pt too wide) in paragraph at lines 76--77
+Overfull \hbox (117.61069pt too wide) in paragraph at lines 75--76
 []\T1/lmr/m/n/10.95 Darstellung des nicht-monetären Nutzens ([] Vorher-/Nachher
 -Vergleich anhand eines Wirtschaftlichkeitskoeffizienten). 
  []
 
 Package acronym Info: Label `acro:EPK' newly defined as it shall be overridden
-although it is yet undefined on input line 87.
+although it is yet undefined on input line 86.
 
-Overfull \hbox (38.34833pt too wide) in paragraph at lines 87--88
+Overfull \hbox (38.34833pt too wide) in paragraph at lines 86--87
 []\T1/lmr/m/n/10.95 Einer oder mehrere interessante (!) Anwendungsfälle könnten
  exemplarisch durch ein Aktivitätsdiagramm
  []
@@ -1565,7 +1558,7 @@ Overfull \hbox (38.34833pt too wide) in paragraph at lines 87--88
 ! Undefined control sequence.
 \Anhang #1->\appendixname 
                           {}~\ref {#1}: \nameref {#1} \vpageref {#1}
-l.91 ...agramm findet sich im \Anhang{app:UseCase}
+l.90 ...agramm findet sich im \Anhang{app:UseCase}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1574,24 +1567,24 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Package natbib Warning: Citation `ISO9126' on page 4 undefined on input line 97
+Package natbib Warning: Citation `ISO9126' on page 4 undefined on input line 96
 .
 
 
-Overfull \hbox (3.60759pt too wide) in paragraph at lines 97--98
+Overfull \hbox (3.60759pt too wide) in paragraph at lines 96--97
 []\T1/lmr/m/n/10.95 Welche Qualitätsanforderungen werden an die Anwendung geste
 llt ([] hinsichtlich Performance,
  []
 
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
-Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 105.
+Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 104.
 (pdftex.def)             Requested size: 36.4716pt x 12.28568pt.
 [4]
 ! Undefined control sequence.
 \Anhang #1->\appendixname 
                           {}~\ref {#1}: \nameref {#1} \vpageref {#1}
-l.109 ...ft findet sich im \Anhang{app:Lastenheft}
+l.108 ...ft findet sich im \Anhang{app:Lastenheft}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1640,7 +1633,7 @@ Tabellenmodell, [][]-Schemas)
 
 Package acronym Info: Label `acro:ERM' newly defined as it shall be overridden
 although it is yet undefined on input line 46.
-<Bilder/ERDiagramm.pdf, id=454, 597.432pt x 314.776pt>
+<Bilder/ERDiagramm.pdf, id=453, 597.432pt x 314.776pt>
 File: Bilder/ERDiagramm.pdf Graphic file (type pdf)
 <use Bilder/ERDiagramm.pdf>
 Package pdftex.def Info: Bilder/ERDiagramm.pdf  used on input line 50.
@@ -1662,7 +1655,7 @@ Overfull \hbox (22.03276pt too wide) in paragraph at lines 65--66
 lches die Klassen der Anwendung und deren Beziehungen untereinander
  []
 
-<Bilder/modulimport.pdf, id=461, 1236.62pt x 392.667pt>
+<Bilder/modulimport.pdf, id=460, 1236.62pt x 392.667pt>
 File: Bilder/modulimport.pdf Graphic file (type pdf)
 <use Bilder/modulimport.pdf>
 Package pdftex.def Info: Bilder/modulimport.pdf  used on input line 70.
@@ -1860,7 +1853,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 9.
 (pdftex.def)             Requested size: 36.4716pt x 12.28568pt.
  [2]
-<Bilder/UseCase.pdf, id=576, 386.24298pt x 304.337pt>
+<Bilder/UseCase.pdf, id=575, 386.24298pt x 304.337pt>
 File: Bilder/UseCase.pdf Graphic file (type pdf)
 <use Bilder/UseCase.pdf>
 Package pdftex.def Info: Bilder/UseCase.pdf  used on input line 16.
@@ -1896,7 +1889,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 50.
 (pdftex.def)             Requested size: 36.4716pt x 12.28568pt.
 [4])
-<Bilder/database.pdf, id=625, 845.1575pt x 597.23125pt>
+<Bilder/database.pdf, id=624, 845.1575pt x 597.23125pt>
 File: Bilder/database.pdf Graphic file (type pdf)
 <use Bilder/database.pdf>
 Package pdftex.def Info: Bilder/database.pdf  used on input line 27.
@@ -1907,17 +1900,17 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 30.
 (pdftex.def)             Requested size: 36.4716pt x 12.28568pt.
  [5 <./Bilder/database.pdf, page is rotated 90 degrees>]
 (./Anhang/AnhangEntwuerfe.tex
-<Bilder/MockupModules.pdf, id=643, 722.7pt x 542.025pt>
+<Bilder/MockupModules.pdf, id=642, 722.7pt x 542.025pt>
 File: Bilder/MockupModules.pdf Graphic file (type pdf)
 <use Bilder/MockupModules.pdf>
 Package pdftex.def Info: Bilder/MockupModules.pdf  used on input line 5.
 (pdftex.def)             Requested size: 338.58835pt x 253.94125pt.
-<Bilder/MockupModul.pdf, id=644, 722.7pt x 542.025pt>
+<Bilder/MockupModul.pdf, id=643, 722.7pt x 542.025pt>
 File: Bilder/MockupModul.pdf Graphic file (type pdf)
 <use Bilder/MockupModul.pdf>
 Package pdftex.def Info: Bilder/MockupModul.pdf  used on input line 11.
 (pdftex.def)             Requested size: 338.58835pt x 253.94125pt.
-<Bilder/MockupTag.pdf, id=645, 722.7pt x 542.025pt>
+<Bilder/MockupTag.pdf, id=644, 722.7pt x 542.025pt>
 File: Bilder/MockupTag.pdf Graphic file (type pdf)
 <use Bilder/MockupTag.pdf>
 Package pdftex.def Info: Bilder/MockupTag.pdf  used on input line 17.
@@ -1939,7 +1932,7 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 33.
 pdfTeX warning: /usr/bin/pdflatex (file ./Bilder/MockupTag.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
 >] (./Anhang/AnhangScreenshots.tex
-<Bilder/tagliste.pdf, id=714, 597.432pt x 340.47202pt>
+<Bilder/tagliste.pdf, id=713, 597.432pt x 340.47202pt>
 File: Bilder/tagliste.pdf Graphic file (type pdf)
 <use Bilder/tagliste.pdf>
 Package pdftex.def Info: Bilder/tagliste.pdf  used on input line 5.
@@ -1951,7 +1944,7 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 8.
  [8
 
  <./Bilder/tagliste.pdf>]
-<Bilder/modulliste.pdf, id=812, 597.432pt x 505.087pt>
+<Bilder/modulliste.pdf, id=811, 597.432pt x 505.087pt>
 File: Bilder/modulliste.pdf Graphic file (type pdf)
 <use Bilder/modulliste.pdf>
 Package pdftex.def Info: Bilder/modulliste.pdf  used on input line 11.
@@ -1963,12 +1956,12 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 14.
  [9
 
  <./Bilder/modulliste.pdf>]) (./Anhang/AnhangDoc.tex
-<Bilder/doc.pdf, id=979, page=1, 597.23125pt x 845.1575pt>
+<Bilder/doc.pdf, id=978, page=1, 597.23125pt x 845.1575pt>
 File: Bilder/doc.pdf Graphic file (type pdf)
 <use Bilder/doc.pdf, page 1>
 Package pdftex.def Info: Bilder/doc.pdf , page1 used on input line 4.
 (pdftex.def)             Requested size: 435.32422pt x 616.04424pt.
-<Bilder/doc.pdf, id=980, page=2, 597.23125pt x 845.1575pt>
+<Bilder/doc.pdf, id=979, page=2, 597.23125pt x 845.1575pt>
 File: Bilder/doc.pdf Graphic file (type pdf)
 <use Bilder/doc.pdf, page 2>
 Package pdftex.def Info: Bilder/doc.pdf , page2 used on input line 6.
@@ -1995,7 +1988,7 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 4.
  [12
 
 ]
-<Bilder/testcase.jpg, id=1041, 773.89125pt x 334.24875pt>
+<Bilder/testcase.jpg, id=1040, 773.89125pt x 334.24875pt>
 File: Bilder/testcase.jpg Graphic file (type jpg)
 <use Bilder/testcase.jpg>
 Package pdftex.def Info: Bilder/testcase.jpg  used on input line 7.
@@ -2019,7 +2012,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 43.
 (pdftex.def)             Requested size: 36.4716pt x 12.28568pt.
  [15]
-<Bilder/Klassendiagramm.pdf, id=1181, 766.06201pt x 598.235pt>
+<Bilder/Klassendiagramm.pdf, id=1180, 766.06201pt x 598.235pt>
 File: Bilder/Klassendiagramm.pdf Graphic file (type pdf)
 <use Bilder/Klassendiagramm.pdf>
 Package pdftex.def Info: Bilder/Klassendiagramm.pdf  used on input line 50.
@@ -2154,16 +2147,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 28599 strings out of 483140
- 548395 string characters out of 5965150
+ 28598 strings out of 483140
+ 548383 string characters out of 5965150
  1044194 words of memory out of 5000000
  42547 multiletter control sequences out of 15000+600000
  622210 words of font info for 78 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  76i,25n,107p,10270b,2280s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
+c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
 m-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/
@@ -2175,10 +2168,10 @@ mr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Projektdokumentation.pdf (39 pages, 2334785 bytes).
+Output written on Projektdokumentation.pdf (39 pages, 2334980 bytes).
 PDF statistics:
- 1545 PDF objects out of 1728 (max. 8388607)
- 1273 compressed objects within 13 object streams
- 358 named destinations out of 1000 (max. 500000)
+ 1544 PDF objects out of 1728 (max. 8388607)
+ 1272 compressed objects within 13 object streams
+ 357 named destinations out of 1000 (max. 500000)
  717 words of extra memory for PDF output out of 10000 (max. 10000000)
 

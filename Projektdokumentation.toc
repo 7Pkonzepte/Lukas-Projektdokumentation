@@ -20,56 +20,55 @@
 \contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{3}{subsection.37}%
 \contentsline {subsubsection}{\numberline {3.2.1}\glqq {}Make or Buy\grqq {}-Entscheidung}{3}{subsubsection.38}%
 \contentsline {subsubsection}{\numberline {3.2.2}Projektkosten}{3}{subsubsection.39}%
-\contentsline {paragraph}{\nonumberline Beispielrechnung (verkürzt)}{3}{section*.40}%
-\contentsline {subsubsection}{\numberline {3.2.3}Amortisationsdauer}{4}{subsubsection.44}%
-\contentsline {paragraph}{\nonumberline Beispielrechnung (verkürzt)}{4}{section*.45}%
-\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{4}{subsection.48}%
-\contentsline {paragraph}{\nonumberline Beispiel}{4}{section*.49}%
-\contentsline {subsection}{\numberline {3.4}Anwendungsfälle}{4}{subsection.50}%
-\contentsline {paragraph}{\nonumberline Beispiel}{4}{section*.52}%
-\contentsline {subsection}{\numberline {3.5}Qualitätsanforderungen}{4}{subsection.53}%
-\contentsline {subsection}{\numberline {3.6}Lastenheft/Fachkonzept}{5}{subsection.54}%
-\contentsline {paragraph}{\nonumberline Beispiel}{5}{section*.55}%
-\contentsline {section}{\numberline {4}Entwurfsphase}{5}{section.56}%
-\contentsline {subsection}{\numberline {4.1}Zielplattform}{5}{subsection.57}%
-\contentsline {subsection}{\numberline {4.2}Architekturdesign}{5}{subsection.58}%
-\contentsline {paragraph}{\nonumberline Beispiel}{5}{section*.59}%
-\contentsline {subsection}{\numberline {4.3}Entwurf der Benutzeroberfläche}{6}{subsection.62}%
-\contentsline {paragraph}{\nonumberline Beispiel}{6}{section*.63}%
-\contentsline {subsection}{\numberline {4.4}Datenmodell}{6}{subsection.64}%
-\contentsline {paragraph}{\nonumberline Beispiel}{6}{section*.65}%
-\contentsline {subsection}{\numberline {4.5}Geschäftslogik}{6}{subsection.68}%
-\contentsline {paragraph}{\nonumberline Beispiel}{6}{section*.69}%
-\contentsline {subsection}{\numberline {4.6}Maßnahmen zur Qualitätssicherung}{7}{subsection.71}%
-\contentsline {subsection}{\numberline {4.7}Pflichtenheft/Datenverarbeitungskonzept}{7}{subsection.72}%
-\contentsline {paragraph}{\nonumberline Beispiel}{7}{section*.73}%
-\contentsline {section}{\numberline {5}Implementierungsphase}{7}{section.74}%
-\contentsline {subsection}{\numberline {5.1}Implementierung der Datenstrukturen}{7}{subsection.75}%
-\contentsline {subsection}{\numberline {5.2}Implementierung der Benutzeroberfläche}{7}{subsection.76}%
-\contentsline {paragraph}{\nonumberline Beispiel}{8}{section*.77}%
-\contentsline {subsection}{\numberline {5.3}Implementierung der Geschäftslogik}{8}{subsection.78}%
-\contentsline {paragraph}{\nonumberline Beispiel}{8}{section*.79}%
-\contentsline {section}{\numberline {6}Abnahmephase}{8}{section.80}%
-\contentsline {paragraph}{\nonumberline Beispiel}{8}{section*.81}%
-\contentsline {section}{\numberline {7}Einführungsphase}{8}{section.82}%
-\contentsline {section}{\numberline {8}Dokumentation}{9}{section.83}%
-\contentsline {paragraph}{\nonumberline Beispiel}{9}{section*.84}%
-\contentsline {section}{\numberline {9}Fazit}{9}{section.86}%
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{9}{subsection.87}%
-\contentsline {paragraph}{\nonumberline Beispiel (verkürzt)}{9}{section*.88}%
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{9}{subsection.90}%
-\contentsline {subsection}{\numberline {9.3}Ausblick}{10}{subsection.91}%
-\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{11}{section*.92}%
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.93}%
-\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.94}%
-\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.95}%
-\contentsline {subsection}{\numberline {A.3}Use Case-Diagramm}{iii}{subsection.114}%
-\contentsline {subsection}{\numberline {A.4}Pflichtenheft (Auszug)}{iii}{subsection.116}%
-\contentsline {subsection}{\numberline {A.5}Datenbankmodell}{v}{subsection.130}%
-\contentsline {subsection}{\numberline {A.6}Oberflächenentwürfe}{vi}{subsection.132}%
-\contentsline {subsection}{\numberline {A.7}Screenshots der Anwendung}{viii}{subsection.136}%
-\contentsline {subsection}{\numberline {A.8}Entwicklerdokumentation}{x}{subsection.139}%
-\contentsline {subsection}{\numberline {A.9}Testfall und sein Aufruf auf der Konsole}{xii}{subsection.140}%
-\contentsline {subsection}{\numberline {A.10}Klasse: ComparedNaturalModuleInformation}{xiii}{subsection.176}%
-\contentsline {subsection}{\numberline {A.11}Klassendiagramm}{xvi}{subsection.300}%
-\contentsline {subsection}{\numberline {A.12}Benutzerdokumentation}{xvii}{subsection.302}%
+\contentsline {subsubsection}{\numberline {3.2.3}Amortisationsdauer}{4}{subsubsection.43}%
+\contentsline {paragraph}{\nonumberline Beispielrechnung (verkürzt)}{4}{section*.44}%
+\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{4}{subsection.47}%
+\contentsline {paragraph}{\nonumberline Beispiel}{4}{section*.48}%
+\contentsline {subsection}{\numberline {3.4}Anwendungsfälle}{4}{subsection.49}%
+\contentsline {paragraph}{\nonumberline Beispiel}{4}{section*.51}%
+\contentsline {subsection}{\numberline {3.5}Qualitätsanforderungen}{4}{subsection.52}%
+\contentsline {subsection}{\numberline {3.6}Lastenheft/Fachkonzept}{5}{subsection.53}%
+\contentsline {paragraph}{\nonumberline Beispiel}{5}{section*.54}%
+\contentsline {section}{\numberline {4}Entwurfsphase}{5}{section.55}%
+\contentsline {subsection}{\numberline {4.1}Zielplattform}{5}{subsection.56}%
+\contentsline {subsection}{\numberline {4.2}Architekturdesign}{5}{subsection.57}%
+\contentsline {paragraph}{\nonumberline Beispiel}{5}{section*.58}%
+\contentsline {subsection}{\numberline {4.3}Entwurf der Benutzeroberfläche}{6}{subsection.61}%
+\contentsline {paragraph}{\nonumberline Beispiel}{6}{section*.62}%
+\contentsline {subsection}{\numberline {4.4}Datenmodell}{6}{subsection.63}%
+\contentsline {paragraph}{\nonumberline Beispiel}{6}{section*.64}%
+\contentsline {subsection}{\numberline {4.5}Geschäftslogik}{6}{subsection.67}%
+\contentsline {paragraph}{\nonumberline Beispiel}{6}{section*.68}%
+\contentsline {subsection}{\numberline {4.6}Maßnahmen zur Qualitätssicherung}{7}{subsection.70}%
+\contentsline {subsection}{\numberline {4.7}Pflichtenheft/Datenverarbeitungskonzept}{7}{subsection.71}%
+\contentsline {paragraph}{\nonumberline Beispiel}{7}{section*.72}%
+\contentsline {section}{\numberline {5}Implementierungsphase}{7}{section.73}%
+\contentsline {subsection}{\numberline {5.1}Implementierung der Datenstrukturen}{7}{subsection.74}%
+\contentsline {subsection}{\numberline {5.2}Implementierung der Benutzeroberfläche}{7}{subsection.75}%
+\contentsline {paragraph}{\nonumberline Beispiel}{8}{section*.76}%
+\contentsline {subsection}{\numberline {5.3}Implementierung der Geschäftslogik}{8}{subsection.77}%
+\contentsline {paragraph}{\nonumberline Beispiel}{8}{section*.78}%
+\contentsline {section}{\numberline {6}Abnahmephase}{8}{section.79}%
+\contentsline {paragraph}{\nonumberline Beispiel}{8}{section*.80}%
+\contentsline {section}{\numberline {7}Einführungsphase}{8}{section.81}%
+\contentsline {section}{\numberline {8}Dokumentation}{9}{section.82}%
+\contentsline {paragraph}{\nonumberline Beispiel}{9}{section*.83}%
+\contentsline {section}{\numberline {9}Fazit}{9}{section.85}%
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{9}{subsection.86}%
+\contentsline {paragraph}{\nonumberline Beispiel (verkürzt)}{9}{section*.87}%
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{9}{subsection.89}%
+\contentsline {subsection}{\numberline {9.3}Ausblick}{10}{subsection.90}%
+\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{11}{section*.91}%
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.92}%
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.93}%
+\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.94}%
+\contentsline {subsection}{\numberline {A.3}Use Case-Diagramm}{iii}{subsection.113}%
+\contentsline {subsection}{\numberline {A.4}Pflichtenheft (Auszug)}{iii}{subsection.115}%
+\contentsline {subsection}{\numberline {A.5}Datenbankmodell}{v}{subsection.129}%
+\contentsline {subsection}{\numberline {A.6}Oberflächenentwürfe}{vi}{subsection.131}%
+\contentsline {subsection}{\numberline {A.7}Screenshots der Anwendung}{viii}{subsection.135}%
+\contentsline {subsection}{\numberline {A.8}Entwicklerdokumentation}{x}{subsection.138}%
+\contentsline {subsection}{\numberline {A.9}Testfall und sein Aufruf auf der Konsole}{xii}{subsection.139}%
+\contentsline {subsection}{\numberline {A.10}Klasse: ComparedNaturalModuleInformation}{xiii}{subsection.175}%
+\contentsline {subsection}{\numberline {A.11}Klassendiagramm}{xvi}{subsection.299}%
+\contentsline {subsection}{\numberline {A.12}Benutzerdokumentation}{xvii}{subsection.301}%
