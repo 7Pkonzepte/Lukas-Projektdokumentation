@@ -5,14 +5,14 @@
 
 \subsection{Projektumfeld} 
 \label{sec:Projektumfeld}
-Die bits \& likes GmbH(B \& L) ist eine Fullservice-Digitalagentur aus Dortmund. Sie bietet sowohl Onlinemarketing als auch Websitenentwicklung an. Aktuell beschäfftigt sie ca. 50 Mitarbeiter, die Tendenz ist steigend.
+Die bits \& likes GmbH(\acs{BAL}) ist eine Fullservice-Digitalagentur aus Dortmund. Sie bietet sowohl Onlinemarketing als auch Websitenentwicklung an. Aktuell beschäfftigt sie ca. 50 Mitarbeiter, die Tendenz ist steigend.
 
-Die Idee für das Projekt kam bei der Entwicklung einer Website für die Murtfeldt Kunststoffe GmbH \& Co. KG(Murtfeldt). Historisch nutzte Murtfeldt Typo3 als Content-Management-System. B \& L entwickelte mit Nuxt2 eine Headless Lösung für diese neue Website. Dieser Technologiestack soll nun mit der neuesten Version von Typo3(Version 11.5 zum Zeitpunkt des Projekts) als auch der neusten Version von Nuxt neu entwickelt werden. Damit zukünftige Murtfeldt Projekt also auch andere Projekte(z.B. B \& L Firmenwebsite) eine Vorlage haben, mit welcher sie umgesetzt werden können.
+Die Idee für das Projekt kam bei der Entwicklung einer Website für die Murtfeldt Kunststoffe GmbH \& Co. KG(Murtfeldt). Historisch nutzte Murtfeldt Typo3 als Content-Management-System. \acs{BAL} entwickelte mit Nuxt2 eine Headless Lösung für diese neue Website. Dieser Technologiestack soll nun mit der neuesten Version von Typo3(Version 11.5 zum Zeitpunkt des Projekts) als auch der neusten Version von Nuxt(Nuxt3) neu entwickelt werden. Damit zukünftige Murtfeldt Projekt also auch andere Projekte(z.B. \acs{BAL} Firmenwebsite) eine Vorlage(Skeleton) haben, mit welcher sie umgesetzt werden können.
 
 
 \subsection{Projektziel} 
 \label{sec:Projektziel}
-Das Ziel des Projektes ist es eine Typo3 Nuxt3 Vorlage(Skeleton) zu erstellen, auf dessen Basis neue Projekte umgesetzt werden können. Dazu müssen folgende Punkte erreicht werden:
+Das Ziel des Projektes ist es eine Typo3 Nuxt3 Skeleton zu erstellen, auf dessen Basis neue Projekte umgesetzt werden können. Dazu müssen folgende Punkte erreicht werden:
 \begin{itemize}
 	\item Content aus dem Typo3 System im JSON-Format ausspielen.
 	\item Potentielle Erweiterungen an den JSON-Daten um alle technischen Voraussetzungen zu erfüllen
@@ -21,14 +21,14 @@ Das Ziel des Projektes ist es eine Typo3 Nuxt3 Vorlage(Skeleton) zu erstellen, a
 
 \subsection{Projektbegründung} 
 \label{sec:Projektbegruendung}
-Bis jetzt klonte B \& L immer alte Websiten auf dem Typo3 \& Nuxt2 Technologiestack um neue Websiten zu entwickeln. Dies bedeutete, dass viel Content, als auch alter Code erstmal händisch aus dem Projekt gelöscht werden musste. Zusätzlich musste die Datenbank bereinigt werden, damit die neue Website, keine Altlasten / kritische Daten aus dem vorherigen Projekt mit übernimmt. Die Alternative war, ein komplett neues Typo3 und Nuxt2 Projekt aufzusetzen und jedes mal viel Code / Template-Anpassungen neu schreiben. Dieser unnötige Aufwand soll mit diesem Projekt umgangen werden. Dadurch entstehen sowohl Kostenersparnisse durch kürzere Entwicklungszeiten, als auch weniger potentielle Fehler/Komplikationen mit alten Code/Daten von anderen Projekten.
+Bis jetzt klonte \acs{BAL}immer alte Websiten auf dem Typo3 \& Nuxt2 Technologiestack um neue Websiten zu entwickeln. Dies bedeutete, dass viel Content, als auch alter Code erstmal händisch aus dem Projekt gelöscht werden musste. Zusätzlich musste die Datenbank bereinigt werden, damit die neue Website, keine Altlasten / kritische Daten aus dem vorherigen Projekt mit übernimmt. Die Alternative war, ein komplett neues Typo3 und Nuxt2 Projekt aufzusetzen und jedes mal viel Code / Template-Anpassungen neu schreiben. Dieser unnötige Aufwand soll mit diesem Projekt umgangen werden. Dadurch entstehen sowohl Kostenersparnisse durch kürzere Entwicklungszeiten, als auch weniger potentielle Fehler/Komplikationen mit alten Code/Daten von anderen Projekten.
 
 \subsection{Projektschnittstellen} 
 \label{sec:Projektschnittstellen}
 
-Die finale Nuxt Anwendung interagiert nur mit der Typo3 Schnittstelle. Projekte, die mit dem Skeleton entwickelt werden, können aber weitere Schnittstellen einbinden. Im Fall von B \& L würde dies beispielsweise oft eine Schnittstelle zu einem Shopware-System(E-Commerce Platform) sein. Zukünftige Iterationen des Skeletons könnten diese auch als Standard beinhalten.
+Die finale Nuxt Anwendung interagiert nur mit der Typo3 Schnittstelle. Projekte, die mit dem Skeleton entwickelt werden, können aber weitere Schnittstellen einbinden. Im Fall von \acs{BAL} würde dies beispielsweise oft eine Schnittstelle zu einem Shopware-System(E-Commerce Platform) sein. Zukünftige Iterationen des Skeletons könnten diese auch als Standard beinhalten.
 
-Die Mittel für das Projekt werden von  B \& L zur Verfügung gestellt. Da die Entwickler von B \& L auch die zukünftigen Nutzer des Projekts sind. Dementsprechend muss das Projekt auch den Entwicklern später präsentiert und eine Dokumentation für diese geschrieben werden. Projekte, welche aus dem Skeleton entwickelt werden, würden aber in der Zukunft Kunden präsentiert werden und Teile des Skeletons enthalten.
+Die Mittel für das Projekt werden von  \acs{BAL} zur Verfügung gestellt. Da die Entwickler von \acs{BAL} auch die zukünftigen Nutzer des Projekts sind. Dementsprechend muss das Projekt auch den Entwicklern später präsentiert und eine Dokumentation für diese geschrieben werden. Projekte, welche aus dem Skeleton entwickelt werden, würden aber in der Zukunft Kunden präsentiert werden und Teile des Skeletons enthalten.
 
 
 \subsection{Projektabgrenzung} 
@@ -38,6 +38,6 @@ Das Projekte enthält folgende features nicht:
 
 \begin{itemize}
 	\item Ein umgesetztes Frontend-Design
-	\item Alle gängigen Typo3 Komponenten im Frontend eingebaut(nur die Basics)
+	\item Alle gängigen Typo3-Komponenten im Frontend eingebaut(nur die Basics)
 	\item Anbindungen zu anderen technischen Schnittstellen außer Typo3
 \end{itemize}
