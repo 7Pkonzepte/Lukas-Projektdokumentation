@@ -10,27 +10,17 @@
 	\item Was gilt es zu erstellen/verbessern?
 \end{itemize}
 
+Zum Zeitpunkt des Projektstarts hatte \acs{BAL} mehrere Projekte mit Typo3 in Verbindung mit Nuxt2 erstellt. Das genutzte Typo3 System war nicht auf der aktuellen Version. Dazu bestand noch kein vorhandenes Skeleton. Diese Situation gilt es zu verbessern. Dies bedeutet, sowohl die neuste Version von Nuxt, als auch von Typo3 zu nutzen, um ein Skeleton zu erstellen.
+
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
-\begin{itemize}
-	\item Lohnt sich das Projekt für das Unternehmen?
-\end{itemize}
 
-
-\subsubsection{\gqq{Make or Buy}-Entscheidung}
-\label{sec:MakeOrBuyEntscheidung}
-\begin{itemize}
-	\item Gibt es vielleicht schon ein fertiges Produkt, dass alle Anforderungen des Projekts abdeckt?
-	\item Wenn ja, wieso wird das Projekt trotzdem umgesetzt?
-\end{itemize}
+\acs{BAL} schätzt, dass durch das erstellte Skeleton ca. 20 Stunden Arbeit, pro umgesetztes Projekt, eingespart werden können. Bei durchschnittlichen Entwicklerkosten von 45€ pro Stunde (30€ Stundenlohn + 15€ Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner etc.}) ergibt dies eine Ersparnis von 20 * 45€ = \eur{900} pro Projekt. Damit sich das Skeleton für die Firma lohnt, müssen die Projektkosten kleiner als die Einsparungen. Dafür müssen die Projektkosten berechnet werden und überprüft werden, wie oft das Skeleton wahrscheinlich genutzt wird.
 
 
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
-\begin{itemize}
-	\item Welche Kosten fallen bei der Umsetzung des Projekts im Detail an (\zB Entwicklung, Einführung/Schulung, Wartung)?
-\end{itemize}
 
 Die Kosten für die Durchführung des Projekts setzen sich sowohl aus Personal-, als auch aus Ressourcenkosten zusammen.
 Ein Auszubildender der bits \& likes GmbH verdient im dritten Lehrjahr \eur{1450}.
@@ -42,31 +32,16 @@ Ein Auszubildender der bits \& likes GmbH verdient im dritten Lehrjahr \eur{1450
 \end{eqnarray}
 
 Es ergibt sich also ein Stundenlohn von \eur{9.89}. 
-Die Durchführungszeit des Projekts beträgt 70 Stunden. Für die Nutzung von Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner etc.} wird 
-ein pauschaler Stundensatz von \eur{15} angenommen. Für die anderen Mitarbeiter wird pauschal ein Stundenlohn von \eur{25} angenommen. 
-Eine Aufstellung der Kosten befindet sich in Tabelle~\ref{tab:Kostenaufstellung} und sie betragen insgesamt \eur{2739,20}.
+Die Durchführungszeit des Projekts beträgt 80 Stunden. Für die Nutzung von Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner etc.} wird 
+ein pauschaler Stundensatz von \eur{15} angenommen. Für die anderen Mitarbeiter wird pauschal ein Stundenlohn von \eur{30} angenommen. 
+Eine Aufstellung der Kosten befindet sich in Tabelle~\ref{tab:Kostenaufstellung} und sie betragen insgesamt \eur{2621.2}.
 \tabelle{Kostenaufstellung}{tab:Kostenaufstellung}{Kostenaufstellung.tex}
 
 
 \subsubsection{Amortisationsdauer}
 \label{sec:Amortisationsdauer}
-\begin{itemize}
-	\item Welche monetären Vorteile bietet das Projekt (\zB Einsparung von Lizenzkosten, Arbeitszeitersparnis, bessere Usability, Korrektheit)?
-	\item Wann hat sich das Projekt amortisiert?
-\end{itemize}
 
-\paragraph{Beispielrechnung (verkürzt)}
-Bei einer Zeiteinsparung von 10 Minuten am Tag für jeden der 25 Anwender und 220 Arbeitstagen im Jahr ergibt sich eine gesamte Zeiteinsparung von 
-\begin{eqnarray}
-25 \cdot 220 \mbox{ Tage/Jahr} \cdot 10 \mbox{ min/Tag} = 55000 \mbox{ min/Jahr} \approx 917 \mbox{ h/Jahr} 
-\end{eqnarray}
-
-Dadurch ergibt sich eine jährliche Einsparung von 
-\begin{eqnarray}
-917 \mbox{h} \cdot \eur{(25 + 15)}{\mbox{/h}} = \eur{36680}
-\end{eqnarray}
-
-Die Amortisationszeit beträgt also $\frac{\eur{2739,20}}{\eur{36680}\mbox{/Jahr}} \approx 0,07 \mbox{ Jahre} \approx 4 \mbox{ Wochen}$.
+Bei Einsparungen von ca. \eur{900} pro zukünftigen Projekt und Projektkosten von \eur{2621.2} ergibt sich ein Amortisationsdauer von \eur{2621.2} / \eur{900} = 2,921 Projekten. Aufgerundet sind dies 3 Projekte. \acs{BAL} muss also 3 Projekte mit dem Skeleton entwickeln, damit sich das Projekt/Skeleton gelohnt hat. Aktuell sind bei \acs{BAL} drei Projekte in Planung, welche das Skeleton nutzen werden. Dazu gehört die eigene Firmenwebsite, als auch zwei Kundenprojekte. Diese werden im Laufe des nächsten Jahres abgearbeitet. Dadurch wird sich das Projekt bis Ende 2023 amortisiert haben. Ein genaueres Datum kann zum aktuellen Zeitpunkt nicht ermittelt werden, da die zukünftigen Projekte noch keinen festen Zeitplan haben. Wahrscheinlich werden im Laufe der nächsten Jahren aber auch weitere Projekte mit dem Skeleton umgesetzt. Das Projekt hat sich also finanziell für \acs{BAL} gelohnt.
 
 
 \subsection{Nutzwertanalyse}
@@ -81,28 +56,11 @@ Ein Beispiel für eine Entscheidungsmatrix findet sich in Kapitel~\ref{sec:Archi
 
 \subsection{Anwendungsfälle}
 \label{sec:Anwendungsfaelle}
-\begin{itemize}
-	\item Welche Anwendungsfälle soll das Projekt abdecken?
-	\item Einer oder mehrere interessante (!) Anwendungsfälle könnten exemplarisch durch ein Aktivitätsdiagramm oder eine \ac{EPK} detailliert beschrieben werden. 
-\end{itemize}
 
-\paragraph{Beispiel}
-Ein Beispiel für ein Use Case-Diagramm findet sich im \Anhang{app:UseCase}.
-
+Das Skeleton kann theoretisch für sämtliche Websiten genutzt werden, welche ein \acs{CMS} nutzen. Natürlich muss analysiert werden, ob dies auch sinnvoll wäre. Typo3 ist ein Enterprise \acs{CMS}, was bedeutet, dass es sich auf große Firmen spezialisiert hat. Für kleinere Projekte wäre es vielleicht sinnvoller ein anderes \acs{CMS} zu nutzen. Nicht jedes Projekt braucht auch eine custom Lösung im Frontend. Für einige Projekte wäre es vielleicht sinnvoller vorhandene Software zu nutzen. Dies kann ebenfalls ein Typo3 mit vorgegebenen Theme sein, oder ein komplett anderes \acs{CMS}.
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
-\begin{itemize}
-	\item Welche Qualitätsanforderungen werden an die Anwendung gestellt (\zB hinsichtlich Performance, Usability, Effizienz \etc (siehe \citet{ISO9126}))?
-\end{itemize}
 
-
-\subsection{Lastenheft/Fachkonzept}
-\label{sec:Lastenheft}
-\begin{itemize}
-	\item Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
-	\item Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
-\end{itemize}
-
-\paragraph{Beispiel}
-Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
+Da verschiedene Projekte mit dem Skeleton umgesetzt werden, ist es sehr wichtig, dass das Skeleton flexibel ist. Da unterschiedlichen Projekte, zumindest teilweise, von verschiedenen Entwicklern umgesetzt werden, muss der Code leicht zu verstehen sein. Der Code muss also leicht erweiterbar und leserlich sein. 
+Natürlich darf die Ladezeit der Website auch nicht sonderlich groß sein, damit die SEO-Performance nicht zu schlecht wird. Dies ist wichtig, damit mit dem Skeleton entwickelte Projekte über google / anderen Suchmaschinen gefunden werden können. Zusätzlich erhöht eine schnelle Ladezeit die Benutzerfreundlichkeit.

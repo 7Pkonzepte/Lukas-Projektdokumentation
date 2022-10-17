@@ -9,6 +9,9 @@
 	\item Beschreibung der Kriterien zur Auswahl der Zielplattform (\ua Programmiersprache, Datenbank, Client/Server, Hardware).
 \end{itemize}
 
+Als Programmiersprache wurde TypeScript(\acs{TS}) ausgewählt \citet{TypeScript}. \acs{TS} ist ein Superset von JavaScript(\acs{JS}). Dies bedeutet, dass jeder JS-Code in \acs{TS} funktioniert, aber nicht jeder \acs{TS}-Code in JS funktioniert. \acs{TS} erweitert JS um Typen. Dies bedeutet, dass Variablen feste Datentypen(string, number, etc.) haben können. Dies hat den Vorteil, dass \acs{TS} beim kompilieren Fehler schmeißt, falls eine Variable einen Wert bekommt, welche sie nicht haben sollte. \acs{TS} wird zu JS kompiliert, da Browser aktuell nur JS und WebAssembly unterstützen. Dadurch werden vorallem große Projekte weniger fehleranfällig. Das Skeleton selber ist nicht so ein großes Projekt, aber es werden große Projekte damit entwickelt werden. Deswegen ist es sinnvoll bereits mit \acs{TS} zu starten.
+
+Als Framework für \acs{TS} wurde sich für Nuxt3 entschieden. Nuxt3 ist ein serverseitig gerendertes 
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
