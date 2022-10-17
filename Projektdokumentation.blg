@@ -14,45 +14,45 @@ Warning--empty note in BMBF2000
 Warning--there's an address but no publisher in Grashorn2010
 Warning--empty number in Grashorn2010
 Warning--empty note in Grashorn2010
-You've used 9 entries,
+You've used 10 entries,
             4728 wiz_defined-function locations,
-            949 strings with 7933 characters,
-and the built_in function-call counts, 4523 in all, are:
-= -- 424
-> -- 104
-< -- 40
-+ -- 61
-- -- 33
-* -- 307
-:= -- 761
-add.period$ -- 19
-call.type$ -- 9
-change.case$ -- 37
-chr.to.int$ -- 9
-cite$ -- 15
-duplicate$ -- 165
-empty$ -- 443
-format.name$ -- 61
-if$ -- 978
+            954 strings with 8059 characters,
+and the built_in function-call counts, 4977 in all, are:
+= -- 461
+> -- 114
+< -- 42
++ -- 65
+- -- 36
+* -- 335
+:= -- 836
+add.period$ -- 21
+call.type$ -- 10
+change.case$ -- 41
+chr.to.int$ -- 10
+cite$ -- 16
+duplicate$ -- 185
+empty$ -- 497
+format.name$ -- 67
+if$ -- 1081
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 39
-newline$ -- 73
-num.names$ -- 36
-pop$ -- 77
+missing$ -- 44
+newline$ -- 79
+num.names$ -- 40
+pop$ -- 88
 preamble$ -- 1
-purify$ -- 55
+purify$ -- 61
 quote$ -- 0
-skip$ -- 240
+skip$ -- 266
 stack$ -- 0
-substring$ -- 182
-swap$ -- 28
-text.length$ -- 13
+substring$ -- 195
+swap$ -- 31
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 113
+type$ -- 122
 warning$ -- 6
-while$ -- 40
+while$ -- 44
 width$ -- 0
-write$ -- 152
+write$ -- 167
 (There were 6 warnings)
