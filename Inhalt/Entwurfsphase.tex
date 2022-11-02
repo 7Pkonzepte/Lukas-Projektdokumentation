@@ -11,14 +11,24 @@
 
 Als Programmiersprache wurde TypeScript(\acs{TS}) ausgewählt\footnote{\Vgl \citet{TypeScript}.}. \acs{TS} ist ein Superset von JavaScript(\acs{JS}). Dies bedeutet, dass jeder JS-Code in \acs{TS} funktioniert, aber nicht jeder \acs{TS}-Code in JS funktioniert. \acs{TS} erweitert JS um Typen. Dies bedeutet, dass Variablen feste Datentypen(string, number, etc.) haben können. Dies hat den Vorteil, dass \acs{TS} beim kompilieren Fehler schmeißt, falls eine Variable einen Wert bekommt, welche sie nicht haben sollte. \acs{TS} wird zu JS kompiliert, da Browser aktuell nur JS und WebAssembly unterstützen. Dadurch werden vorallem große Projekte weniger fehleranfällig. Das Skeleton selber ist nicht so ein großes Projekt, aber es werden große Projekte damit entwickelt werden. Deswegen ist es sinnvoll bereits mit \acs{TS} zu starten.
 
-Als Framework für \acs{TS} wurde sich für Nuxt3 entschieden. Nuxt3 ist ein serverseitig gerendertes 
+Als Framework für TS wurde sich für Nuxt3 entschieden. Nuxt3 ist ein serverseitig gerendertes Javascript-Framework mit TypeScript Support. Nuxt3 bietet viele Features, welche Webentwicklung einfacher machen. Dazu zählt beispielsweise reactivty. Dies bedeutet, dass das Framework automatisch Variablen in der Darstellung anpassen kann, wenn diese ihren Wert ändern. Viele andere Javascript-Frameworks werden clientseitig gerendert. Das bedeutet, dass der Nutzer das HTML erst rendern muss. Nuxt3 macht dies bereits auf dem Server, wodurch die Seite beim Nutzer schneller angezeigt wird. Dies wirkt sich auch vorteilhaft auf SEO aus.
+
+Als UI-Framework wurde DaisyUI genutzt. Für die Umsetzung des Skeletons war die Nutzung eines UI-Frameworks nicht wirklich nötig. Insgesamt musste während der Entwicklung des Skeleton nicht viel CSS / Styling genutzt werden. Das Framework liefert vorgestylte Komponenten und CSS-Klassen, welche die zukünftige Entwicklung beschleunigen sollen. DaisyUI basiert auf Tailwind, weswegen alle Tailwind Klassen auch in dem Projekt genutzt werden können.
+
+Sonst wurden die klassischen Webtechnologien HTML und CSS genutzt.
+
+Genauere vergleiche zu anderen Frameworks / Technologien, werden im folgenden Kapitel analysiert.
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
-\begin{itemize}
-	\item Beschreibung und Begründung der gewählten Anwendungsarchitektur (\zB \acs{MVC}).
-	\item \Ggfs Bewertung und Auswahl von verwendeten Frameworks sowie \ggfs eine kurze Einführung in die Funktionsweise des verwendeten Frameworks.
-\end{itemize}
+
+Anhand folgender Bewertungsmatrix, wurde sich für Nuxt3 als JS-Framework entschieden:
+
+Anhand folgender Bewertungsmatrix, wurde sich für DaisyUI als UI-Framework entschieden:
+
+Anhand folgender Bewertungsmatrix, wurde sich für Typo3 als CMS entschieden:
+
+Navigation: Standardmäßig gibt die Headless-Extension von Typo3 keine Navigationsstruktur aus, weswegen noch Anpassungen am Template gemacht werden mussten. Es wurde sich entschieden, dass alle Seiten(und deren Unterseiten) in die Navigation ausgespielt werden, welche einer bestimmten Kategorie zugewiesen werden. Kategorien sind standardmäßig bei Seiten in Typo3 vorhanden und können mit kleinen Template-Anpassungen ausgespielt werden.
 
 \paragraph{Beispiel}
 Anhand der Entscheidungsmatrix in Tabelle~\ref{tab:Entscheidungsmatrix} wurde für die Implementierung der Anwendung das \acs{PHP}-Framework Symfony\footnote{\Vgl \citet{Symfony}.} ausgewählt. 
@@ -33,6 +43,19 @@ Anhand der Entscheidungsmatrix in Tabelle~\ref{tab:Entscheidungsmatrix} wurde f�
 	\item Beschreibung des visuellen Entwurfs der konkreten Oberfläche (\zB Mockups, Menüführung).
 	\item \Ggfs Erläuterung von angewendeten Richtlinien zur Usability und Verweis auf Corporate Design.
 \end{itemize}
+
+\paragraph{Frontend} 
+\linebreak
+Das Ziel der Benutzeroberfläche des Skeletons ist, dass Komponenten dargestellt werden und zwischen Seiten des Typo3 navigiert werden kann. Es muss noch keine gute Benutzeroberfläche erstellt werden, welche Kunden nützen können. Stattdessen muss es für Entwickler einfach und flexibel sein, eine gute Benutzeroberfläche für Kunden, aus der Benutzeroberfläche des Skeletons, zu entwickeln. Dafür werden die Komponenten und die Navigation stylistisch sehr minimalistisch gehalten und primär ihre Logik erstellt. Die Navigation befindet sich klassisch am Anfang der Website und unter ihr wird der Content der Seite gerendert. Dies wurde auch hier angewandt.
+
+
+\paragraph{Backend} 
+\linebreak 
+Die Benutzeroberfläche des Backends/CMS ist größtenteils durch Typo3 vorgegeben. Es werden lediglich die Komponenten erweitert, so dass gesteuert werden kann, wie viel Platz die Komponenten einnehmen. Dafür werden für die einzelnen Bildschirmgrößen(Desktop, Tablet, Mobile) Selects eingebaut, welche die Größen als Optionen haben.
+
+\paragraph{Menüführung}  
+\linebreak
+Die Hauptnavigationspunkte, welche aus dem Typo3 ausgespielt werden, werden oben in der Menüleiste angezeigt. Ihre Kinder werden ebenfalls ausgespielt, aber erst angezeigt, wenn durch die Navigation navigiert wird. Wenn einer der Hauptnavigationspunkte angeklickt wird, wird überprüft, ob dieser Children(Unterseiten) hat oder nicht. Wenn dies nicht der Fall ist, wird direkt die Seite von dem Hauptnavigationspunkt aufgerufen. Wenn dies der Fall ist, wird das Sidemenu aufgerufen. Das Sidemenu enthält sowohl den zuletzt angeklickten Navigationspunkt, als auch alle Children von ihm. Zusätzlich gibt es einen Button, mit welchem zurück navigiert werden kann. Wenn der zuletzt angeklickte Navigationspunkt hier nochmal angeklickt wird, wird dessen Seite aufgerufen. Wenn ein Child angeklickt wird, wird wieder überprüft, ob es Children hat oder nicht. Falls nein, wird die Seite aufgerufen, falls ja wird das Child zum zuletzt angeklickten Navigationspunkt. Eine Darstellung der Menüführung finden sie in Abbildung xyz
 
 \paragraph{Beispiel}
 Beispielentwürfe finden sich im \Anhang{app:Entwuerfe}.
@@ -54,6 +77,13 @@ In \Abbildung{ER} wird ein \ac{ERM} dargestellt, welches lediglich Entitäten, R
 \caption{Vereinfachtes ER-Modell}
 \label{fig:ER}
 \end{figure} 
+
+
+ERM erstellen
+
+Content:
+
+Navigation:
 
 
 \subsection{Geschäftslogik}
@@ -83,6 +113,9 @@ Ein Klassendiagramm, welches die Klassen der Anwendung und deren Beziehungen unt
 	\item \Ggfs Definition von Testfällen und deren Durchführung (durch Programme/Benutzer).
 \end{itemize}
 
+Um die SEO von dem Skeleton abschätzen zu können kann Lighthouse von Google verwendet werden. Lighthouse analysiert die Seite bezüglich SEO und liefert abhängig davon einen Wert von 0 – 100. Falls es SEO Schwierigkeiten gibt, werden diese hier erläutert. Da noch nicht viel Content auf den Seiten gepflegt ist, kann es sein, dass es dadurch zu Abzügen kommt. Dies wird sich aber dann automatisch anpassen, wenn mit dem Skeleton eine vernünftige Website erstellt wird.
+
+Wie gut der Code bezüglich Flexibilität und Leserlichkeit ist, lässt sich am besten durch Feedback von Arbeitskollegen erfassen. Da bereits Projekte mit dem Skeleton in Umsetzung sind und mehrere Arbeitskollegen des Prüflings mit dem Code arbeiten, wurde viel Feedback generiert. Dieses viel größtenteils positiv aus.
 
 \subsection{Pflichtenheft/Datenverarbeitungskonzept}
 \label{sec:Pflichtenheft}

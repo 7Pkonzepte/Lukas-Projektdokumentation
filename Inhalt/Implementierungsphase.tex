@@ -2,12 +2,10 @@
 \section{Implementierungsphase} 
 \label{sec:Implementierungsphase}
 
-\subsection{Implementierung der Datenstrukturen}
-\label{sec:ImplementierungDatenstrukturen}
+\subsection{Ausspielen der Typo3 Daten}
+\label{sec:Ausspielen der Typo3 Daten}
 
-\begin{itemize}
-	\item Beschreibung der angelegten Datenbank (\zB Generierung von \acs{SQL} aus Modellierungswerkzeug oder händisches Anlegen), \acs{XML}-Schemas \usw.
-\end{itemize}
+Damit die Typo3 Daten im JSON-Format ausgespielt werden, muss die Headless-Extension(https://extensions.typo3.org/extension/headless) installiert werden. Danach muss die Extension zum Template hinzugefügt werden, damit Typo3 weiß, dass es das Template dementsprechend anpassen muss. Typo3 spielt nun die Daten im JSON-Format aus. Das JSON muss noch angepasst werden, damit eine Navigationsstruktur damit abgebildet werden kann. Dafür werden folgende Anpassungen am Template vorgenommen. Abbildung
 
 
 \subsection{Implementierung der Benutzeroberfläche}
