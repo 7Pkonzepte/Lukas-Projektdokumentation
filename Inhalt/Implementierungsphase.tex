@@ -2,11 +2,137 @@
 \section{Implementierungsphase} 
 \label{sec:Implementierungsphase}
 
+\subsection{Docker-Setup}
+\label{sec:Docker-Setup}
+
+Als Image für das aktuellste Typo3 Docker-Setup wurde das Image von Martin Helmich genutzt (https://github.com/martin-helmich/docker-typo3). Ein Docker-Image ist eine Datei, welche aus Anweisungen besteht, welche vollständige und ausführbare Version einer Anwendung erstellt. Diese Anweisungen werden in einer docker-compose.yml Daten gespeichert und dann mit dem Befehl docker-compose up ausgeführt. Nach dem Ausführen des Befehls, wird eine Typo3 Instanz erstellt und gestartet. Abhängig von dem angegebenen Port, kann dann das Typo3 über Localhost aufgerufen werden. Nach dem ausführen der Anweisungen, wird dort der Installations-Screen(siehe Abbildung) von Typo3 angezeigt. Nach dem Installieren, kann ausgewählt werden, ob das Typo3 mit einer leeren Startseite gestartet werden soll, oder weitere Konfigurationen installiert/ausgeführt werden sollen. Um das Skeleton möglichst minimal zu halten, wird das Typo3 mit einer leeren Startseite initialisiert.
+
 \subsection{Ausspielen der Typo3 Daten}
 \label{sec:Ausspielen der Typo3 Daten}
 
-Damit die Typo3 Daten im JSON-Format ausgespielt werden, muss die Headless-Extension(https://extensions.typo3.org/extension/headless) installiert werden. Danach muss die Extension zum Template hinzugefügt werden, damit Typo3 weiß, dass es das Template dementsprechend anpassen muss. Typo3 spielt nun die Daten im JSON-Format aus. Das JSON muss noch angepasst werden, damit eine Navigationsstruktur damit abgebildet werden kann. Dafür werden folgende Anpassungen am Template vorgenommen. Abbildung
+Damit die Typo3 Daten im JSON-Format ausgespielt werden, wird die Headless-Extension \linebreak (https://extensions.typo3.org/extension/headless) installiert. Danach muss die Extension zum Template hinzugefügt werden, damit Typo3 weiß, dass es das Template dementsprechend anpassen muss. Typo3 spielt nun die Daten im JSON-Format aus. Das JSON muss noch angepasst werden, damit eine Navigationsstruktur damit abgebildet werden kann. Dafür werden folgende Erweiterungen am Template vorgenommen.
 
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+\begin{lstlisting}[language=json,firstnumber=1]
+lib.page = JSON
+lib.page {
+  fields {
+    navigation {
+      fields {
+        main {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+            10 {              
+				       special = categories
+				       special.value = 1
+				       levels = 7
+				       as = main
+				       expandAll = 1
+				       includeSpacer = 1
+				       titleField = nav_title // title	
+              	dataProcessing {
+                	10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                	10 {
+                  		references.fieldName = media
+                  		as = media
+                	}
+              	}
+                 overwriteMenuLevelConfig {
+                  stdWrap.cObject {
+                    100 = TEXT
+                    100.field = uid
+                    100.wrap = ,"uid":|
+                  }
+                }   
+            }
+          }
+        }
+      }      
+    }
+  }
+}
+\end{lstlisting}
+Durch diese Anpassungen erhält das page Objekt die property navigation. Die Eigenschaft navigation hat wiederrum die Eigenschaft main. Mit der Hilfe des Menuprocessor von der Headless Extension, werden in die main Eigenschaft alle Seiten + Unterseiten geladen, welche der 1. Kategorie zugewiesen werden (special = categories \& special value = 1). Falls Bilder für die Seiten gepflegt sind, werden diese ebenfalls durch den FilesProcessor ausgespielt. Diese werde in dem Skeleton aber nicht verwendet. Dies dient nur zum Nutzen von potentiellen zukünftigen Projekten. Die Anpassungen können sowohl in der Skeleton-Extension stattfinden, als auch im Typo3 Backend.
+
+\subsection{Skeleton-Extension / Layout}
+\label{sec:Skeleton-Extension / Layout}
+
+\paragraph{Datenmodell:}
+
+Alle Komponenten, die gepflegt werden können, sollen für Desktop, Tablet und Mobile verschiedene Breiten gepflegt bekommen können. Ein Text soll beispielsweise nur ein drittel der Bildschirmbreite auf Desktop haben, aber 50\% auf einem Tablet und die volle Breite auf einem Mobiltelefon. Dafür erhalten alle Elemente drei Felder in der Datenbank:
+\begin{lstlisting}[language=json,firstnumber=1]
+CREATE TABLE tt_content (
+        tx_responsive_mobile int(11) DEFAULT '100' NOT NULL,
+        tx_responsive_tablet int(11) DEFAULT '100' NOT NULL,
+        tx_responsive_desktop int(11) DEFAULT '100' NOT NULL,
+);
+\end{lstlisting}
+Felder, welche als Input für Inhaltselemente dienen, werden in Typo3 in der tt\_content Tabelle gespeichert. Diese Felder müssen noch mit angemessenen Auswahlmöglichkeiten versehen werden und dann allen Elementen zugewiesen werden.
+\paragraph{Backend:} Die Inputfelder werden als Selects dargestellt. Dies Auswahlmöglichkeiten werden im Code vorgegeben.
+\begin{lstlisting}[language=json,firstnumber=1]
+"tx_responsive_mobile" => Array (
+        "exclude" => 1,
+        "label" => 'Mobile',
+        "config" => Array (
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                ['25%','25'],
+                ['33%','33'],
+                ['50%','50'],
+                ['66%','66'],
+                ['75%','75'],
+                ['100%','100']
+            ],
+            'default' => '100',
+            'size' => 1,
+            'maxitems' => 1,
+        )
+    ),
+\end{lstlisting}
+Analog zum oberen Code, werden für Tablet und Desktop ebenfalls Konfigurationen vorgenommen und im Array \$tempColumns gespeichert. Welche Eigenschaften Inputfelder brauchen und welche Optionen es bei den Inputfeldern gibt, lässt sich in der Typo3 Dokumentation(https://docs.typo3.org/m/typo3/\linebreak reference-tca/main/en-us/Columns/Index.html) nachlesen. Um die Inputfelder nun allen Elementen hinzuzufügen, wird die ExtensionManagementUtility Klasse aus dem Typo3 Core genutzt.
+\begin{lstlisting}[language=json,firstnumber=1]
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns("tt_content",$tempColumns,1);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content','--div--;Responsive,tx_responsive_mobile,tx_responsive_tablet,tx_responsive_desktop','','after:addToAllTCAtypes');
+\end{lstlisting}
+
+Die erste Zeile Code speichert die Inputfelder ab, die zweite Zeile Code, fügt sie allen Inhaltselementen hinzu. --div--;Responsive sorgt dafür, dass diese in einem eigenen Tab mit dem Namen Responsive dargestellt werden. Danach wird aufgelistet werden Inputfelder hinzugefügt werden.
+
+\paragraph{Ausspielen ans Frontend:}
+
+Damit die gepflegten Daten auch ans Frontend ausgespielt werden, muss das Template von Typo3 um diese erweitert werden. Extensions haben dafür im Pfad \linebreak Configuration->TypoScript die Datei setup.typoscript. Hier können Anpassungen ans Template gepflegt werden, diese Anpassungen werden erst aktiv, wenn man die Extension dem Typo3 Template zuweist.
 
 \subsection{Implementierung der Benutzeroberfläche}
 \label{sec:ImplementierungBenutzeroberflaeche}

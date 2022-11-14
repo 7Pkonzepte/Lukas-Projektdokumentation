@@ -15,9 +15,12 @@ Als Framework für TS wurde sich für Nuxt3 entschieden. Nuxt3 ist ein serversei
 
 Als UI-Framework wurde DaisyUI genutzt. Für die Umsetzung des Skeletons war die Nutzung eines UI-Frameworks nicht wirklich nötig. Insgesamt musste während der Entwicklung des Skeleton nicht viel CSS / Styling genutzt werden. Das Framework liefert vorgestylte Komponenten und CSS-Klassen, welche die zukünftige Entwicklung beschleunigen sollen. DaisyUI basiert auf Tailwind, weswegen alle Tailwind Klassen auch in dem Projekt genutzt werden können.
 
+Um Typo3 besser testen zu können, wird Typo3 in einem Docker-Container ausgeführt. Docker ist eine Open-Source-Tool, welches es erlaubt Software in abgekapselten Umgebungen/Containern laufen zu lassen. Ein Docker-Container ist Softwarepaket, was alle nötigen Werkzeuge enthält um ein Programm laufen zu lassen. Docker ermöglicht es verschiedenste Programme (andere Programmiersprachen, Systemanforderungen, Libraries, etc.) in unterschiedlichen Containern laufen zu lassen. Beispielsweise kann auf einem Rechner/Server in einem Docker-Container Typo3 laufen, während in einem anderen Nuxt läuft. Docker-Container können schnell hoch und runter gefahren werden, was testen von neuem Code, oder neustarten von Systemen sehr schnell macht.
+
+
 Sonst wurden die klassischen Webtechnologien HTML und CSS genutzt.
 
-Genauere vergleiche zu anderen Frameworks / Technologien, werden im folgenden Kapitel analysiert.
+Genauere Vergleiche zu anderen Frameworks / Technologien, werden im folgenden Kapitel analysiert.
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
@@ -29,6 +32,8 @@ Anhand folgender Bewertungsmatrix, wurde sich für DaisyUI als UI-Framework ents
 Anhand folgender Bewertungsmatrix, wurde sich für Typo3 als CMS entschieden:
 
 Navigation: Standardmäßig gibt die Headless-Extension von Typo3 keine Navigationsstruktur aus, weswegen noch Anpassungen am Template gemacht werden mussten. Es wurde sich entschieden, dass alle Seiten(und deren Unterseiten) in die Navigation ausgespielt werden, welche einer bestimmten Kategorie zugewiesen werden. Kategorien sind standardmäßig bei Seiten in Typo3 vorhanden und können mit kleinen Template-Anpassungen ausgespielt werden.
+
+Layout / Spalteneinteilung: Standardmäßig hat Typo3 keine Tools um Komponenten in Spalten aufzuteilen. Es gibt viele Standardkonfigurationen, welche dies ermöglichen, aber ein Typo3 mit keinen zusätzlich installierten Erweiterungen hat diese Funktionalität nicht. Deswegen wird eine eigene kleine Extension für Typo3 geschrieben, welche diese Funktionalität liefert.
 
 \paragraph{Beispiel}
 Anhand der Entscheidungsmatrix in Tabelle~\ref{tab:Entscheidungsmatrix} wurde für die Implementierung der Anwendung das \acs{PHP}-Framework Symfony\footnote{\Vgl \citet{Symfony}.} ausgewählt. 
