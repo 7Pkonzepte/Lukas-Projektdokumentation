@@ -19,6 +19,49 @@ Use Case-Diagramme und weitere \acs{UML}-Diagramme kann man auch direkt mit \LaT
 
 \input{Anhang/AnhangPflichtenheft.tex}
 
+\subsection{tt\_content.php}
+\label{tt_content.php}
+
+\begin{lstlisting}[language=json,firstnumber=1]
+<?php declare(strict_types=1);
+
+defined('TYPO3_MODE') || die();
+
+// static TypoScript
+(static function () {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
+        array(
+            'LLL:EXT:bal_skeleton/Resources/Private/Language/Tca.xlf:bal_column.wizard.title',
+            'tx_bal_column',
+            'EXT:bal_skeleton/Resources/Public/Icons/ContentElements/stage.png'
+        ),
+        'CType',
+        'bal_skeleton'
+    );
+    $temporaryColumn = array(
+        'tx_bal_column_color' => array (
+            'exclude' => 1,
+            'label' => 'LLL:EXT:bal_skeleton/Resources/Private/Language/Tca.xlf:bal_column.color.title',
+            'config' => array (
+                'type' => 'input',
+                'renderType' => 'colorpicker',
+                'size' => 10,
+            )
+        ),
+    );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
+        'tt_content',
+        $temporaryColumn
+    );
+
+    $GLOBALS['TCA']['tt_content']['types']['tx_bal_column'] = array(
+        'showitem' => '
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
+            tx_bal_column_color,
+    ');
+})();
+\end{lstlisting}
 
 \subsection{Datenbankmodell}
 \label{app:Datenbankmodell}

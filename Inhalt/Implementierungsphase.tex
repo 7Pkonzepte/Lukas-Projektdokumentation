@@ -88,7 +88,7 @@ Durch diese Anpassungen erhält das page Objekt die property navigation. Die Eig
 
 \subsection{Skeleton-Extension / Layout}
 \label{sec:Skeleton-Extension / Layout}
-
+Typo3 ermöglicht es Entwicklern das Typo3 mit eigenen Extensions zu erweitern. Diese Extensions müssen einer bestimmten Struktur folgen, welche von Typo3 vorgegeben ist. Die genaue Form lässt sich in der Typo3 Dokumentation finden. \newline https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ExtensionArchitecture/Index.html
 \paragraph{Datenmodell:}
 
 Alle Komponenten, die gepflegt werden können, sollen für Desktop, Tablet und Mobile verschiedene Breiten gepflegt bekommen können. Ein Text soll beispielsweise nur ein drittel der Bildschirmbreite auf Desktop haben, aber 50\% auf einem Tablet und die volle Breite auf einem Mobiltelefon. Dafür erhalten alle Elemente drei Felder in der Datenbank:
@@ -99,8 +99,8 @@ CREATE TABLE tt_content (
         tx_responsive_desktop int(11) DEFAULT '100' NOT NULL,
 );
 \end{lstlisting}
-Felder, welche als Input für Inhaltselemente dienen, werden in Typo3 in der tt\_content Tabelle gespeichert. Diese Felder müssen noch mit angemessenen Auswahlmöglichkeiten versehen werden und dann allen Elementen zugewiesen werden.
-\paragraph{Backend:} Die Inputfelder werden als Selects dargestellt. Dies Auswahlmöglichkeiten werden im Code vorgegeben.
+Anpassungen an bestehende Tabellen in der Datenbank werden in der ext\_tables.sql Datei vorgenommen. Diese Datei wird automatisch beim installieren von Extensions ausgelesen und die Anpassungen durchgeführt. Felder, welche als Input für Inhaltselemente dienen, werden in Typo3 in der tt\_content Tabelle gespeichert. Diese Felder müssen noch mit angemessenen Auswahlmöglichkeiten versehen werden und dann allen Elementen zugewiesen werden.
+\paragraph{Backend:} Die Inputfelder werden als Selects dargestellt. Die Auswahlmöglichkeiten werden im Code vorgegeben.
 \begin{lstlisting}[language=json,firstnumber=1]
 "tx_responsive_mobile" => Array (
         "exclude" => 1,
@@ -133,6 +133,25 @@ Die erste Zeile Code speichert die Inputfelder ab, die zweite Zeile Code, fügt 
 \paragraph{Ausspielen ans Frontend:}
 
 Damit die gepflegten Daten auch ans Frontend ausgespielt werden, muss das Template von Typo3 um diese erweitert werden. Extensions haben dafür im Pfad \linebreak Configuration->TypoScript die Datei setup.typoscript. Hier können Anpassungen ans Template gepflegt werden, diese Anpassungen werden erst aktiv, wenn man die Extension dem Typo3 Template zuweist.
+
+\begin{lstlisting}[language=json,firstnumber=1]
+lib.appearance {
+    fields {
+        responsive_desktop = TEXT
+        responsive_desktop {
+            field = tx_responsive_desktop
+        }
+        responsive_tablet = TEXT ......
+    }
+}
+\end{lstlisting}
+
+Die gepflegten Daten werden nun in der Eigenschaft appearance ausgespielt und können von Nuxt3 ausgelesen werden.
+
+\paragraph{Sections:}
+Um die Elemente auf einer Seite in Bereiche auszuteilen, wurde ein komplett neues Inhaltselement erstellt. Dieses wurde als Section bezeichnet. Sections können Hintergrundfarben haben, wodurch Abschnitte im Frontend farblich voneinander getrennt dargestellt werden können. Dafür wurde ebenfalls in der tt\_content Tabelle ein Feld angelegt. In dem Fall mit dem Namen tx\_bal\_column\_color. Damit das neue Inhaltselement in Typo3 genutzt werden kann, muss die tt\_content.php Datei um folgenden Code erweitert werden. \Anhang{tt_content.php} Die Datei lässt sich im Pfad \linebreak Configuration->TCA->Overrides finden.
+
+
 
 \subsection{Implementierung der Benutzeroberfläche}
 \label{sec:ImplementierungBenutzeroberflaeche}
