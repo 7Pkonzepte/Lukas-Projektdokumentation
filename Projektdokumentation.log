@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.11)  17 NOV 2022 18:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.11)  17 NOV 2022 18:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1845,7 +1845,7 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 174.
 [18]
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
-Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 200.
+Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 202.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [19]
 ! Undefined control sequence.
@@ -2370,7 +2370,7 @@ xmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/
 fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.
 pfb>
-Output written on Projektdokumentation.pdf (55 pages, 1918549 bytes).
+Output written on Projektdokumentation.pdf (55 pages, 1918553 bytes).
 PDF statistics:
  1725 PDF objects out of 1728 (max. 8388607)
  1538 compressed objects within 16 object streams
