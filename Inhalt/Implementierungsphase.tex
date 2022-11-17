@@ -122,7 +122,7 @@ Anpassungen an bestehende Tabellen in der Datenbank werden in der ext\_tables.sq
         )
     ),
 \end{lstlisting}
-Analog zum oberen Code, werden für Tablet und Desktop ebenfalls Konfigurationen vorgenommen und im Array \$tempColumns gespeichert. Welche Eigenschaften Inputfelder brauchen und welche Optionen es bei den Inputfeldern gibt, lässt sich in der Typo3 Dokumentation(https://docs.typo3.org/m/typo3/\linebreak reference-tca/main/en-us/Columns/Index.html) nachlesen. Um die Inputfelder nun allen Elementen hinzuzufügen, wird die ExtensionManagementUtility Klasse aus dem Typo3 Core genutzt.
+Analog zum oberen Code, werden für Tablet und Desktop ebenfalls Konfigurationen vorgenommen und im Array \$tempColumns gespeichert. Welche Eigenschaften Inputfelder brauchen und welche Optionen es bei den Inputfeldern gibt, lässt sich in der Typo3 Dokumentation(https://docs.typo3.org/m/typo3/\newline reference-tca/main/en-us/Columns/Index.html) nachlesen. Um die Inputfelder nun allen Elementen hinzuzufügen, wird die ExtensionManagementUtility Klasse aus dem Typo3 Core genutzt.
 \begin{lstlisting}[language=json,firstnumber=1]
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns("tt_content",$tempColumns,1);
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content','--div--;Responsive,tx_responsive_mobile,tx_responsive_tablet,tx_responsive_desktop','','after:addToAllTCAtypes');
@@ -132,7 +132,7 @@ Die erste Zeile Code speichert die Inputfelder ab, die zweite Zeile Code, fügt 
 
 \paragraph{Ausspielen ans Frontend:}
 
-Damit die gepflegten Daten auch ans Frontend ausgespielt werden, muss das Template von Typo3 um diese erweitert werden. Extensions haben dafür im Pfad \linebreak Configuration->TypoScript die Datei setup.typoscript. Hier können Anpassungen ans Template gepflegt werden, diese Anpassungen werden erst aktiv, wenn man die Extension dem Typo3 Template zuweist.
+Damit die gepflegten Daten auch ans Frontend ausgespielt werden, muss das Template von Typo3 um diese erweitert werden. Extensions haben dafür im Pfad \newline Configuration->TypoScript die Datei setup.typoscript. Hier können Anpassungen ans Template gepflegt werden, diese Anpassungen werden erst aktiv, wenn man die Extension dem Typo3 Template zuweist.
 
 \begin{lstlisting}[language=json,firstnumber=1]
 lib.appearance {
@@ -149,8 +149,9 @@ lib.appearance {
 Die gepflegten Daten werden nun in der Eigenschaft appearance ausgespielt und können von Nuxt3 ausgelesen werden.
 
 \paragraph{Sections:}
-Um die Elemente auf einer Seite in Bereiche auszuteilen, wurde ein komplett neues Inhaltselement erstellt. Dieses wurde als Section bezeichnet. Sections können Hintergrundfarben haben, wodurch Abschnitte im Frontend farblich voneinander getrennt dargestellt werden können. Dafür wurde ebenfalls in der tt\_content Tabelle ein Feld angelegt. In dem Fall mit dem Namen tx\_bal\_column\_color. Damit das neue Inhaltselement in Typo3 genutzt werden kann, muss die tt\_content.php Datei um folgenden Code erweitert werden. \Anhang{tt_content.php} Die Datei lässt sich im Pfad \linebreak Configuration->TCA->Overrides finden.
+Um die Elemente auf einer Seite in Bereiche auszuteilen, wurde ein komplett neues Inhaltselement erstellt. Dieses wurde als Section bezeichnet. Sections können Hintergrundfarben haben, wodurch Abschnitte im Frontend farblich voneinander getrennt dargestellt werden können. Dafür wurde ebenfalls in der tt\_content Tabelle ein Feld angelegt. In dem Fall mit dem Namen tx\_bal\_column\_color. Damit das neue Inhaltselement in Typo3 genutzt werden kann, muss die tt\_content.php Datei um folgenden Code erweitert werden. \Anhang{tt_content.php} \newline Die Datei lässt sich im Pfad Configuration->TCA->Overrides der Extension finden.
 
+Damit das neue Element auch in der Auswahl von Elementen angezeigt wird, muss das Element noch in der ext\_localconf.php Datei im Root Verzeichnes der Extension hinzugefügt werden.\newline \Anhang{ext_localconf.php} \newline Übersetzungen für den Namen und die Beschreibung der Section wurden in einer .xlf Datei gespflegt.
 
 
 \subsection{Implementierung der Benutzeroberfläche}
@@ -161,9 +162,52 @@ Um die Elemente auf einer Seite in Bereiche auszuteilen, wurde ein komplett neue
 	\item \Ggfs Beschreibung des Corporate Designs und dessen Umsetzung in der Anwendung.
 	\item Screenshots der Anwendung
 \end{itemize}
+\paragraph{Nuxt3 aufsetzen um DaisyUI installieren}
+Um Nuxt3 nutzen zu können, muss eine aktuelle Version von Node.js auf der Betriebssystem installiert werden. Zum installieren von Nuxt3 und DaisyUI wurde der Node Package Manager genutzt.
 
-\paragraph{Beispiel}
-Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im \Anhang{Screenshots}.
+\paragraph{Dynamische Seiten}
+Alle Seiten der Nuxt3 Anwendungen befinden sich im pages Ordner. Da Nuxt3 nicht weiß, wie der Seitenbaum von Typo3 aussieht und dieser sich ständig ändert, können die einzelnen Seiten nicht per Hand eingepflegt werden. Damit Nuxt3 trotzdem weiß welcher Code bei den unterschiedlichen Seiten ausgeführt werden soll, gibt es eine Catch-all Route. Eine Datei/Seite die den Namen [...slug].vue erhält, fungiert als Catch-all Route. Dies bedeutet, dass alle Seiten die nicht gepflegt sind, durch diese Datei verarbeitet werden. Wenn aber beispielsweise eine Shop-Seite angelegt werde soll, die ihre Daten durch eine E-Commerce Platform bekommt. Dann kann im pages Ordner eine shop.vue Datei hinterlegt werden, welche dann für den Pfad beispielseite.de/shop die Daten darstellt. Analog kann dies für alle möglichen Seiten geschehen.
+
+\paragraph{Verarbeitung der Typo3 Daten}
+
+In der nuxt.config.ts Datei können generelle Konfigurationen am Nuxt3 vorgenommen werden. In ihr wurde die URL des Typo3 gespeichert. Dies hat den Vorteil, dass die URL in der Anwendung als Variable genutzt werden kann. Das heißt, dass bei späteren Entwicklungen lediglich die Variable einen anderen Wert bekommen muss und Nuxt automatisch alle Daten von einem anderen Typo3 bezieht.
+
+\begin{lstlisting}[language=json,firstnumber=1]
+export default defineNuxtConfig({
+    runtimeConfig: {
+        public: {
+            typo3: 'http://localhost'
+        }
+    },
+})
+\end{lstlisting}
+
+Die Variable wird darauf hin in der [...slug].vue Datei genutzt um die Daten vom Typo3 zu laden. Dies geschieht im <script setup> Tag. Nuxt3 Dateien können sowohl einen Script Tag haben, welcher Clientseitig ausgeführt wird, als auch ein Script Tag, welcher Serverseitig ausgeführt wird(hat den Zusatz setup). Da die ladezeit minimal gehalten werden soll, werden die Typo3 Daten hier Serverseitig geladen. Für \newline Entwicklungszwecke wird der Cache hier noch ausgeschaltet. Damit Änderungen im Typo3 direkt sichtbar werden. Wenn das Projekt in Production geht, sollte die Zeile {initialCache: false} entfernt werden. Dadurch Speichert Nuxt3 die Daten im Cache und die Seite wird schnell geladen. Je nach Website kann programmiert werden, dass sich der Cache häufiger oder weniger häufiger leert.
+
+\begin{lstlisting}[language=json,firstnumber=1]
+  const runtimeConfig = useRuntimeConfig()
+  const route = useRoute();
+  const { data } = await useAsyncData(
+      "pageData",
+    () => $fetch(runtimeConfig.typo3 + route.fullPath),
+    {initialCache: false}
+  )
+\end{lstlisting}
+
+Im route Objekt ist der Pfad der aktuellen Website gespeichert. route.fullPath würde bei der Seite beispielseite.de/beispiel1 dem Wert beispiel1 entsprechen.
+Die Daten aus dem Typo3(hier das data Objekt) wurden danach weiter verarbeitet. Der erste Schritt der Datenverarbeitung war es die Daten in Kategorien zu zerlegen. Dafür wurden vier Kategorien/Variablen angelegt. Die Variable breadcrumbs bekam die Daten bezüglich der Breadcrumbs der Seite. Die Variable Content bekam alle Daten bezüglich der Inhaltselemente auf der bestimmten Seite. Die Variable mainNavigation bekam alle Daten der Hauptnavigation. Als letztes bekam die Variable metaData alle Metadaten der Website. Die Breadcrumbs wurden bereits automatisch durch die Headless Extension generiert und sind im Datenobjekt vorhanden. Das gleiche gilt für die Metadaten und dem Großteil der Inhaltselemente. Die Navigationsdaten finden sich in der Eigenschaft main, welche zum Objekt navigation gehört, welches wiederum zum Objekt page gehört. Diese Logik wurde in \ref{sec:Ausspielen der Typo3 Daten} angelegt.
+
+\begin{lstlisting}[language=json,firstnumber=1]
+  let breadcrumbs = data.value.breadcrumbs;
+  let content = data.value.content.colPos0;
+  let mainNavigation = data.value.page.navigation.main;
+  let metaData = data.value.meta;
+\end{lstlisting}
+
+Mit der Nuxt3 Funktion useHead() können die Metadaten an die Website weiter gegeben werden. Für die Weiterverarbeitung der Breadcrumbs, die Navigation und den Content wurden eigene Komponenten erstellt. Diese erhalten die Variablen als Eigenschaften/Properties/Props zugewiesen. Da Nuxt3 einen automatischen Import von Komponenten hat, müssen diese lediglich im Template gepflegt werden und nicht zusätzlich importiert werden. Dafür wurden die Komponenten im components Ordner gepflegt, damit Nuxt3 diese automatisch importieren kann. Den vollständigen Code der [...slug].vue finden Sie unter \Anhang{[...slug].vue}.
+
+\paragraph{Finale Anwendung}
+Screenshots der finalen Anwendung inklusive der gepflegten Dummy-Inhalte der Typo3 Seite befinden sich im \Anhang{Screenshots}.
 
 
 \subsection{Implementierung der Geschäftslogik}

@@ -5,10 +5,6 @@
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
 
-\begin{itemize}
-	\item Beschreibung der Kriterien zur Auswahl der Zielplattform (\ua Programmiersprache, Datenbank, Client/Server, Hardware).
-\end{itemize}
-
 Als Programmiersprache wurde TypeScript(\acs{TS}) ausgewählt\footnote{\Vgl \citet{TypeScript}.}. \acs{TS} ist ein Superset von JavaScript(\acs{JS}). Dies bedeutet, dass jeder JS-Code in \acs{TS} funktioniert, aber nicht jeder \acs{TS}-Code in JS funktioniert. \acs{TS} erweitert JS um Typen. Dies bedeutet, dass Variablen feste Datentypen(string, number, etc.) haben können. Dies hat den Vorteil, dass \acs{TS} beim kompilieren Fehler schmeißt, falls eine Variable einen Wert bekommt, welche sie nicht haben sollte. \acs{TS} wird zu JS kompiliert, da Browser aktuell nur JS und WebAssembly unterstützen. Dadurch werden vorallem große Projekte weniger fehleranfällig. Das Skeleton selber ist nicht so ein großes Projekt, aber es werden große Projekte damit entwickelt werden. Deswegen ist es sinnvoll bereits mit \acs{TS} zu starten.
 
 Als Framework für TS wurde sich für Nuxt3 entschieden. Nuxt3 ist ein serverseitig gerendertes Javascript-Framework mit TypeScript Support. Nuxt3 bietet viele Features, welche Webentwicklung einfacher machen. Dazu zählt beispielsweise reactivty. Dies bedeutet, dass das Framework automatisch Variablen in der Darstellung anpassen kann, wenn diese ihren Wert ändern. Viele andere Javascript-Frameworks werden clientseitig gerendert. Das bedeutet, dass der Nutzer das HTML erst rendern muss. Nuxt3 macht dies bereits auf dem Server, wodurch die Seite beim Nutzer schneller angezeigt wird. Dies wirkt sich auch vorteilhaft auf SEO aus.
@@ -22,23 +18,36 @@ Sonst wurden die klassischen Webtechnologien HTML und CSS genutzt.
 
 Genauere Vergleiche zu anderen Frameworks / Technologien, werden im folgenden Kapitel analysiert.
 
+\pagebreak
+
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
 
 Anhand folgender Bewertungsmatrix, wurde sich für Nuxt3 als JS-Framework entschieden:
 
+\tabelle{Entscheidungsmatrix Nuxt3}{tab:Entscheidungsmatrix Nuxt3}{Nutzwert_Nuxt3.tex}
+
+Als Optionen wurden alle Frameworks genommen, mit welchen \acs{BAL} bereits Erfahrungen gesammelt hat. Eigenentwicklungen wurden von Anfang an ausgeschlossen, da diese zu aufwendig sind. Andere Frameworks hätten eine zu lange Einarbeitung/Umschulung für potentiell zu wenig Nutzen gehabt.
+
 Anhand folgender Bewertungsmatrix, wurde sich für DaisyUI als UI-Framework entschieden:
+
+\tabelle{Entscheidungsmatrix DaisyUI}{tab:Entscheidungsmatrix DaisyUI}{Nutzwert_DaisyUI.tex}
 
 Anhand folgender Bewertungsmatrix, wurde sich für Typo3 als CMS entschieden:
 
-Navigation: Standardmäßig gibt die Headless-Extension von Typo3 keine Navigationsstruktur aus, weswegen noch Anpassungen am Template gemacht werden mussten. Es wurde sich entschieden, dass alle Seiten(und deren Unterseiten) in die Navigation ausgespielt werden, welche einer bestimmten Kategorie zugewiesen werden. Kategorien sind standardmäßig bei Seiten in Typo3 vorhanden und können mit kleinen Template-Anpassungen ausgespielt werden.
+\tabelle{Entscheidungsmatrix Typo3}{tab:Entscheidungsmatrix Typo3}{Nutzwert_Typo3.tex}
 
-Layout / Spalteneinteilung: Standardmäßig hat Typo3 keine Tools um Komponenten in Spalten aufzuteilen. Es gibt viele Standardkonfigurationen, welche dies ermöglichen, aber ein Typo3 mit keinen zusätzlich installierten Erweiterungen hat diese Funktionalität nicht. Deswegen wird eine eigene kleine Extension für Typo3 geschrieben, welche diese Funktionalität liefert.
+\pagebreak
 
-\paragraph{Beispiel}
-Anhand der Entscheidungsmatrix in Tabelle~\ref{tab:Entscheidungsmatrix} wurde für die Implementierung der Anwendung das \acs{PHP}-Framework Symfony\footnote{\Vgl \citet{Symfony}.} ausgewählt. 
+Anhand folgender Bewertungsmatrix, wurde sich für TS als Programmiersprache entschieden:
 
-\tabelle{Entscheidungsmatrix}{tab:Entscheidungsmatrix}{Nutzwert.tex}
+\tabelle{Entscheidungsmatrix TS}{tab:Entscheidungsmatrix TS}{Nutzwert_TS.tex}
+
+Beide Programmiersprachen werden von Nuxt3 standardmäßg unterstützt. \acs{TS} benötigt mehr Zeilen Code und fügt einen weiteren Layer an Komplexität zu dem Projekt hinzu. Dafür werden Fehler früher entdeckt und das Projekt lässt sich leichter skalieren. Diese Faktoren werden von \acs{BAL} mehr wertgeschätzt, weswegen sich für \acs{TS} entschieden wurde.
+
+Navigation: Standardmäßig gibt die Headless-Extension von Typo3 keine Navigationsstruktur aus, weswegen noch Anpassungen am Template gemacht werden mussten. Es wurde sich entschieden, dass alle Seiten(und deren Unterseiten) in die Navigation ausgespielt werden, welche einer bestimmten Kategorie zugewiesen werden. Kategorien sind standardmäßig bei Seiten in Typo3 vorhanden und können mit kleinen Template-Anpassungen ausgespielt werden. Die Headless Extension bietet dafür Funktionalitäten.
+
+Layout / Spalteneinteilung: Standardmäßig hat Typo3 keine Tools um Komponenten in Spalten/Bereiche aufzuteilen. Es gibt viele Standardkonfigurationen, welche dies ermöglichen, aber ein komplett leeres Typo3 hat diese Funktionalität nicht. Deswegen wird eine eigene kleine Extension für Typo3 geschrieben, welche diese Funktionalität liefert.
 
 
 \subsection{Entwurf der Benutzeroberfläche}

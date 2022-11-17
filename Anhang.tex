@@ -63,6 +63,84 @@ defined('TYPO3_MODE') || die();
 })();
 \end{lstlisting}
 
+\subsection{ext\_localconf.php}
+\label{ext_localconf.php}
+
+\begin{lstlisting}[language=json,firstnumber=1]
+<?php
+defined('TYPO3_MODE') || die('Access denied.');
+
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
+
+
+call_user_func(
+    function () {
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod.wizards.newContentElement.wizardItems.common {
+           elements {
+              tx_bal_column {
+                 iconIdentifier = bal_column
+                 title = LLL:EXT:bal_skeleton/Resources/Private/Language/Tca.xlf:bal_column.wizard.title
+                 description = LLL:EXT:bal_skeleton/Resources/Private/Language/Tca.xlf:bal_column.wizard.description
+                 tt_content_defValues {
+                    CType = tx_bal_column
+                 }
+              }
+           }
+           show := addToList(tx_bal_column)
+        }'
+        );
+
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+
+        $iconRegistry->registerIcon(
+            'bal_column',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:bal_skeleton/Resources/Public/Icons/ContentElements/stage.svg']
+        );
+   }
+);
+\end{lstlisting}
+
+\subsection{[...slug].vue}
+\label{[...slug].vue}
+
+\begin{lstlisting}[language=json,firstnumber=1]
+<script setup lang="ts">
+  const runtimeConfig = useRuntimeConfig()
+  const route = useRoute();
+  const { data } = await useAsyncData(
+      "pageData",
+    () => $fetch(runtimeConfig.typo3 + route.fullPath),
+    {initialCache: false}
+  )
+  let breadcrumbs = data.value.breadcrumbs;
+  let content = data.value.content.colPos0;
+  let mainNavigation = data.value.page.navigation.main;
+  let metaData = data.value.meta;
+
+  useHead({
+    title: metaData.title,
+    meta: [
+      { name: 'description', content: metaData.description ? metaData.description : '' }
+    ]
+  })
+
+</script>
+<template>
+     <div>
+          <template v-if="mainNavigation"><Navigation :typo3-navigation="mainNavigation"></Navigation></template>
+          <div class="container mx-auto xl">
+            <template v-if="breadcrumbs"><Breadcrumbs :typo3breadcrumbs="breadcrumbs"></Breadcrumbs></template>
+            <template v-if="content"><TypoView :typo3-content="content"></TypoView></template>
+            <h3 v-else>Noch kein Content gepflegt!</h3>
+          </div>
+     </div>
+</template>
+\end{lstlisting}
+
 \subsection{Datenbankmodell}
 \label{app:Datenbankmodell}
 ER-Modelle kann man auch direkt mit \LaTeX{} zeichnen, siehe \zB \url{http://www.texample.net/tikz/examples/entity-relationship-diagram/}.
