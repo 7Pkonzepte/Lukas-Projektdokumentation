@@ -206,6 +206,40 @@ Die Daten aus dem Typo3(hier das data Objekt) wurden danach weiter verarbeitet. 
 
 Mit der Nuxt3 Funktion useHead() können die Metadaten an die Website weiter gegeben werden. Für die Weiterverarbeitung der Breadcrumbs, die Navigation und den Content wurden eigene Komponenten erstellt. Diese erhalten die Variablen als Eigenschaften/Properties/Props zugewiesen. Da Nuxt3 einen automatischen Import von Komponenten hat, müssen diese lediglich im Template gepflegt werden und nicht zusätzlich importiert werden. Dafür wurden die Komponenten im components Ordner gepflegt, damit Nuxt3 diese automatisch importieren kann. Den vollständigen Code der [...slug].vue finden Sie unter \Anhang{[...slug].vue}.
 
+\paragraph{Setup Navigation}
+
+Die Logik der Navigation wurde in eine Nuxt3 Composable ausgelagert. Die Navigation muss mehrere Aufgaben erfüllen. Den gesamten Code des Composables finden Sie unter \Anhang{navigation.ts}.
+
+\begin{itemize}
+\item öffnen/schließen des Slidemenu
+\item anzeigen von allen Seiten
+\item navigieren auf Seiten
+\end{itemize}
+
+Für das öffnen und schließen des Slidemenu wurden im Composable die Funktionen open() und close() erstellt. Der State, ob das Slidemenu geöffnet oder geschlossen ist, wird über die Variable navigationOpened gesteuert. Dafür wird die neue Nuxt3 eigene Funktion useState() genommen. Mit ihr lässt sich sehr einfach der State über die gesamt Anwendung verwalten. Der useState Funktion wird dabei ein Key übergeben, mit dem überall in der Anwendung auf den State zugegriffen werden kann. Zusätzlich kann der Wert des States optional initialisiert werden. Hier wird natürlich der Initialwert auf false gesetzt. Die Navigation soll sich erst öffnen, wenn der Nutzer der Website das möchte.
+Analog wurde jeweils ein State für die gesamte Navigation(fullNavList), die aktuelle im Slidemenu angezeigte Navigation(currentNavList) und dem Parent der aktuell angezeigten Navigation(previousNavItem) erstellt.
+
+\paragraph{Aufteilung Navigation}
+Die Navigation wurde in zwei Teile aufgeteilt, der erste Teil sind die Navigationspunkte, welche in der Navigationsbar der Website angezeigt werden. Sie sind die Seiten, welche im Typo3 die Kategorie "main" zugewiesen bekommen haben. Der zweite Teil ist das Slidemenu, das Slidemenu wird geöffnet, wenn ein Elemet in der Navigationsbar angeklickt wird und es Unterseiten(Children) hat. Im Slidemenu wird die currentNavList dargestellt. Initial sind dies die Unterseiten, des angeklickten Navigationselements. Die Navigationsbar wird in der Komponente TopNavigation.vue dargestellt und das Slidemenu in der Komponente SlideMenu.vue.
+
+\paragraph{TopNavigation.vue}
+
+TopNavigation.vue ist eine sehr einfache Komponente. Sie nutzt das navigation Composable um auf den State fullNavList zuzugreifen. Mit v-for, einer vue/nuxt internen Funktionalität, lässt sich im Template durch die Elemente durchiterieren. Mit @click lassen sich Funktionen aufrufen, wenn ein Element angeklickt wird. In diesem Fall ist es die open() Funktion des composables.
+\begin{lstlisting}[language=json,firstnumber=1]
+<div v-for="navItem in navigation.fullNavList.value" 
+:key="navItem.uid" @click="navigation.open(navItem)">
+	{{navItem.title}}	</div>
+\end{lstlisting}
+Es wurde noch einfaches Styling mit DaisyUI hinzugefügt, dies hat aber keinen Einfluss auf die Logik der Komponente und wird in zukünftigen Projekten wahrscheinlich überschrieben werden. Deswegen wird es hier nicht mit angezeigt.
+
+\paragraph{open()}
+
+Die open() Funktion besteht aus einem if else Statement. Wenn das Navigationselement(navItem), welches als Parameter angegeben wurde, keine Unterseiten hat, dann wird die Seite des navItems aufgerufen. Dafür wird der Nuxt-Router genutzt. Mit ihm kann programmatisch die Route geändert werden. Falls das Navigationselement Unterseiten hat, dann wird die aktuell angezeigt Navigation gleich den Unterseiten gesetzt. Als Parent der Navigation wird das Navigationsitem gesetzt und das Slidemenu, was diese Informationen darstellt, wird geöffnet.
+
+\paragraph{Slidemenu.vue}
+Den kompletten Code des Slidemenu finden Sie im Anhang unter \Anhang{SlideMenu.vue}.
+Das Slidemenu zeigt die aktuelle Navigation an, welche aus Unterseiten eines anderen Navigationselement besteht. Dafür nutzt sie die gleiche Logik wie die Navigationsbar. Es wird genauso durch alle Elemente von currentNavList iteriert, wie es bei bei der Navigationsbar für fullNavList passiert ist. Der Unterschied liegt in der Funktion, welche bei @click hinterlegt wird. Es wird die Funktion navigate() aufgerufen, welche im Navigation Composable hinterlegt ist. Die Funktion navigate() ähnelt der Funktion open() sehr. Beide nehmen ein Navigationselement als Parameter. Beide Funktionen haben die gleichen if else Bedingungen. Der Unterschied liegt in dem Code, welcher nach der jeweiligen Bedingung ausgeführt wird. Wenn das Navigationselement keine Unterseiten hat, dann wird wie bei open() zur Seite navigiert. Zusätzlich wird aber auch das Slidemenu mit der close() Funktion geschlossen. Theoretisch könnte hier auch der State von navigationOpened direkt auf false gesetzt werden. Falls sich die close() Logik aber erweitert, muss dies dann nicht an meheren Orten angepasst werden. Falls das Element Unterseiten hat, wird die aktuelle angezeige Navigation den Unterseiten gleichgesetzt. Ebenfalls wie bei open() Funktion wird auch der Parent der Navigation gleich dem Parameter gesetzt. Es wird aber nicht das Slidemenu geöffnet, da es ja bereits geöffnet ist.
+
 \paragraph{Finale Anwendung}
 Screenshots der finalen Anwendung inklusive der gepflegten Dummy-Inhalte der Typo3 Seite befinden sich im \Anhang{Screenshots}.
 

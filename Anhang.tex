@@ -5,20 +5,6 @@
 
 \tabelleAnhang{ZeitplanungKomplett}
 
-\input{Anhang/AnhangLastenheft.tex}
-\clearpage
-
-\subsection{Use Case-Diagramm}
-\label{app:UseCase}
-Use Case-Diagramme und weitere \acs{UML}-Diagramme kann man auch direkt mit \LaTeX{} zeichnen, siehe \zB \url{http://metauml.sourceforge.net/old/usecase-diagram.html}.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{UseCase.pdf}{0.7}
-\caption{Use Case-Diagramm}
-\end{figure}
-
-\input{Anhang/AnhangPflichtenheft.tex}
-
 \subsection{tt\_content.php}
 \label{tt_content.php}
 
@@ -71,8 +57,6 @@ defined('TYPO3_MODE') || die();
 defined('TYPO3_MODE') || die('Access denied.');
 
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
-
-
 
 call_user_func(
     function () {
@@ -139,6 +123,112 @@ call_user_func(
           </div>
      </div>
 </template>
+\end{lstlisting}
+
+\subsection{navigation.ts}
+\label{navigation.ts}
+
+\begin{lstlisting}[language=json,firstnumber=1]
+export const useNavigation = () => {
+    const fullNavList = useState('fullNavList', () => []);
+    const navigationOpened = useState('navigationOpened', () => false);
+    const currentNavList = useState('currentNavList', () => []);
+    const previousNavItem:{value: navigationItem | Record<string, never>} = useState('previousNavItem');
+    const router = useRouter();
+    
+    const open = (navItem: navigationItem) => {
+        if (!navItem.hasSubpages) {
+            router.push(navItem.link)
+        } else {
+            previousNavItem.value = navItem;
+            currentNavList.value = navItem.children;
+            navigationOpened.value = true;  
+        } 
+    }
+    const close = () => {
+        navigationOpened.value = false;
+    }
+    const navigate = (navItem: navigationItem) => {
+        if (!navItem.hasSubpages) {
+            close();
+            router.push(navItem.link)
+        }
+        else {
+            previousNavItem.value = navItem;
+            currentNavList.value = navItem.children;
+        }
+    }
+    const back = () => {
+        const parent = findParent(fullNavList.value, previousNavItem.value.uid);
+        if (parent && parent.children) {
+            previousNavItem.value = parent;
+            currentNavList.value = parent.children;
+        } else {
+            previousNavItem.value = {};
+            currentNavList.value = fullNavList.value;
+        }
+    }
+    const findParent = (nav: navigationItem[], id: number, potentialParentNav?: navigationItem) => {
+        let parent: navigationItem;
+        for (let index = 0; index < nav.length; index++) {
+            const item = nav[index];
+            if (item.uid === id) {
+                parent = potentialParentNav;
+                break;
+            } 
+            else {
+                if (item.children && item.children.length > 0) {
+                        parent = findParent(item.children, id, item);
+                        if (parent) {
+                            break;
+                        }
+                    }
+                }
+        }
+        return parent;
+    }
+    return {fullNavList, navigationOpened, open, close, currentNavList, previousNavItem, navigate, back};
+}
+\end{lstlisting}
+
+\subsection{SlideMenu.vue}
+\label{SlideMenu.vue}
+
+\begin{lstlisting}[language=json,firstnumber=1]
+<script setup>
+    const {fullNavList, navigationOpened, close, currentNavList, previousNavItem, navigate, back} = useNavigation();
+</script>
+<template>
+    <div class="slidemenu-container" :class="{'active' : navigationOpened}">
+        <div class="flex">
+            <div class="text-xl font-bold cursor-pointer" v-if="fullNavList != currentNavList" @click="back()">back</div>
+            <div class="text-xl font-bold pl-6 grow" v-if="previousNavItem">
+                <NuxtLink :to="previousNavItem.link" @click="close()">{{previousNavItem.title}}</NuxtLink>
+            </div>
+            <div class="text-xl font-bold cursor-pointer" @click="close()">X</div>
+        </div>
+        <hr>
+        <div class="navbar">
+            <div class="btn btn-ghost normal-case text-xl" v-for="navItem in currentNavList" :key="navItem.uid" @click="navigate(navItem)">
+                {{navItem.title}}
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+    .slidemenu-container {
+        position: absolute;
+        height: 100vh;
+        width: 0px;
+        transition: width 0.5s;
+        background: white;
+        overflow-x: hidden;
+        z-index: 100;
+    }
+    .slidemenu-container.active {
+        width: 400px;
+    }
+</style>
 \end{lstlisting}
 
 \subsection{Datenbankmodell}

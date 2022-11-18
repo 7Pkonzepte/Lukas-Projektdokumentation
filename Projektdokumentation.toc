@@ -50,34 +50,38 @@
 \contentsline {paragraph}{\nonumberline Nuxt3 aufsetzen um DaisyUI installieren}{18}{section*.159}%
 \contentsline {paragraph}{\nonumberline Dynamische Seiten}{18}{section*.160}%
 \contentsline {paragraph}{\nonumberline Verarbeitung der Typo3 Daten}{19}{section*.161}%
-\contentsline {paragraph}{\nonumberline Finale Anwendung}{20}{section*.183}%
-\contentsline {subsection}{\numberline {5.5}Implementierung der Geschäftslogik}{20}{subsection.184}%
-\contentsline {paragraph}{\nonumberline Beispiel}{20}{section*.185}%
-\contentsline {section}{\numberline {6}Abnahmephase}{20}{section.186}%
-\contentsline {paragraph}{\nonumberline Beispiel}{21}{section*.187}%
-\contentsline {section}{\numberline {7}Einführungsphase}{21}{section.188}%
-\contentsline {section}{\numberline {8}Dokumentation}{21}{section.189}%
-\contentsline {paragraph}{\nonumberline Beispiel}{21}{section*.190}%
-\contentsline {section}{\numberline {9}Fazit}{21}{section.192}%
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{21}{subsection.193}%
-\contentsline {paragraph}{\nonumberline Beispiel (verkürzt)}{22}{section*.194}%
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{22}{subsection.196}%
-\contentsline {subsection}{\numberline {9.3}Ausblick}{22}{subsection.197}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{23}{section*.198}%
-\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{24}{section*.199}%
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.200}%
-\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.201}%
-\contentsline {subsection}{\numberline {A.2}Lastenheft (Auszug)}{ii}{subsection.202}%
-\contentsline {subsection}{\numberline {A.3}Use Case-Diagramm}{iii}{subsection.221}%
-\contentsline {subsection}{\numberline {A.4}Pflichtenheft (Auszug)}{iii}{subsection.223}%
-\contentsline {subsection}{\numberline {A.5}tt\_content.php}{v}{subsection.237}%
-\contentsline {subsection}{\numberline {A.6}ext\_localconf.php}{vi}{subsection.277}%
-\contentsline {subsection}{\numberline {A.7}[...slug].vue}{vii}{subsection.314}%
-\contentsline {subsection}{\numberline {A.8}Datenbankmodell}{viii}{subsection.347}%
-\contentsline {subsection}{\numberline {A.9}Oberflächenentwürfe}{x}{subsection.349}%
-\contentsline {subsection}{\numberline {A.10}Screenshots der Anwendung}{xii}{subsection.353}%
-\contentsline {subsection}{\numberline {A.11}Entwicklerdokumentation}{xiii}{subsection.356}%
-\contentsline {subsection}{\numberline {A.12}Testfall und sein Aufruf auf der Konsole}{xv}{subsection.357}%
-\contentsline {subsection}{\numberline {A.13}Klasse: ComparedNaturalModuleInformation}{xvi}{subsection.393}%
-\contentsline {subsection}{\numberline {A.14}Klassendiagramm}{xix}{subsection.517}%
-\contentsline {subsection}{\numberline {A.15}Benutzerdokumentation}{xx}{subsection.519}%
+\contentsline {paragraph}{\nonumberline Setup Navigation}{20}{section*.183}%
+\contentsline {paragraph}{\nonumberline Aufteilung Navigation}{20}{section*.184}%
+\contentsline {paragraph}{\nonumberline TopNavigation.vue}{21}{section*.185}%
+\contentsline {paragraph}{\nonumberline open()}{21}{section*.190}%
+\contentsline {paragraph}{\nonumberline Slidemenu.vue}{21}{section*.191}%
+\contentsline {paragraph}{\nonumberline Finale Anwendung}{22}{section*.192}%
+\contentsline {subsection}{\numberline {5.5}Implementierung der Geschäftslogik}{22}{subsection.193}%
+\contentsline {paragraph}{\nonumberline Beispiel}{22}{section*.194}%
+\contentsline {section}{\numberline {6}Abnahmephase}{22}{section.195}%
+\contentsline {paragraph}{\nonumberline Beispiel}{22}{section*.196}%
+\contentsline {section}{\numberline {7}Einführungsphase}{22}{section.197}%
+\contentsline {section}{\numberline {8}Dokumentation}{23}{section.198}%
+\contentsline {paragraph}{\nonumberline Beispiel}{23}{section*.199}%
+\contentsline {section}{\numberline {9}Fazit}{23}{section.201}%
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{23}{subsection.202}%
+\contentsline {paragraph}{\nonumberline Beispiel (verkürzt)}{23}{section*.203}%
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{23}{subsection.205}%
+\contentsline {subsection}{\numberline {9.3}Ausblick}{24}{subsection.206}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{25}{section*.207}%
+\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{26}{section*.208}%
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.209}%
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.210}%
+\contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.211}%
+\contentsline {subsection}{\numberline {A.3}ext\_localconf.php}{iii}{subsection.251}%
+\contentsline {subsection}{\numberline {A.4}[...slug].vue}{iv}{subsection.286}%
+\contentsline {subsection}{\numberline {A.5}navigation.ts}{v}{subsection.319}%
+\contentsline {subsection}{\numberline {A.6}SlideMenu.vue}{vi}{subsection.381}%
+\contentsline {subsection}{\numberline {A.7}Datenbankmodell}{vii}{subsection.417}%
+\contentsline {subsection}{\numberline {A.8}Oberflächenentwürfe}{ix}{subsection.419}%
+\contentsline {subsection}{\numberline {A.9}Screenshots der Anwendung}{xi}{subsection.423}%
+\contentsline {subsection}{\numberline {A.10}Entwicklerdokumentation}{xii}{subsection.426}%
+\contentsline {subsection}{\numberline {A.11}Testfall und sein Aufruf auf der Konsole}{xiv}{subsection.427}%
+\contentsline {subsection}{\numberline {A.12}Klasse: ComparedNaturalModuleInformation}{xv}{subsection.463}%
+\contentsline {subsection}{\numberline {A.13}Klassendiagramm}{xviii}{subsection.587}%
+\contentsline {subsection}{\numberline {A.14}Benutzerdokumentation}{xix}{subsection.589}%
