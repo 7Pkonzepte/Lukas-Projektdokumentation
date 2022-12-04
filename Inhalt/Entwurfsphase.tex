@@ -69,55 +69,7 @@ Die Benutzeroberfläche des Backends/CMS ist größtenteils durch Typo3 vorgegeb
 
 \paragraph{Menüführung}  
 \linebreak
-Die Hauptnavigationspunkte, welche aus dem Typo3 ausgespielt werden, werden oben in der Menüleiste angezeigt. Ihre Kinder werden ebenfalls ausgespielt, aber erst angezeigt, wenn durch die Navigation navigiert wird. Wenn einer der Hauptnavigationspunkte angeklickt wird, wird überprüft, ob dieser Children(Unterseiten) hat oder nicht. Wenn dies nicht der Fall ist, wird direkt die Seite von dem Hauptnavigationspunkt aufgerufen. Wenn dies der Fall ist, wird das Sidemenu aufgerufen. Das Sidemenu enthält sowohl den zuletzt angeklickten Navigationspunkt, als auch alle Children von ihm. Zusätzlich gibt es einen Button, mit welchem zurück navigiert werden kann. Wenn der zuletzt angeklickte Navigationspunkt hier nochmal angeklickt wird, wird dessen Seite aufgerufen. Wenn ein Child angeklickt wird, wird wieder überprüft, ob es Children hat oder nicht. Falls nein, wird die Seite aufgerufen, falls ja wird das Child zum zuletzt angeklickten Navigationspunkt. Eine Darstellung der Menüführung finden sie in Abbildung xyz
-
-\paragraph{Beispiel}
-Beispielentwürfe finden sich im \Anhang{app:Entwuerfe}.
-
-
-\subsection{Datenmodell}
-\label{sec:Datenmodell}
-
-\begin{itemize}
-	\item Entwurf/Beschreibung der Datenstrukturen (\zB \acs{ERM} und/oder Tabellenmodell, \acs{XML}-Schemas) mit kurzer Beschreibung der wichtigsten (!) verwendeten Entitäten.
-\end{itemize}
-
-\paragraph{Beispiel}
-In \Abbildung{ER} wird ein \ac{ERM} dargestellt, welches lediglich Entitäten, Relationen und die dazugehörigen Kardinalitäten enthält. 
-
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{ERDiagramm.pdf}{0.6}
-\caption{Vereinfachtes ER-Modell}
-\label{fig:ER}
-\end{figure} 
-
-
-ERM erstellen
-
-Content:
-
-Navigation:
-
-
-\subsection{Geschäftslogik}
-\label{sec:Geschaeftslogik}
-
-\begin{itemize}
-	\item Modellierung und Beschreibung der wichtigsten (!) Bereiche der Geschäftslogik (\zB mit Kom\-po\-nen\-ten-, Klassen-, Sequenz-, Datenflussdiagramm, Programmablaufplan, Struktogramm, \ac{EPK}).
-	\item Wie wird die erstellte Anwendung in den Arbeitsfluss des Unternehmens integriert?
-\end{itemize}
-
-\paragraph{Beispiel}
-Ein Klassendiagramm, welches die Klassen der Anwendung und deren Beziehungen untereinander darstellt kann im \Anhang{app:Klassendiagramm} eingesehen werden.
-
-\Abbildung{Modulimport} zeigt den grundsätzlichen Programmablauf beim Einlesen eines Moduls als \ac{EPK}.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{modulimport.pdf}{0.9}
-\caption{Prozess des Einlesens eines Moduls}
-\label{fig:Modulimport}
-\end{figure}
+Die Hauptnavigationspunkte, welche aus dem Typo3 ausgespielt werden, werden oben in der Menüleiste angezeigt. Ihre Kinder(Children/Unterseiten) werden ebenfalls ausgespielt, aber erst angezeigt, wenn durch die Navigation navigiert wird. Wenn einer der Hauptnavigationspunkte angeklickt wird, wird überprüft, ob dieser Children(Unterseiten) hat oder nicht. Wenn dies nicht der Fall ist, wird direkt die Seite von dem Hauptnavigationspunkt aufgerufen. Wenn dies der Fall ist, wird das Sidemenu aufgerufen. Das Sidemenu enthält sowohl den zuletzt angeklickten Navigationspunkt, als auch alle Children von ihm. Eine Darstellung der Menüführung finden sie im Beispielentwürfe finden sich im \Anhang{Screenshots des Menüs}. Zusätzlich gibt es einen Button, mit welchem zurück navigiert werden kann. Wenn der zuletzt angeklickte Navigationspunkt hier nochmal angeklickt wird, wird dessen Seite aufgerufen. Wenn ein Child angeklickt wird, wird wieder überprüft, ob es Children hat oder nicht. Falls nein, wird die Seite aufgerufen, falls ja wird das Child zum zuletzt angeklickten Navigationspunkt. 
 
 
 \subsection{Maßnahmen zur Qualitätssicherung}
@@ -131,11 +83,8 @@ Um die SEO von dem Skeleton abschätzen zu können kann Lighthouse von Google ve
 
 Wie gut der Code bezüglich Flexibilität und Leserlichkeit ist, lässt sich am besten durch Feedback von Arbeitskollegen erfassen. Da bereits Projekte mit dem Skeleton in Umsetzung sind und mehrere Arbeitskollegen des Prüflings mit dem Code arbeiten, wurde viel Feedback generiert. Dieses viel größtenteils positiv aus.
 
-\subsection{Pflichtenheft/Datenverarbeitungskonzept}
+\subsection{Pflichtenheft}
 \label{sec:Pflichtenheft}
-\begin{itemize}
-	\item Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
-\end{itemize}
 
-\paragraph{Beispiel}
-Ein Beispiel für das auf dem Lastenheft (siehe Kapitel~\ref{sec:Lastenheft}: \nameref{sec:Lastenheft}) aufbauende Pflichtenheft ist im \Anhang{app:Pflichtenheft} zu finden.
+Ein Pflichten- oder Lastenheft wurde für dieses Projekt nicht erstellt. 
+

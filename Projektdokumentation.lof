@@ -1,11 +1,13 @@
-\babel@toc {nil}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Vereinfachtes ER-Modell}}{14}{figure.68}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Prozess des Einlesens eines Moduls}}{15}{figure.72}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Datenbankmodell}}{viii}{figure.421}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Liste der Module mit Filtermöglichkeiten}}{ix}{figure.423}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Anzeige der Übersichtsseite einzelner Module}}{x}{figure.424}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Anzeige und Filterung der Module nach Tags}}{x}{figure.425}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Ausspielen der Komponenten im Frontend}}{xi}{figure.427}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Pflegen der Komponenten im Backend}}{xi}{figure.428}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Aufruf des Testfalls auf der Konsole}}{xv}{figure.465}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Klassendiagramm}}{xviii}{figure.591}%
+\babel@toc {ngerman}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Datenbankmodell}}{viii}{figure.418}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Start der Menüführung durch klicken auf Test2}}{ix}{figure.420}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Sidemenu öffnet sich. Beim klicken auf Test2 öffnet sich Test2 Seite, beim klick auf Test3 wird die open() Funktion angewandt.}}{ix}{figure.421}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Test3 hat Children, also wird neue Seitennavigation angezeigt.}}{ix}{figure.422}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Liste der Module mit Filtermöglichkeiten}}{x}{figure.424}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Anzeige der Übersichtsseite einzelner Module}}{xi}{figure.425}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Anzeige und Filterung der Module nach Tags}}{xi}{figure.426}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Ausspielen der Komponenten im Frontend}}{xii}{figure.428}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Pflegen der Komponenten im Backend}}{xii}{figure.429}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Aufruf des Testfalls auf der Konsole}}{xvi}{figure.466}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Klassendiagramm}}{xix}{figure.592}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

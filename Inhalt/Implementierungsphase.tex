@@ -154,21 +154,28 @@ Um die Elemente auf einer Seite in Bereiche auszuteilen, wurde ein komplett neue
 Damit das neue Element auch in der Auswahl von Elementen angezeigt wird, muss das Element noch in der ext\_localconf.php Datei im Root Verzeichnes der Extension hinzugefügt werden.\newline \Anhang{ext_localconf.php} \newline Übersetzungen für den Namen und die Beschreibung der Section wurden in einer .xlf Datei gespflegt.
 
 
-\subsection{Implementierung der Benutzeroberfläche}
-\label{sec:ImplementierungBenutzeroberflaeche}
+\subsection{Setup der Implementierung der Benutzeroberfläche}
+\label{sec:Setup der ImplementierungBenutzeroberflaeche}
 
 \begin{itemize}
 	\item Beschreibung der Implementierung der Benutzeroberfläche, falls dies separat zur Implementierung der Geschäftslogik erfolgt (\zB bei \acs{HTML}-Oberflächen und Stylesheets).
 	\item \Ggfs Beschreibung des Corporate Designs und dessen Umsetzung in der Anwendung.
 	\item Screenshots der Anwendung
 \end{itemize}
-\paragraph{Nuxt3 aufsetzen um DaisyUI installieren}
-Um Nuxt3 nutzen zu können, muss eine aktuelle Version von Node.js auf der Betriebssystem installiert werden. Zum installieren von Nuxt3 und DaisyUI wurde der Node Package Manager genutzt.
 
-\paragraph{Dynamische Seiten}
-Alle Seiten der Nuxt3 Anwendungen befinden sich im pages Ordner. Da Nuxt3 nicht weiß, wie der Seitenbaum von Typo3 aussieht und dieser sich ständig ändert, können die einzelnen Seiten nicht per Hand eingepflegt werden. Damit Nuxt3 trotzdem weiß welcher Code bei den unterschiedlichen Seiten ausgeführt werden soll, gibt es eine Catch-all Route. Eine Datei/Seite die den Namen [...slug].vue erhält, fungiert als Catch-all Route. Dies bedeutet, dass alle Seiten die nicht gepflegt sind, durch diese Datei verarbeitet werden. Wenn aber beispielsweise eine Shop-Seite angelegt werde soll, die ihre Daten durch eine E-Commerce Platform bekommt. Dann kann im pages Ordner eine shop.vue Datei hinterlegt werden, welche dann für den Pfad beispielseite.de/shop die Daten darstellt. Analog kann dies für alle möglichen Seiten geschehen.
+\subsubsection{Nuxt3 aufsetzen um DaisyUI installieren}
+\label{sec:Nuxt3 aufsetzen um DaisyUI installieren}
+Um Nuxt 3 nutzen zu können, muss eine aktuelle Version von Node.js auf der Betriebssystem installiert werden. Zum installieren von Nuxt 3 und DaisyUI wurde der Node Package Manager genutzt. Um das neue Nuxt 3 Projekt aufzusetzen, wurde der Befehl npm nuxi init bal-skeleton ausgeführt. Dies erstellt ein neues Nuxt 3 Projekt mit dem Namen bal-skeleton in dem Verzeichnis, indem es ausgeführt wurde. Also Software für version-control wurde Github genutzt. Das Nuxt 3 Projekt kann nun, im entsprechenden Verzeichnis, durch den Befehl npm run dev gestartet werden. Im Browser wird nun auf localhost:3000 die Website dargestellt. Änderungen am Code werden direkt angewandt und im Browser angezeigt.
 
-\paragraph{Verarbeitung der Typo3 Daten}
+\subsection{Navigation der Implementierung der Benutzeroberfläche}
+\label{sec:Navigation der der ImplementierungBenutzeroberflaeche}
+
+\subsubsection{Dynamische Seiten}
+\label{sec:Dynamische Seiten}
+Websiten haben normalerweise nicht nur eine Startseite, sondern sie haben meisten auch mehrere Unterseiten. Damit Nuxt 3 weiß, welche Dateien als Seiten fungieren werden diese Dateien in ein bestimmtes Verzeichnis gelegt. Alle Seiten der Nuxt 3 Anwendungen befinden sich im pages Verzeichnis. Da Nuxt 3 und wir als Programmierer nicht wissen, wie der Seitenbaum von Typo3 aussieht und dieser sich ständig ändert, können die einzelnen Seiten nicht per Hand eingepflegt werden. Damit Nuxt3 trotzdem weiß welcher Code bei den unterschiedlichen Seiten ausgeführt werden soll, gibt es eine Catch-all Route. Eine Datei/Seite die den Namen [...slug].vue erhält, fungiert als Catch-all Route. Dies bedeutet, dass alle Seiten die nicht gepflegt sind, durch diese Datei verarbeitet werden. Wenn aber beispielsweise eine Shop-Seite angelegt werde soll, die ihre Daten durch eine E-Commerce Platform und nicht Typo3 bekommt. Dann kann im pages Ordner eine shop.vue Datei hinterlegt werden, welche dann für den Pfad /shop die Daten darstellt. Analog kann dies für alle möglichen Seiten geschehen. Das Skeleton bearbeitet also standardmäßig jeden Seitenaufruf gleich.
+
+\subsubsection{Verarbeitung der Typo3 Daten}
+\label{sec:Verarbeitung der Typo3 Daten}
 
 In der nuxt.config.ts Datei können generelle Konfigurationen am Nuxt3 vorgenommen werden. In ihr wurde die URL des Typo3 gespeichert. Dies hat den Vorteil, dass die URL in der Anwendung als Variable genutzt werden kann. Das heißt, dass bei späteren Entwicklungen lediglich die Variable einen anderen Wert bekommen muss und Nuxt automatisch alle Daten von einem anderen Typo3 bezieht.
 
@@ -182,7 +189,7 @@ export default defineNuxtConfig({
 })
 \end{lstlisting}
 
-Die Variable wird darauf hin in der [...slug].vue Datei genutzt um die Daten vom Typo3 zu laden. Dies geschieht im <script setup> Tag. Nuxt3 Dateien können sowohl einen Script Tag haben, welcher Clientseitig ausgeführt wird, als auch ein Script Tag, welcher Serverseitig ausgeführt wird(hat den Zusatz setup). Da die ladezeit minimal gehalten werden soll, werden die Typo3 Daten hier Serverseitig geladen. Zum Laden der Daten wird die Nuxt3 eigene useAsyncData() Funktion genutzt. Mit ihr können Daten asynchron geladen werden. Zusätzlich hat sie viele Optionen um die Anfrage anzupassen. Eine der Optionen ist es den Cache auszuschalten. Für Entwicklungszwecke wird der Cache hier noch ausgeschaltet. Damit Änderungen im Typo3 direkt sichtbar werden. Wenn das Projekt in Production geht, sollte die Zeile {initialCache: false} entfernt werden. Dadurch Speichert Nuxt3 die Daten im Cache und die Seite wird schnell geladen. Je nach Website kann programmiert werden, dass sich der Cache häufiger oder weniger häufiger leert.
+Die Variable wird darauf hin in der [...slug].vue Datei genutzt um die Daten vom Typo3 zu laden. Dies geschieht im <script setup> Tag. Nuxt 3 Dateien können sowohl einen Script Tag haben, welcher Clientseitig ausgeführt wird, als auch ein Script Tag, welcher Serverseitig ausgeführt wird(hat den Zusatz setup). Da die Ladezeit minimal gehalten werden soll, werden die Typo3 Daten hier Serverseitig geladen. Zum Laden der Daten wird die Nuxt 3 eigene useAsyncData() Funktion genutzt. Mit ihr können Daten asynchron geladen werden. Zusätzlich hat sie viele Optionen um die Anfrage anzupassen. Eine der Optionen ist es den Cache auszuschalten. Für Entwicklungszwecke wird der Cache hier noch ausgeschaltet. Damit Änderungen im Typo3 direkt sichtbar werden. Wenn das Projekt in Produktion geht, sollte die Zeile {initialCache: false} entfernt werden. Dadurch Speichert Nuxt 3 die Daten im Cache und die Seite wird schnell geladen. Je nach Website kann programmiert werden, dass sich der Cache häufiger oder weniger häufiger leert.
 
 \begin{lstlisting}[language=json,firstnumber=1]
   const runtimeConfig = useRuntimeConfig()
@@ -194,7 +201,8 @@ Die Variable wird darauf hin in der [...slug].vue Datei genutzt um die Daten vom
   )
 \end{lstlisting}
 
-Im route Objekt ist der Pfad der aktuellen Website gespeichert. route.fullPath würde bei der Seite beispielseite.de/beispiel1 dem Wert beispiel1 entsprechen.
+Im route Objekt ist der Pfad der aktuellen Website gespeichert. route.fullPath würde bei der Seite beispielseite.de/beispie1 dem Wert beispie1 entsprechen. Danach geht eine Anfrage an das Typo3 auf dem Pfad /beispiel. In diesem Fall wäre das http://localhost/beispiel. Das bedeutet, dass bei jedem Seitenaufruf, der Nuxt 3-Client das Typo3 anspricht. Wenn das Typo3 eine Seite unter dem Pfad hat, wird es die dementsprechenden Daten ausspielen. Normalerweise sollte dies der Fall sein, da die Elemente aus der Navigation alles Seiten aus dem Typo3 sind. Falls eine Seite angesteuert wird, die nicht im Typo3 existiert, wirft dieses einen 404 Fehler zurück. Das wurde hier in dem Projekt nicht beachtet. Sollte aber in zukünftigen Versionen des Projekts implementiert werden.
+
 Die Daten aus dem Typo3(hier das data Objekt) wurden danach weiter verarbeitet. Der erste Schritt der Datenverarbeitung war es die Daten in Kategorien zu zerlegen. Dafür wurden vier Kategorien/Variablen angelegt. Die Variable breadcrumbs bekam die Daten bezüglich der Breadcrumbs der Seite. Die Variable Content bekam alle Daten bezüglich der Inhaltselemente auf der bestimmten Seite. Die Variable mainNavigation bekam alle Daten der Hauptnavigation. Als letztes bekam die Variable metaData alle Metadaten der Website. Die Breadcrumbs wurden bereits automatisch durch die Headless Extension generiert und sind im Datenobjekt vorhanden. Das gleiche gilt für die Metadaten und dem Großteil der Inhaltselemente. Die Navigationsdaten finden sich in der Eigenschaft main, welche zum Objekt navigation gehört, welches wiederum zum Objekt page gehört. Diese Logik wurde in \ref{sec:Ausspielen der Typo3 Daten} angelegt.
 
 \begin{lstlisting}[language=json,firstnumber=1]
@@ -206,7 +214,8 @@ Die Daten aus dem Typo3(hier das data Objekt) wurden danach weiter verarbeitet. 
 
 Mit der Nuxt3 Funktion useHead() können die Metadaten an die Website weiter gegeben werden. Für die Weiterverarbeitung der Breadcrumbs, die Navigation und den Content wurden eigene Komponenten erstellt. Diese erhalten die Variablen als Eigenschaften/Properties/Props zugewiesen. Da Nuxt3 einen automatischen Import von Komponenten hat, müssen diese lediglich im Template gepflegt werden und nicht zusätzlich importiert werden. Dafür wurden die Komponenten im components Ordner gepflegt, damit Nuxt3 diese automatisch importieren kann. Den vollständigen Code der [...slug].vue finden Sie unter \Anhang{[...slug].vue}.
 
-\paragraph{Setup Navigation}
+\subsubsection{Setup Navigation}
+\label{sec:Setup Navigation}
 
 Die Logik der Navigation wurde in eine Nuxt3 Composable ausgelagert. Die Navigation muss mehrere Aufgaben erfüllen. Den gesamten Code des Composables finden Sie unter \Anhang{navigation.ts}.
 
@@ -219,10 +228,13 @@ Die Logik der Navigation wurde in eine Nuxt3 Composable ausgelagert. Die Navigat
 Für das öffnen und schließen des Slidemenu wurden im Composable die Funktionen open() und close() erstellt. Der State, ob das Slidemenu geöffnet oder geschlossen ist, wird über die Variable navigationOpened gesteuert. Dafür wird die neue Nuxt3 eigene Funktion useState() genommen. Mit ihr lässt sich sehr einfach der State über die gesamt Anwendung verwalten. Der useState Funktion wird dabei ein Key übergeben, mit dem überall in der Anwendung auf den State zugegriffen werden kann. Zusätzlich kann der Wert des States optional initialisiert werden. Hier wird natürlich der Initialwert auf false gesetzt. Die Navigation soll sich erst öffnen, wenn der Nutzer der Website das möchte.
 Analog wurde jeweils ein State für die gesamte Navigation(fullNavList), die aktuelle im Slidemenu angezeigte Navigation(currentNavList) und dem Parent der aktuell angezeigten Navigation(previousNavItem) erstellt.
 
-\paragraph{Aufteilung Navigation}
-Die Navigation wurde in zwei Teile aufgeteilt, der erste Teil sind die Navigationspunkte, welche in der Navigationsbar der Website angezeigt werden. Sie sind die Seiten, welche im Typo3 die Kategorie "main" zugewiesen bekommen haben. Der zweite Teil ist das Slidemenu, das Slidemenu wird geöffnet, wenn ein Elemet in der Navigationsbar angeklickt wird und es Unterseiten(Children) hat. Im Slidemenu wird die currentNavList dargestellt. Initial sind dies die Unterseiten, des angeklickten Navigationselements. Die Navigationsbar wird in der Komponente TopNavigation.vue dargestellt und das Slidemenu in der Komponente SlideMenu.vue.
+\subsubsection{Aufteilung Navigation}
+\label{sec:Aufteilung Navigation}
 
-\paragraph{TopNavigation.vue}
+Die Navigation wurde in zwei Teile aufgeteilt, der erste Teil sind die Navigationspunkte, welche in der Navigationsbar der Website angezeigt werden. Sie sind die Seiten, welche im Typo3 die Kategorie 'main' zugewiesen bekommen haben. Der zweite Teil ist das Slidemenu. Das Slidemenu wird geöffnet, wenn ein Element in der Navigationsbar angeklickt wird und es Unterseiten(Children) hat. Im Slidemenu wird die currentNavList dargestellt. Initial sind dies die Unterseiten, des angeklickten Navigationselements. Die Navigationsbar wird in der Komponente TopNavigation.vue dargestellt und das Slidemenu in der Komponente SlideMenu.vue.
+
+\subsubsection{TopNavigation.vue}
+\label{sec:TopNavigation.vue}
 
 TopNavigation.vue ist eine sehr einfache Komponente. Sie nutzt das navigation Composable um auf den State fullNavList zuzugreifen. Mit v-for, einer vue/nuxt internen Funktionalität, lässt sich im Template durch die Elemente durchiterieren. Mit @click lassen sich Funktionen aufrufen, wenn ein Element angeklickt wird. In diesem Fall ist es die open() Funktion des composables.
 \begin{lstlisting}[language=json,firstnumber=1]
@@ -232,27 +244,26 @@ TopNavigation.vue ist eine sehr einfache Komponente. Sie nutzt das navigation Co
 \end{lstlisting}
 Es wurde noch einfaches Styling mit DaisyUI hinzugefügt, dies hat aber keinen Einfluss auf die Logik der Komponente und wird in zukünftigen Projekten wahrscheinlich überschrieben werden. Deswegen wird es hier nicht mit angezeigt.
 
-\paragraph{open()}
+\subsubsection{open() Funktion}
+\label{sec:open() Funktion}
 
 Die open() Funktion besteht aus einem if else Statement. Den Programmcode finden sie im Navigation Composable \Anhang{navigation.ts} (const open = ...). Wenn das Navigationselement(navItem), welches als Parameter angegeben wurde, keine Unterseiten hat, dann wird die Seite des navItems aufgerufen. Dafür wird der Nuxt-Router genutzt. Mit ihm kann programmatisch die Route geändert werden. Falls das Navigationselement Unterseiten hat, dann wird die aktuell angezeigt Navigation gleich den Unterseiten gesetzt. Als Parent der Navigation wird das Navigationsitem gesetzt und das Slidemenu, was diese Informationen darstellt, wird geöffnet.
 
-\paragraph{Slidemenu.vue}
+\subsubsection{Slidemenu.vue}
+\label{sec:Slidemenu.vue}
+
 Den kompletten Code des Slidemenu finden Sie im Anhang unter \Anhang{SlideMenu.vue}.
-Das Slidemenu zeigt die aktuelle Navigation an, welche aus Unterseiten eines anderen Navigationselement besteht. Dafür nutzt sie die gleiche Logik wie die Navigationsbar. Es wird genauso durch alle Elemente von currentNavList iteriert, wie es bei bei der Navigationsbar für fullNavList passiert ist. Der Unterschied liegt in der Funktion, welche bei @click hinterlegt wird. Es wird die Funktion navigate() aufgerufen, welche im Navigation Composable hinterlegt ist. Die Funktion navigate() ähnelt der Funktion open() sehr. Beide nehmen ein Navigationselement als Parameter. Beide Funktionen haben die gleichen if else Bedingungen. Der Unterschied liegt in dem Code, welcher nach der jeweiligen Bedingung ausgeführt wird. Wenn das Navigationselement keine Unterseiten hat, dann wird wie bei open() zur Seite navigiert. Zusätzlich wird aber auch das Slidemenu mit der close() Funktion geschlossen. Theoretisch könnte hier auch der State von navigationOpened direkt auf false gesetzt werden. Falls sich die close() Logik aber erweitert, muss dies dann nicht an meheren Orten angepasst werden. Falls das Element Unterseiten hat, wird die aktuelle angezeige Navigation den Unterseiten gleichgesetzt. Ebenfalls wie bei open() Funktion wird auch der Parent der Navigation gleich dem Parameter gesetzt. Es wird aber nicht das Slidemenu geöffnet, da es ja bereits geöffnet ist.
+Das Slidemenu zeigt die aktuelle Navigation an, welche aus Unterseiten eines anderen Navigationselement besteht. Dafür nutzt sie die gleiche Logik wie die Navigationsbar. Es wird genauso durch alle Elemente von currentNavList iteriert, wie es bei bei der Navigationsbar für fullNavList passiert ist. Der Unterschied liegt in der Funktion, welche bei @click hinterlegt wird. Es wird die Funktion navigate() aufgerufen, welche im Navigation Composable hinterlegt ist. Die Funktion navigate() ähnelt der Funktion open() sehr. Beide nehmen ein Navigationselement als Parameter. Beide Funktionen haben die gleichen if else Bedingungen. Der Unterschied liegt in dem Code, welcher nach der jeweiligen Bedingung ausgeführt wird. Wenn das Navigationselement keine Unterseiten hat, dann wird wie bei open() zur Seite navigiert. Zusätzlich wird aber auch das Slidemenu mit der close() Funktion geschlossen. Theoretisch könnte hier auch der State von navigationOpened direkt auf false gesetzt werden. Falls sich die close() Logik aber erweitert, muss dies dann nicht an meheren Orten angepasst werden. Falls das Element Unterseiten hat, wird die aktuelle angezeige Navigation den Unterseiten gleichgesetzt. 
 
-\paragraph{Finale Anwendung}
+\subsection{Implementierung des Contents der Benutzeroberfläche}
+\label{sec:Implementierung des Contents der ImplementierungBenutzeroberflaeche}
+
+\subsubsection{TypoView.vue}
+\label{sec:TypoView.vue}
+
+In die TypoView.vue Datei werden die Contentdaten der Typo3-Seite reingeladen. Sie bekommt diese als Property/Eigenschaft in der [...slug].vue Datei.
+
+\subsection{finale Anwendung}
+\label{sec:finale Anwendung}
+
 Screenshots der finalen Anwendung inklusive der gepflegten Dummy-Inhalte der Typo3 Seite befinden sich im \Anhang{Screenshots}.
-
-
-\subsection{Implementierung der Geschäftslogik}
-\label{sec:ImplementierungGeschaeftslogik}
-
-\begin{itemize}
-	\item Beschreibung des Vorgehens bei der Umsetzung/Programmierung der entworfenen Anwendung.
-	\item \Ggfs interessante Funktionen/Algorithmen im Detail vorstellen, verwendete Entwurfsmuster zeigen.
-	\item Quelltextbeispiele zeigen.
-	\item Hinweis: Wie in Kapitel~\ref{sec:Einleitung}: \nameref{sec:Einleitung} zitiert, wird nicht ein lauffähiges Programm bewertet, sondern die Projektdurchführung. Dennoch würde ich immer Quelltextausschnitte zeigen, da sonst Zweifel an der tatsächlichen Leistung des Prüflings aufkommen können.
-\end{itemize}
-
-\paragraph{Beispiel}
-Die Klasse \texttt{Com\-par\-ed\-Na\-tu\-ral\-Mo\-dule\-In\-for\-ma\-tion} findet sich im \Anhang{app:CNMI}.  

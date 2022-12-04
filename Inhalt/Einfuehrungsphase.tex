@@ -2,8 +2,10 @@
 \section{Einführungsphase}
 \label{sec:Einfuehrungsphase}
 
-\begin{itemize}
-	\item Welche Schritte waren zum Deployment der Anwendung nötig und wie wurden sie durchgeführt (automatisiert/manuell)?
-	\item Wurden \ggfs Altdaten migriert und wenn ja, wie?
-	\item Wurden Benutzerschulungen durchgeführt und wenn ja, Wie wurden sie vorbereitet?
-\end{itemize}
+Für das Nutzen des Projekts benötigen die Arbeitskollegen vom Prüfungsbewerber zwei Sachen. Als erstes brauchen sie alle Voraussetzungen um Nuxt 3 auf ihrem System laufen zu lassen. Diese finden sich in der Nuxt 3 Dokumentation. Danach kann das repository von Github geklont werden und das Skeleton Clientseitig genutzt werden.
+
+Als zweites wird ein Typo3 gebraucht. Dies kann ein bestehendes Typo3 auf einem Server sein, welches auf headless eingestellt wurde. Dies kann aber auch ein Typo3 sein, welches lokal in einem Docker-Container läuft.
+
+Um das finale Projekt zu deployen, welches aus dem Skeleton entwickelt wurde, bedarf es nur zwei Dinge. Der Nuxt 3 Code muss den Build-Prozess durchlaufen. Dafür wird im entsprechenden Verzeichnis einfach der Befehl nuxt build im Terminal ausgeführt. Dadurch entsteht ein output Verzeichnis. Im output Verzeichnis wird durch den Befehl node .output/server/index.mjs der Nuxt 3 Server gestartet. 
+
+Typo3 kann auf einem Server installiert werden, welcher PHP nutzen kann. Genauere Anforderungen finden sich in der Typo3 Dokumentation. Oder es kann ebenfalls in einem Docker-Container laufen. Entsprechende Images finden sich im Internet. Wenn Änderungen am Typo3 werden im Normalfall durch das installieren von Extensions durchgeführt, was im Backend vom Typo3 geschieht. Dadurch muss ein einmalig laufendes Typo3 nicht komplett neu gestartet werde, wenn Anpassungen gemacht werden. Wenn Anpassungen am Nuxt 3 erfolgen, muss dieses neu gebaut werden(Build-Prozess) und der neu gebaute Code
