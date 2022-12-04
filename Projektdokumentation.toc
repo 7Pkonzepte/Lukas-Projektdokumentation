@@ -12,77 +12,79 @@
 \contentsline {section}{\numberline {2}Projektplanung}{2}{section.29}%
 \contentsline {subsection}{\numberline {2.1}Projektphasen}{2}{subsection.30}%
 \contentsline {subsection}{\numberline {2.2}Abweichungen vom Projektantrag}{6}{subsection.33}%
-\contentsline {subsection}{\numberline {2.3}Ressourcenplanung}{6}{subsection.34}%
-\contentsline {subsection}{\numberline {2.4}Entwicklungsprozess}{6}{subsection.35}%
-\contentsline {section}{\numberline {3}Analysephase}{6}{section.36}%
-\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{6}{subsection.37}%
-\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{7}{subsection.38}%
-\contentsline {subsubsection}{\numberline {3.2.1}Projektkosten}{7}{subsubsection.40}%
-\contentsline {subsubsection}{\numberline {3.2.2}Amortisationsdauer}{7}{subsubsection.44}%
-\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{8}{subsection.45}%
-\contentsline {subsection}{\numberline {3.4}Anwendungsfälle}{9}{subsection.46}%
-\contentsline {subsection}{\numberline {3.5}Qualitätsanforderungen}{9}{subsection.47}%
-\contentsline {subsection}{\numberline {3.6}Nuxt 2 vs Nuxt 3}{9}{subsection.48}%
-\contentsline {subsubsection}{\numberline {3.6.1}Warum wurde sich trotzdem für Nuxt 3 entschieden?}{10}{subsubsection.49}%
-\contentsline {section}{\numberline {4}Entwurfsphase}{10}{section.50}%
-\contentsline {subsection}{\numberline {4.1}Zielplattform}{10}{subsection.51}%
-\contentsline {subsection}{\numberline {4.2}Architekturdesign}{12}{subsection.53}%
-\contentsline {subsection}{\numberline {4.3}Entwurf der Benutzeroberfläche}{13}{subsection.58}%
-\contentsline {paragraph}{\nonumberline Frontend}{13}{section*.59}%
-\contentsline {paragraph}{\nonumberline Backend}{14}{section*.60}%
-\contentsline {paragraph}{\nonumberline Menüführung}{14}{section*.61}%
-\contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.62}%
-\contentsline {subsection}{\numberline {4.4}Datenmodell}{14}{subsection.63}%
+\contentsline {subsubsection}{\numberline {2.2.1}Bearbeitungszeitraum}{6}{subsubsection.34}%
+\contentsline {subsubsection}{\numberline {2.2.2}Zeitplanung}{6}{subsubsection.35}%
+\contentsline {subsection}{\numberline {2.3}Ressourcenplanung}{6}{subsection.36}%
+\contentsline {subsection}{\numberline {2.4}Entwicklungsprozess}{6}{subsection.37}%
+\contentsline {section}{\numberline {3}Analysephase}{7}{section.38}%
+\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{7}{subsection.39}%
+\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{7}{subsection.40}%
+\contentsline {subsubsection}{\numberline {3.2.1}Projektkosten}{7}{subsubsection.42}%
+\contentsline {subsubsection}{\numberline {3.2.2}Amortisationsdauer}{8}{subsubsection.46}%
+\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{8}{subsection.47}%
+\contentsline {subsection}{\numberline {3.4}Anwendungsfälle}{9}{subsection.48}%
+\contentsline {subsection}{\numberline {3.5}Qualitätsanforderungen}{9}{subsection.49}%
+\contentsline {subsection}{\numberline {3.6}Nuxt 2 vs Nuxt 3}{10}{subsection.50}%
+\contentsline {subsubsection}{\numberline {3.6.1}Warum wurde sich trotzdem für Nuxt 3 entschieden?}{10}{subsubsection.51}%
+\contentsline {section}{\numberline {4}Entwurfsphase}{11}{section.52}%
+\contentsline {subsection}{\numberline {4.1}Zielplattform}{11}{subsection.53}%
+\contentsline {subsection}{\numberline {4.2}Architekturdesign}{12}{subsection.55}%
+\contentsline {subsection}{\numberline {4.3}Entwurf der Benutzeroberfläche}{13}{subsection.60}%
+\contentsline {paragraph}{\nonumberline Frontend}{13}{section*.61}%
+\contentsline {paragraph}{\nonumberline Backend}{14}{section*.62}%
+\contentsline {paragraph}{\nonumberline Menüführung}{14}{section*.63}%
 \contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.64}%
-\contentsline {subsection}{\numberline {4.5}Geschäftslogik}{15}{subsection.67}%
-\contentsline {paragraph}{\nonumberline Beispiel}{15}{section*.69}%
-\contentsline {subsection}{\numberline {4.6}Maßnahmen zur Qualitätssicherung}{15}{subsection.71}%
-\contentsline {subsection}{\numberline {4.7}Pflichtenheft/Datenverarbeitungskonzept}{16}{subsection.72}%
-\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.73}%
-\contentsline {section}{\numberline {5}Implementierungsphase}{16}{section.74}%
-\contentsline {subsection}{\numberline {5.1}Docker-Setup}{16}{subsection.75}%
-\contentsline {subsection}{\numberline {5.2}Ausspielen der Typo3 Daten}{16}{subsection.76}%
-\contentsline {subsection}{\numberline {5.3}Skeleton-Extension / Layout}{18}{subsection.115}%
-\contentsline {paragraph}{\nonumberline Datenmodell:}{18}{section*.116}%
-\contentsline {paragraph}{\nonumberline Backend:}{18}{section*.123}%
-\contentsline {paragraph}{\nonumberline Ausspielen ans Frontend:}{19}{section*.147}%
-\contentsline {paragraph}{\nonumberline Sections:}{20}{section*.158}%
-\contentsline {subsection}{\numberline {5.4}Implementierung der Benutzeroberfläche}{20}{subsection.159}%
-\contentsline {paragraph}{\nonumberline Nuxt3 aufsetzen um DaisyUI installieren}{20}{section*.160}%
-\contentsline {paragraph}{\nonumberline Dynamische Seiten}{20}{section*.161}%
-\contentsline {paragraph}{\nonumberline Verarbeitung der Typo3 Daten}{21}{section*.162}%
-\contentsline {paragraph}{\nonumberline Setup Navigation}{22}{section*.184}%
-\contentsline {paragraph}{\nonumberline Aufteilung Navigation}{22}{section*.185}%
-\contentsline {paragraph}{\nonumberline TopNavigation.vue}{23}{section*.186}%
-\contentsline {paragraph}{\nonumberline open()}{23}{section*.191}%
-\contentsline {paragraph}{\nonumberline Slidemenu.vue}{23}{section*.192}%
-\contentsline {paragraph}{\nonumberline Finale Anwendung}{24}{section*.193}%
-\contentsline {subsection}{\numberline {5.5}Implementierung der Geschäftslogik}{24}{subsection.194}%
-\contentsline {paragraph}{\nonumberline Beispiel}{24}{section*.195}%
-\contentsline {section}{\numberline {6}Abnahmephase}{24}{section.196}%
+\contentsline {subsection}{\numberline {4.4}Datenmodell}{14}{subsection.65}%
+\contentsline {paragraph}{\nonumberline Beispiel}{14}{section*.66}%
+\contentsline {subsection}{\numberline {4.5}Geschäftslogik}{15}{subsection.69}%
+\contentsline {paragraph}{\nonumberline Beispiel}{15}{section*.71}%
+\contentsline {subsection}{\numberline {4.6}Maßnahmen zur Qualitätssicherung}{15}{subsection.73}%
+\contentsline {subsection}{\numberline {4.7}Pflichtenheft/Datenverarbeitungskonzept}{16}{subsection.74}%
+\contentsline {paragraph}{\nonumberline Beispiel}{16}{section*.75}%
+\contentsline {section}{\numberline {5}Implementierungsphase}{16}{section.76}%
+\contentsline {subsection}{\numberline {5.1}Docker-Setup}{16}{subsection.77}%
+\contentsline {subsection}{\numberline {5.2}Ausspielen der Typo3 Daten}{16}{subsection.78}%
+\contentsline {subsection}{\numberline {5.3}Skeleton-Extension / Layout}{18}{subsection.117}%
+\contentsline {paragraph}{\nonumberline Datenmodell:}{18}{section*.118}%
+\contentsline {paragraph}{\nonumberline Backend:}{18}{section*.125}%
+\contentsline {paragraph}{\nonumberline Ausspielen ans Frontend:}{19}{section*.149}%
+\contentsline {paragraph}{\nonumberline Sections:}{20}{section*.160}%
+\contentsline {subsection}{\numberline {5.4}Implementierung der Benutzeroberfläche}{20}{subsection.161}%
+\contentsline {paragraph}{\nonumberline Nuxt3 aufsetzen um DaisyUI installieren}{20}{section*.162}%
+\contentsline {paragraph}{\nonumberline Dynamische Seiten}{20}{section*.163}%
+\contentsline {paragraph}{\nonumberline Verarbeitung der Typo3 Daten}{21}{section*.164}%
+\contentsline {paragraph}{\nonumberline Setup Navigation}{22}{section*.186}%
+\contentsline {paragraph}{\nonumberline Aufteilung Navigation}{22}{section*.187}%
+\contentsline {paragraph}{\nonumberline TopNavigation.vue}{23}{section*.188}%
+\contentsline {paragraph}{\nonumberline open()}{23}{section*.193}%
+\contentsline {paragraph}{\nonumberline Slidemenu.vue}{23}{section*.194}%
+\contentsline {paragraph}{\nonumberline Finale Anwendung}{24}{section*.195}%
+\contentsline {subsection}{\numberline {5.5}Implementierung der Geschäftslogik}{24}{subsection.196}%
 \contentsline {paragraph}{\nonumberline Beispiel}{24}{section*.197}%
-\contentsline {section}{\numberline {7}Einführungsphase}{24}{section.198}%
-\contentsline {section}{\numberline {8}Dokumentation}{25}{section.199}%
-\contentsline {paragraph}{\nonumberline Beispiel}{25}{section*.200}%
-\contentsline {section}{\numberline {9}Fazit}{25}{section.202}%
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{25}{subsection.203}%
-\contentsline {paragraph}{\nonumberline Beispiel (verkürzt)}{25}{section*.204}%
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{25}{subsection.206}%
-\contentsline {subsection}{\numberline {9.3}Ausblick}{26}{subsection.207}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{27}{section*.208}%
-\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{28}{section*.209}%
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.210}%
-\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.211}%
-\contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.212}%
-\contentsline {subsection}{\numberline {A.3}ext\_localconf.php}{iii}{subsection.252}%
-\contentsline {subsection}{\numberline {A.4}[...slug].vue}{iv}{subsection.287}%
-\contentsline {subsection}{\numberline {A.5}navigation.ts}{v}{subsection.320}%
-\contentsline {subsection}{\numberline {A.6}SlideMenu.vue}{vi}{subsection.382}%
-\contentsline {subsection}{\numberline {A.7}Datenbankmodell}{vii}{subsection.418}%
-\contentsline {subsection}{\numberline {A.8}Oberflächenentwürfe}{ix}{subsection.420}%
-\contentsline {subsection}{\numberline {A.9}Screenshots der Anwendung}{xi}{subsection.424}%
-\contentsline {subsection}{\numberline {A.10}Entwicklerdokumentation}{xii}{subsection.427}%
-\contentsline {subsection}{\numberline {A.11}Testfall und sein Aufruf auf der Konsole}{xiv}{subsection.428}%
-\contentsline {subsection}{\numberline {A.12}Klasse: ComparedNaturalModuleInformation}{xv}{subsection.464}%
-\contentsline {subsection}{\numberline {A.13}Klassendiagramm}{xviii}{subsection.588}%
-\contentsline {subsection}{\numberline {A.14}Benutzerdokumentation}{xix}{subsection.590}%
+\contentsline {section}{\numberline {6}Abnahmephase}{24}{section.198}%
+\contentsline {paragraph}{\nonumberline Beispiel}{24}{section*.199}%
+\contentsline {section}{\numberline {7}Einführungsphase}{24}{section.200}%
+\contentsline {section}{\numberline {8}Dokumentation}{25}{section.201}%
+\contentsline {paragraph}{\nonumberline Beispiel}{25}{section*.202}%
+\contentsline {section}{\numberline {9}Fazit}{25}{section.204}%
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{25}{subsection.205}%
+\contentsline {paragraph}{\nonumberline Beispiel (verkürzt)}{25}{section*.206}%
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{25}{subsection.208}%
+\contentsline {subsection}{\numberline {9.3}Ausblick}{26}{subsection.209}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{27}{section*.210}%
+\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{28}{section*.211}%
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.212}%
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.213}%
+\contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.214}%
+\contentsline {subsection}{\numberline {A.3}ext\_localconf.php}{iii}{subsection.254}%
+\contentsline {subsection}{\numberline {A.4}[...slug].vue}{iv}{subsection.289}%
+\contentsline {subsection}{\numberline {A.5}navigation.ts}{v}{subsection.322}%
+\contentsline {subsection}{\numberline {A.6}SlideMenu.vue}{vi}{subsection.384}%
+\contentsline {subsection}{\numberline {A.7}Datenbankmodell}{vii}{subsection.420}%
+\contentsline {subsection}{\numberline {A.8}Oberflächenentwürfe}{ix}{subsection.422}%
+\contentsline {subsection}{\numberline {A.9}Screenshots der Anwendung}{xi}{subsection.426}%
+\contentsline {subsection}{\numberline {A.10}Entwicklerdokumentation}{xii}{subsection.429}%
+\contentsline {subsection}{\numberline {A.11}Testfall und sein Aufruf auf der Konsole}{xiv}{subsection.430}%
+\contentsline {subsection}{\numberline {A.12}Klasse: ComparedNaturalModuleInformation}{xv}{subsection.466}%
+\contentsline {subsection}{\numberline {A.13}Klassendiagramm}{xviii}{subsection.590}%
+\contentsline {subsection}{\numberline {A.14}Benutzerdokumentation}{xix}{subsection.592}%
