@@ -46,12 +46,25 @@ Bei Einsparungen von ca. \eur{900} pro zukünftigen Projekt und Projektkosten vo
 
 \subsection{Nutzwertanalyse}
 \label{sec:Nutzwertanalyse}
+Da es noch kein Skeleton gab, kann ein Vorher-/Nacher-Vergleich zwischen einem alten Skeleton und dem neuen nicht geschehen. Es kann jedoch verglichen werden, ob es vom Nutzen ist ein Skeleton zu haben oder nicht. Dafür gibt es zwei Alternativen.
 \begin{itemize}
-	\item Darstellung des nicht-monetären Nutzens (\zB Vorher-/Nachher-Vergleich anhand eines Wirtschaftlichkeitskoeffizienten). 
+	\item Jedes Projekt schreibt den gesamten Code neu. Es wird mit einem leeren Typo3 und Nuxt 3 gestartet
+	\item Es werden wie vorher alte Projekte geklont und auf deren Basis neue Projekte umgesetzt
 \end{itemize}
+Dafür wurde folgende Nutzwertanalyse erstellt: \newline
 
-\paragraph{Beispiel}
-Ein Beispiel für eine Entscheidungsmatrix findet sich in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
+\begin{tabular}{llllll}
+\centering
+\rowcolor{heading}\textbf{Eigenschaft}   & \textbf{Gewichtung} & \textbf{Skeleton} & \textbf{kein Code} & \textbf{alte Projekte klonen} \\
+\textbf{Einarbeitungszeit}                   & 3  & 5       & 2       & 3 \\
+\rowcolor{odd}\textbf{Fehleranfälligkeit}     & 3  & 5       & 4       & 2        \\
+\textbf{initiale Kosten} & 2  & 2       & 5       & 5      \\
+\rowcolor{heading}\textbf{Gesamt:}       & \textbf{8} & \textbf{34} & \textbf{22} & \textbf{25} } \\
+\rowcolor{odd}\textbf{Nutzwert:}                        & & \textbf{4,25} & \textbf{2,75} & \textbf{3,125} \\
+\end{tabular} \newline
+
+Das Skeleton hat die geringste Einarbeitungszeit(dadurch den höchsten Wert, da hohe Einarbeitungszeit schlecht ist). Dies liegt daran, dass beim Skeleton eine kleine Codebasis besteht, welche die Verbindung zum Typo3 schon übernimmt. Ein Frontend Entwickler kann sich beispielsweise an das Projekt setzen und bekommt direkt seine Daten aus dem Typo3. Gleichzeitig besteht aber kein anderer Code, welcher zu Komplikationen/Verwirrung führen könnte. Geklonte Projekte würden zwar auch schon ihre Daten aus dem Typo3 bekommen, aber neue Entwickler müssten sich erstmal in die große bestehende Codebase einarbeiten. Wenn kein vorheriger Code genutzt wird, ist die Codebase zwar am geringsten(leeres Typo3 und Nuxt 3). Dies führt aber dazu, dass sich ein neuer Entwickler erstmal damit beschäftigen muss, wie er an die Daten des Typo3 kommt und diese verarbeitet. Das Skeleton ist auch am wenigsten fehleranfällig. Bei geklonten Projekten können alte Codeabschnitte mit neuen auf unerwartete Art und Weisen miteinander interagieren. Neuer Code kann zwar theoretisch fehlerfrei geschrieben werden, aber ein Skeleton, welches häufiger genutzt wird, wird auch häufiger getestet. Der größte Nachteil eines Skeletons gegenüber den Alternativen sind die Kosten. Die beiden anderen Alternativen haben initial keine/sehr geringe Kosten. Da sich die Kosten des Skeletons aber in einem geringen Rahmen halten(Kapitel~\ref{sec:Wirtschaftlichkeitsanalyse}: \nameref{sec:Wirtschaftlichkeitsanalyse}) und die Kosten durch zukünftige Vorteile ausgeglichen werden, schlägt dies nicht so sehr ins Gewicht.
+Es wurden zusätzlich unterschiedliche Technologien verglichen um so ein Skeleton zu erstellen. Genauere Analysen zum Nutzwert der Technologien finden sie in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}. 
 
 
 \subsection{Anwendungsfälle}
@@ -64,3 +77,18 @@ Das Skeleton kann theoretisch für sämtliche Websiten genutzt werden, welche ei
 
 Da verschiedene Projekte mit dem Skeleton umgesetzt werden, ist es sehr wichtig, dass das Skeleton flexibel ist. Da unterschiedlichen Projekte, zumindest teilweise, von verschiedenen Entwicklern umgesetzt werden, muss der Code leicht zu verstehen sein. Der Code muss also leicht erweiterbar und leserlich sein. 
 Natürlich darf die Ladezeit der Website auch nicht sonderlich groß sein, damit die SEO-Performance nicht zu schlecht wird. Dies ist wichtig, damit mit dem Skeleton entwickelte Projekte über google / anderen Suchmaschinen gefunden werden können. Zusätzlich erhöht eine schnelle Ladezeit die Benutzerfreundlichkeit.
+
+\subsection{Nuxt 2 vs Nuxt 3}
+\label{sec:Nuxt 2 vs Nuxt 3}
+
+Es wurde sich entschieden für das Projekt Nuxt 3 zu nutzen. Bis jetzt hatte \acs{BAL} Nuxt 2 und Vue 3 genutzt um sich mit Headless-Typo3 Systemen zu verbinden. Der Grund für die Entscheidung liegt unter anderem der Erweiterung der Wissensbasis der Firma. Eine genauere Analyse, warum sich für Nuxt im allgemeinen und nicht für andere Frontend Webframeworks entschieden wurde, finden sie in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}. Zum Zeitpunkt der Projektarbeit war Nuxt 3 noch in der Beta. Am 16.11.2022 wurde die erste stable Version von Nuxt veröffentlicht. Dies ist natürlich erstmal ein Nachteil, da Betaversionen von Programmen häufiger von Bugs geplagt sind. Zusätzlich werden in Betaversionen häufiger stärkere Veränderungen durchgeführt, welche zu Problemen bei bestehenden Programmcode führen könnten. Nuxt 2 ist seit Jahren offziell veröffentlicht und \acs{BAL} hat bereits mehrere Projekte erfolgreich mit Nuxt 2 abgeschlossen. Zusätzlich hat \acs{BAL} bereits Nuxt 2 erfolgreich mit einem Headless-Typo3 verbunden. Es wäre also sehr viel einfacher das Skeleton mit Nuxt 2 umzusetzen. Es gibt also folgende gute Gründe Nuxt 2 anstelle von Nuxt 3 zu nutzen:
+\begin{itemize}
+	\item Programmcode aus vorherigen Projekten kann genutzt werden. --> Zeitersparnis
+	\item Wissensbasis in Nuxt 2 vorhanden. --> potentiell weniger Bugs / schnelleres Entwickeln
+	\item Programm kann schneller von Arbeitskollegen verstanden werden --> potentiell schnellere Entwicklungszeit / Einarbeitungszeit bei ersten neuen Projekten mit Skeleton
+\end{itemize}
+
+\subsubsection{Warum wurde sich trotzdem für Nuxt 3 entschieden?}
+\label{sec:Warum wurde sich trotzdem für Nuxt 3 entschieden?}
+
+Nuxt 3 biete gegenüber von Nuxt 2 einige Vorteile. Der erste Vorteil ist, dass Typescript unterstüzt wird. Zwar konnte Typescript auch in Nuxt 2 und Vue 2 Projekten genutzt werden, es war aber immer mit Komplikationen verbunden. Nuxt 3(und Vue 3) unterstützen dies von Anfang an, was zu einer erleichterten Nutzung von Typescript führt. Selbst wenn kein Typescript genutzt wird, beeinhaltet Nuxt 3 einige Vorteile gegenüber von Nuxt 2. Beispielsweise hat Nuxt 3 eine komplett neue Server-Engine bekommen. Diese hat den Namen Nitro. Nitro hat dank dynamischen Code-Splitting eine bessere Leistung als Nuxt 2. Es gibt zusätzlich viele neue Features, wie die neue Composition API, automatische Imports, verbesserte Devtools, etc. Aus diesen Gründen scheint Nuxt 3 langfristig die bessere Entscheidung für die Entwicklung neuer Projekte zu sein, als Nuxt 2. Die Projektarbeit wäre trotzdem wahrscheinlich sehr viel schneller und einfacher mit Nuxt 2 umzusetzen gewesen. Aus den oben genannten Gründen ist ein Umstieg auf Nuxt 3 aber absehbar. Deswegen entschied sich \acs{BAL} das Projekt in Nuxt 3 umzusetzen. Die Wissensbasis von Nuxt 3 soll mithilfe des Projektes erweitert und der Grundstein für zukünftige Nuxt 3 Projekte gelegt werden.

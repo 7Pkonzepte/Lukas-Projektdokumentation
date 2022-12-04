@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.11)  18 NOV 2022 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.10.11)  4 DEC 2022 17:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1395,7 +1395,7 @@ ie Einspeicherung und Verarbeitung in elektronischen
 (./Projektdokumentation.toc
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
-Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 44.
+Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 43.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
 
 
@@ -1407,7 +1407,7 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=53.63744pt'.
 (scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
-4.
+3.
 
 
 Overfull \vbox (10.95831pt too high) has occurred while \output is active []
@@ -1549,22 +1549,64 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 45.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [7]
-Overfull \hbox (117.61069pt too wide) in paragraph at lines 50--51
-[]\T1/lmr/m/n/10.95 Darstellung des nicht-monetären Nutzens ([] Vorher-/Nachher
--Vergleich anhand eines Wirtschaftlichkeitskoeffizienten). 
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
  []
 
-) (./Inhalt/Entwurfsphase.tex
-Overfull \hbox (7.87698pt too wide) in paragraph at lines 65--2
+! Misplaced \noalign.
+\rowcolor ->\noalign 
+                     {\ifnum 0=`}\fi \global \let \CT@do@color \CT@@do@color...
+l.58 \rowcolor
+              {heading}\textbf{Eigenschaft}   & \textbf{Gewichtung} & \textb...
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Extra }, or forgotten \endgroup.
+l.62 ... \textbf{34} & \textbf{22} & \textbf{25} }
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--65
+
+ []
+
+
+Overfull \hbox (4.49231pt too wide) in paragraph at lines 66--68
+[]\T1/lmr/m/n/10.95 Das Skeleton hat die geringste Einarbeitungszeit(dadurch de
+n höchsten Wert, da hohe Einarbeitungszeit
+ []
+
+File: Bilder/Firmenlogo.png Graphic file (type png)
+<use Bilder/Firmenlogo.png>
+Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 68.
+(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
+[8]
+Overfull \hbox (7.87698pt too wide) in paragraph at lines 78--80
 \T1/lmr/m/n/10.95 flexibel ist. Da unterschiedlichen Projekte, zumindest teilwe
 ise, von verschiedenen Entwicklern umgesetzt
  []
 
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
-Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 9.
+Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 88.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[8]
+[9]
+Overfull \hbox (45.15773pt too wide) in paragraph at lines 88--89
+[]\T1/lmr/m/n/10.95 Programm kann schneller von Arbeitskollegen verstanden werd
+en --> potentiell schnellere Entwicklungszeit
+ []
+
+) (./Inhalt/Entwurfsphase.tex
+File: Bilder/Firmenlogo.png Graphic file (type png)
+<use Bilder/Firmenlogo.png>
+Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 12.
+(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
+ [10]
 Overfull \hbox (0.49078pt too wide) in paragraph at lines 19--20
 []\T1/lmr/m/n/10.95 Genauere Vergleiche zu anderen Frameworks / Technologien, w
 erden im folgenden Kapitel analysiert. 
@@ -1574,13 +1616,13 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 22.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[9] (./Tabellen/Nutzwert_Nuxt3.tex) (./Tabellen/Nutzwert_DaisyUI.tex)
+[11] (./Tabellen/Nutzwert_Nuxt3.tex) (./Tabellen/Nutzwert_DaisyUI.tex)
 (./Tabellen/Nutzwert_Typo3.tex)
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 41.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [10] (./Tabellen/Nutzwert_TS.tex)
+ [12] (./Tabellen/Nutzwert_TS.tex)
 Overfull \hbox (8.87227pt too wide) in paragraph at lines 50--51
 []\T1/lmr/m/n/10.95 Layout / Spalteneinteilung: Standardmäÿig hat Typo3 keine T
 ools um Komponenten in Spalten/Bereiche
@@ -1636,7 +1678,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 69.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[11]
+[13]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1670,7 +1712,7 @@ Tabellenmodell, [][]-Schemas)
 
 Package acronym Info: Label `acro:ERM' newly defined as it shall be overridden
 although it is yet undefined on input line 86.
-<Bilder/ERDiagramm.pdf, id=536, 597.432pt x 314.776pt>
+<Bilder/ERDiagramm.pdf, id=558, 597.432pt x 314.776pt>
 File: Bilder/ERDiagramm.pdf Graphic file (type pdf)
 <use Bilder/ERDiagramm.pdf>
 Package pdftex.def Info: Bilder/ERDiagramm.pdf  used on input line 90.
@@ -1679,7 +1721,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 100.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[12 <./Bilder/ERDiagramm.pdf>]
+[14 <./Bilder/ERDiagramm.pdf>]
 Package acronym Info: Label `acro:EPK' newly defined as it shall be overridden
 although it is yet undefined on input line 107.
 
@@ -1705,7 +1747,7 @@ Overfull \hbox (22.03276pt too wide) in paragraph at lines 112--113
 lches die Klassen der Anwendung und deren Beziehungen untereinander
  []
 
-<Bilder/modulimport.pdf, id=566, 1236.62pt x 392.667pt>
+<Bilder/modulimport.pdf, id=588, 1236.62pt x 392.667pt>
 File: Bilder/modulimport.pdf Graphic file (type pdf)
 <use Bilder/modulimport.pdf>
 Package pdftex.def Info: Bilder/modulimport.pdf  used on input line 117.
@@ -1714,13 +1756,13 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 133.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[13 <./Bilder/modulimport.pdf>]
+[15 <./Bilder/modulimport.pdf>]
 
-LaTeX Warning: Reference `sec:Lastenheft' on page 14 undefined on input line 14
+LaTeX Warning: Reference `sec:Lastenheft' on page 16 undefined on input line 14
 1.
 
 
-LaTeX Warning: Reference `sec:Lastenheft' on page 14 undefined on input line 14
+LaTeX Warning: Reference `sec:Lastenheft' on page 16 undefined on input line 14
 1.
 
 ! Undefined control sequence.
@@ -1735,15 +1777,15 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `app:Pflichtenheft' on page 14 undefined on input line
+LaTeX Warning: Reference `app:Pflichtenheft' on page 16 undefined on input line
  141.
 
 
-LaTeX Warning: Reference `app:Pflichtenheft' on page 14 undefined on input line
+LaTeX Warning: Reference `app:Pflichtenheft' on page 16 undefined on input line
  141.
 
 
-LaTeX Warning: Reference `app:Pflichtenheft' on page 14 undefined on input line
+LaTeX Warning: Reference `app:Pflichtenheft' on page 16 undefined on input line
  141.
 
 
@@ -1778,12 +1820,12 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 53.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[14]
+[16]
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 88.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [15]
+ [17]
 Overfull \hbox (10.99925pt too wide) in paragraph at lines 102--103
 \T1/lmr/m/n/10.95 Anpassungen an bestehende Tabellen in der Datenbank werden in
  der ext_tables.sql Datei vorgenommen.
@@ -1793,7 +1835,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 114.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[16]
+[18]
 Overfull \hbox (5.37944pt too wide) in paragraph at lines 135--136
 \T1/lmr/m/n/10.95 Configuration->TypoScript die Datei setup.typoscript. Hier kö
 nnen Anpassungen ans Template gepflegt
@@ -1809,7 +1851,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 149.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[17]
+[19]
 ! Undefined control sequence.
 \Anhang #1->\appendixname 
                           {}~\ref {#1}: \nameref {#1} \vpageref {#1}
@@ -1854,12 +1896,12 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 174.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[18]
+[20]
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 199.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [19]
+ [21]
 ! Undefined control sequence.
 \Anhang #1->\appendixname 
                           {}~\ref {#1}: \nameref {#1} \vpageref {#1}
@@ -1899,16 +1941,27 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 225.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[20]
+[22]
 Overfull \hbox (6.87175pt too wide) in paragraph at lines 227--228
 \T1/lmr/m/n/10.95 Composable um auf den State fullNavList zuzugreifen. Mit v-fo
 r, einer vue/nuxt internen Funktionalität,
  []
 
+! Undefined control sequence.
+\Anhang #1->\appendixname 
+                          {}~\ref {#1}: \nameref {#1} \vpageref {#1}
+l.237 ...igation Composable \Anhang{navigation.ts}
+                                                   (const open = ...). Wenn ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (19.55466pt too wide) in paragraph at lines 237--238
-[] []\T1/lmss/bx/n/10.95 open()[][] \T1/lmr/m/n/10.95 Die open() Funktion beste
-ht aus einem if else Statement. Wenn das Navigationselement(navItem),
+
+Overfull \hbox (49.8227pt too wide) in paragraph at lines 237--238
+\T1/lmr/m/n/10.95 Navigation Composable  [][]A.5[][]: [][]navigation.ts[][][] a
+uf Seite [][]v[][][] (const open = ...). Wenn das Navigationselement(navItem),
  []
 
 ! Undefined control sequence.
@@ -1949,7 +2002,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 247.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[21]
+[23]
 ! Undefined control sequence.
 \Anhang #1->\appendixname 
                           {}~\ref {#1}: \nameref {#1} \vpageref {#1}
@@ -1990,7 +2043,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 7.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [22]
+ [24]
 ! Undefined control sequence.
 \Anhang #1->\appendixname 
                           {}~\ref {#1}: \nameref {#1} \vpageref {#1}
@@ -2042,12 +2095,12 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 33.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[23]))
+[25]))
 File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 82.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [24] (./Projektdokumentation.bbl
+ [26] (./Projektdokumentation.bbl
 Underfull \hbox (badness 1635) in paragraph at lines 17--26
 \T1/lmr/m/sc/10.95 Bundesministerium für Bildung und Forschung\T1/lmr/m/n/10.95
  :  Umsetzungshilfen für die neue
@@ -2071,7 +2124,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 2.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [25
+ [27
 
 ]
 Overfull \hbox (23.03128pt too wide) in paragraph at lines 7--9
@@ -2089,7 +2142,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 <use Bilder/Firmenlogo.png>
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 89.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [26
+ [28
 
 ] (./Anhang.tex (./Tabellen/ZeitplanungKomplett.tex)
 File: Bilder/Firmenlogo.png Graphic file (type png)
@@ -2125,7 +2178,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 209.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [6]
-<Bilder/database.pdf, id=1020, 845.1575pt x 597.23125pt>
+<Bilder/database.pdf, id=1042, 845.1575pt x 597.23125pt>
 File: Bilder/database.pdf Graphic file (type pdf)
 <use Bilder/database.pdf>
 Package pdftex.def Info: Bilder/database.pdf  used on input line 239.
@@ -2141,17 +2194,17 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 242.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [8 <./Bilder/database.pdf, page is rotated 90 degrees>]
 (./Anhang/AnhangEntwuerfe.tex
-<Bilder/MockupModules.pdf, id=1067, 722.7pt x 542.025pt>
+<Bilder/MockupModules.pdf, id=1086, 722.7pt x 542.025pt>
 File: Bilder/MockupModules.pdf Graphic file (type pdf)
 <use Bilder/MockupModules.pdf>
 Package pdftex.def Info: Bilder/MockupModules.pdf  used on input line 5.
 (pdftex.def)             Requested size: 338.58835pt x 253.94125pt.
-<Bilder/MockupModul.pdf, id=1068, 722.7pt x 542.025pt>
+<Bilder/MockupModul.pdf, id=1087, 722.7pt x 542.025pt>
 File: Bilder/MockupModul.pdf Graphic file (type pdf)
 <use Bilder/MockupModul.pdf>
 Package pdftex.def Info: Bilder/MockupModul.pdf  used on input line 11.
 (pdftex.def)             Requested size: 338.58835pt x 253.94125pt.
-<Bilder/MockupTag.pdf, id=1069, 722.7pt x 542.025pt>
+<Bilder/MockupTag.pdf, id=1088, 722.7pt x 542.025pt>
 File: Bilder/MockupTag.pdf Graphic file (type pdf)
 <use Bilder/MockupTag.pdf>
 Package pdftex.def Info: Bilder/MockupTag.pdf  used on input line 17.
@@ -2173,12 +2226,12 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 245.
 pdfTeX warning: /usr/bin/pdflatex (file ./Bilder/MockupTag.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
 >] (./Anhang/AnhangScreenshots.tex
-<Bilder/Frontend1.png, id=1139, 1924.18875pt x 949.5475pt>
+<Bilder/Frontend1.png, id=1158, 1924.18875pt x 949.5475pt>
 File: Bilder/Frontend1.png Graphic file (type png)
 <use Bilder/Frontend1.png>
 Package pdftex.def Info: Bilder/Frontend1.png  used on input line 5.
 (pdftex.def)             Requested size: 442.08434pt x 218.1595pt.
-<Bilder/Backend1.png, id=1140, 1923.185pt x 958.58125pt>
+<Bilder/Backend1.png, id=1159, 1923.185pt x 958.58125pt>
 File: Bilder/Backend1.png Graphic file (type png)
 <use Bilder/Backend1.png>
 Package pdftex.def Info: Bilder/Backend1.png  used on input line 10.
@@ -2190,12 +2243,12 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 13.
  [11
 
  <./Bilder/Frontend1.png> <./Bilder/Backend1.png>]) (./Anhang/AnhangDoc.tex
-<Bilder/doc.pdf, id=1149, page=1, 597.23125pt x 845.1575pt>
+<Bilder/doc.pdf, id=1166, page=1, 597.23125pt x 845.1575pt>
 File: Bilder/doc.pdf Graphic file (type pdf)
 <use Bilder/doc.pdf, page 1>
 Package pdftex.def Info: Bilder/doc.pdf , page1 used on input line 4.
 (pdftex.def)             Requested size: 435.32422pt x 616.04424pt.
-<Bilder/doc.pdf, id=1150, page=2, 597.23125pt x 845.1575pt>
+<Bilder/doc.pdf, id=1167, page=2, 597.23125pt x 845.1575pt>
 File: Bilder/doc.pdf Graphic file (type pdf)
 <use Bilder/doc.pdf, page 2>
 Package pdftex.def Info: Bilder/doc.pdf , page2 used on input line 6.
@@ -2222,7 +2275,7 @@ Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 4.
  [14
 
 ]
-<Bilder/testcase.jpg, id=1216, 773.89125pt x 334.24875pt>
+<Bilder/testcase.jpg, id=1229, 773.89125pt x 334.24875pt>
 File: Bilder/testcase.jpg Graphic file (type jpg)
 <use Bilder/testcase.jpg>
 Package pdftex.def Info: Bilder/testcase.jpg  used on input line 7.
@@ -2245,7 +2298,7 @@ File: Bilder/Firmenlogo.png Graphic file (type png)
 Package pdftex.def Info: Bilder/Firmenlogo.png  used on input line 255.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [17]
-<Bilder/Klassendiagramm.pdf, id=1357, 766.06201pt x 598.235pt>
+<Bilder/Klassendiagramm.pdf, id=1368, 766.06201pt x 598.235pt>
 File: Bilder/Klassendiagramm.pdf Graphic file (type pdf)
 <use Bilder/Klassendiagramm.pdf>
 Package pdftex.def Info: Bilder/Klassendiagramm.pdf  used on input line 262.
@@ -2375,84 +2428,33 @@ Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 94.
  ) 
 Here is how much of TeX's memory you used:
- 29311 strings out of 483140
- 557559 string characters out of 5965150
+ 29304 strings out of 483140
+ 557493 string characters out of 5965150
  1046503 words of memory out of 5000000
- 42921 multiletter control sequences out of 15000+600000
+ 42927 multiletter control sequences out of 15000+600000
  622009 words of font info for 78 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  76i,25n,108p,10270b,2280s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{lstlisting.466} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{lstlisting.430} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.590} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.464} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.427} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.426} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.423} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.591} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.465} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.429} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.428} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.425} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.421} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.383} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.321} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.288} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/
-texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx
-10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-sy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pf
-b>
-Output written on Projektdokumentation.pdf (56 pages, 1901902 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lm
+bx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.
+pfb>
+Output written on Projektdokumentation.pdf (58 pages, 1908759 bytes).
 PDF statistics:
- 1795 PDF objects out of 2073 (max. 8388607)
- 1612 compressed objects within 17 object streams
- 687 named destinations out of 1000 (max. 500000)
- 736 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1806 PDF objects out of 2073 (max. 8388607)
+ 1621 compressed objects within 17 object streams
+ 674 named destinations out of 1000 (max. 500000)
+ 752 words of extra memory for PDF output out of 10000 (max. 10000000)
 
