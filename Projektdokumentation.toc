@@ -55,30 +55,25 @@
 \contentsline {subsubsection}{\numberline {5.5.7}Slidemenu.vue}{21}{subsubsection.193}%
 \contentsline {subsection}{\numberline {5.6}Implementierung des Contents der Benutzeroberfläche}{21}{subsection.194}%
 \contentsline {subsubsection}{\numberline {5.6.1}TypoView.vue}{21}{subsubsection.195}%
-\contentsline {subsection}{\numberline {5.7}finale Anwendung}{21}{subsection.196}%
-\contentsline {section}{\numberline {6}Abnahmephase}{21}{section.197}%
-\contentsline {section}{\numberline {7}Einführungsphase}{22}{section.198}%
-\contentsline {section}{\numberline {8}Dokumentation}{22}{section.199}%
-\contentsline {section}{\numberline {9}Fazit}{23}{section.200}%
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{23}{subsection.201}%
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{23}{subsection.203}%
-\contentsline {subsection}{\numberline {9.3}Ausblick}{23}{subsection.204}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{24}{section*.206}%
-\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{25}{section*.208}%
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.209}%
-\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.210}%
-\contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.211}%
-\contentsline {subsection}{\numberline {A.3}ext\_localconf.php}{iii}{subsection.251}%
-\contentsline {subsection}{\numberline {A.4}[...slug].vue}{iv}{subsection.286}%
-\contentsline {subsection}{\numberline {A.5}navigation.ts}{v}{subsection.319}%
-\contentsline {subsection}{\numberline {A.6}SlideMenu.vue}{vi}{subsection.381}%
-\contentsline {subsection}{\numberline {A.7}Datenbankmodell}{vii}{subsection.417}%
-\contentsline {subsection}{\numberline {A.8}Screenshots des Menüs}{ix}{subsection.419}%
-\contentsline {subsection}{\numberline {A.9}Oberflächenentwürfe}{x}{subsection.423}%
-\contentsline {subsection}{\numberline {A.10}Screenshots der Anwendung}{xii}{subsection.427}%
-\contentsline {subsection}{\numberline {A.11}Entwicklerdokumentation}{xiii}{subsection.430}%
-\contentsline {subsection}{\numberline {A.12}Testfall und sein Aufruf auf der Konsole}{xv}{subsection.431}%
-\contentsline {subsection}{\numberline {A.13}Klasse: ComparedNaturalModuleInformation}{xvi}{subsection.467}%
-\contentsline {subsection}{\numberline {A.14}Klassendiagramm}{xix}{subsection.591}%
-\contentsline {subsection}{\numberline {A.15}Benutzerdokumentation}{xx}{subsection.593}%
+\contentsline {subsubsection}{\numberline {5.6.2}Section Komponente}{22}{subsubsection.196}%
+\contentsline {subsubsection}{\numberline {5.6.3}Content Komponenten}{22}{subsubsection.197}%
+\contentsline {subsection}{\numberline {5.7}finale Anwendung}{22}{subsection.198}%
+\contentsline {section}{\numberline {6}Abnahmephase}{22}{section.199}%
+\contentsline {section}{\numberline {7}Einführungsphase}{23}{section.200}%
+\contentsline {section}{\numberline {8}Dokumentation}{23}{section.201}%
+\contentsline {section}{\numberline {9}Fazit}{24}{section.202}%
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{24}{subsection.203}%
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{24}{subsection.205}%
+\contentsline {subsection}{\numberline {9.3}Ausblick}{24}{subsection.206}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{25}{section*.208}%
+\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{26}{section*.210}%
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.211}%
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.212}%
+\contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.213}%
+\contentsline {subsection}{\numberline {A.3}ext\_localconf.php}{iii}{subsection.253}%
+\contentsline {subsection}{\numberline {A.4}[...slug].vue}{iv}{subsection.288}%
+\contentsline {subsection}{\numberline {A.5}navigation.ts}{v}{subsection.321}%
+\contentsline {subsection}{\numberline {A.6}SlideMenu.vue}{vi}{subsection.383}%
+\contentsline {subsection}{\numberline {A.7}Screenshots des Menüs}{viii}{subsection.419}%
+\contentsline {subsection}{\numberline {A.8}Screenshots der Anwendung}{ix}{subsection.423}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -10,51 +10,51 @@ Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: Bibliographie.bib
-Warning--there's an address but no publisher in BMBF2000
-Warning--empty number in BMBF2000
-Warning--empty note in BMBF2000
-Warning--there's an address but no publisher in Grashorn2010
-Warning--empty number in Grashorn2010
-Warning--empty note in Grashorn2010
-You've used 10 entries,
+Warning--I didn't find a database entry for "Rohrer2011"
+Warning--I didn't find a database entry for "Grashorn2010"
+Warning--I didn't find a database entry for "Bundesgesetzblatt48"
+Warning--I didn't find a database entry for "BMBF2000"
+Warning--I didn't find a database entry for "MerkblattIHK"
+Warning--I didn't find a database entry for "BewertungsmatrikIHK"
+You've used 2 entries,
             4728 wiz_defined-function locations,
-            954 strings with 8059 characters,
-and the built_in function-call counts, 4977 in all, are:
-= -- 461
-> -- 114
-< -- 42
-+ -- 65
-- -- 36
-* -- 335
-:= -- 836
-add.period$ -- 21
-call.type$ -- 10
-change.case$ -- 41
-chr.to.int$ -- 10
-cite$ -- 16
-duplicate$ -- 185
-empty$ -- 497
-format.name$ -- 67
-if$ -- 1081
+            906 strings with 6820 characters,
+and the built_in function-call counts, 956 in all, are:
+= -- 74
+> -- 20
+< -- 4
++ -- 8
+- -- 6
+* -- 58
+:= -- 163
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 40
+empty$ -- 109
+format.name$ -- 12
+if$ -- 207
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 44
-newline$ -- 79
-num.names$ -- 40
-pop$ -- 88
+missing$ -- 10
+newline$ -- 27
+num.names$ -- 8
+pop$ -- 22
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 12
 quote$ -- 0
-skip$ -- 266
+skip$ -- 53
 stack$ -- 0
-substring$ -- 195
-swap$ -- 31
-text.length$ -- 14
+substring$ -- 26
+swap$ -- 6
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 122
-warning$ -- 6
-while$ -- 44
+type$ -- 18
+warning$ -- 0
+while$ -- 8
 width$ -- 0
-write$ -- 167
+write$ -- 42
 (There were 6 warnings)
