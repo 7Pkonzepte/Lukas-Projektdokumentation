@@ -100,7 +100,7 @@ Wie oben genannt, hat Nuxt 3 einige neue Features, ein paar davon werden in dies
 
 \paragraph{Composables}
 
-'In the context of Vue applications, a 'composable' is a function that leverages Vue's Composition API to encapsulate and reuse stateful logic.'
+Composables sind effektiv Funktionen, welche von der gesamten Anwendung aus aufgerufen werden können. Der Unterschied zwischen normalen Funktionen, welche wieder verwendet werden, ist dass ihr State bestehen bleibt. Wenn ein Composable an einer Stelle im Programm aufgerufen wird, gibt es ein Objekt zurück, welches Variablen und/oder Funktionen besitzt. Falls sich der Wert einer Variable ändert, ändert sich dieser Wert bei allen Dateien, die das Composable aufgerufen haben. Composables sind nur zugänglich für Dateien, die deren Funktion aufgerufen haben. Dadurch unterscheiden sie sich von einem generellen State-Management. Bei so einem State-Management hätten alle Dateien in der Anwendung Zugriff auf den State. Wenn also mehrere Dateien eine ähnliche Logik haben und es sinnvoll wäre state zu teilen, kann es sinnvoll sein ein Composable zu nutzen.
 
 \paragraph{neues State-Management}
 

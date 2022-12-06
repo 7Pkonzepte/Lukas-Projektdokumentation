@@ -67,9 +67,9 @@
 \contentsline {section}{\numberline {9}Fazit}{25}{section.207}%
 \contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{25}{subsection.208}%
 \contentsline {subsection}{\numberline {9.2}Lessons Learned}{25}{subsection.210}%
-\contentsline {subsection}{\numberline {9.3}Ausblick}{25}{subsection.211}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{26}{section*.213}%
-\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{27}{section*.215}%
+\contentsline {subsection}{\numberline {9.3}Ausblick}{26}{subsection.211}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{27}{section*.213}%
+\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{28}{section*.215}%
 \contentsline {section}{\numberline {A}Anhang}{i}{appendix.216}%
 \contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.217}%
 \contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.218}%
