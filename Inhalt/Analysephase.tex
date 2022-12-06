@@ -92,3 +92,16 @@ Es wurde sich entschieden für das Projekt Nuxt 3 zu nutzen. Bis jetzt hatte \ac
 \label{sec:Warum wurde sich trotzdem für Nuxt 3 entschieden?}
 
 Nuxt 3 biete gegenüber von Nuxt 2 einige Vorteile. Der erste Vorteil ist, dass Typescript unterstüzt wird. Zwar konnte Typescript auch in Nuxt 2 und Vue 2 Projekten genutzt werden, es war aber immer mit Komplikationen verbunden. Nuxt 3(und Vue 3) unterstützen dies von Anfang an, was zu einer erleichterten Nutzung von Typescript führt. Selbst wenn kein Typescript genutzt wird, beeinhaltet Nuxt 3 einige Vorteile gegenüber von Nuxt 2. Beispielsweise hat Nuxt 3 eine komplett neue Server-Engine bekommen. Diese hat den Namen Nitro. Nitro hat dank dynamischen Code-Splitting eine bessere Leistung als Nuxt 2. Es gibt zusätzlich viele neue Features, wie die neue Composition API, automatische Imports, verbesserte Devtools, etc. Aus diesen Gründen scheint Nuxt 3 langfristig die bessere Entscheidung für die Entwicklung neuer Projekte zu sein, als Nuxt 2. Die Projektarbeit wäre trotzdem wahrscheinlich sehr viel schneller und einfacher mit Nuxt 2 umzusetzen gewesen. Aus den oben genannten Gründen ist ein Umstieg auf Nuxt 3 aber absehbar. Deswegen entschied sich \acs{BAL} das Projekt in Nuxt 3 umzusetzen. Die Wissensbasis von Nuxt 3 soll mithilfe des Projektes erweitert und der Grundstein für zukünftige Nuxt 3 Projekte gelegt werden.
+
+\subsubsection{neue Nuxt 3 Features}
+\label{sec:neue Nuxt 3 Features}
+
+Wie oben genannt, hat Nuxt 3 einige neue Features, ein paar davon werden in dieser Projektarbeit genutzt um das Skeleton umzusetzen. Composables sind eins der neuen Features.
+
+\paragraph{Composables}
+
+'In the context of Vue applications, a 'composable' is a function that leverages Vue's Composition API to encapsulate and reuse stateful logic.'
+
+\paragraph{neues State-Management}
+
+Unter State-Management(Zustandsverwaltung) versteht man die Verwaltung von mehreren Datenflüssen über die ganze Anwendung hinweg. Daten die im State gespeichert sind, können von allen Dateien in der Anwendung aufgerufen/manipuliert werden. So ist es einfach Daten zwischen Dateien zu teilen. In Nuxt 2 wurde primär vuex als State-Management genutzt. Dies kann auch weiterhin in Nuxt 3 genutzt werden. Das hat den Vorteil, dass alte Programme leichter nach Nuxt 3 portiert werden können. Nuxt 3 bietet aber auch neue Möglichkeiten den State der Anwendung zu managen. Es wurde Pinia entwickelt, welches als Nachfolger von vuex betrachtet wird. Ähnlich wie vuex bietet es viele Funktionalitäten und der State wird in einem dedizierten Verzeichnis gemanagt. Nuxt 3 kann auch ohne irgendwelche Bibliotheken den State managen. Dafür gibt es die neue useState() Funktion. In ihr kann ein State mit einem Key definiert werden und danach durch den Key in jeder Datei aufgerufen werden. Letzteres wird später in der Implementierungsphase genutzt werden um den State zu managen.
