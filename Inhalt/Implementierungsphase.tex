@@ -299,14 +299,25 @@ Die Überschrift Komponente(Header.vue) wird genutzt um eine Überschrift und ei
 \caption{Überschrift/ Header.vue}
 \label{fig:berschrift/ Header.vue}
 \end{figure}
-\paragraph{Überschrift}
+
 \paragraph{Nur Bilder}
+
+In dieser Komponente werden nur Bilder gepflegt. Damit dies geschehen kann, bedarf es zwei verschachtelter Schleifen. Diese werden mit v-for dargestellt. Gepflegte Bilder in Typo3 werden in Reihen und Spalten unterteilt. Im Backend wird gepflegt wie viele Bilder pro Spalte enthalten sein können. Dies kann zur Darstellung von unterschiedlichen Layouts nützlich sein. Im Skeleton wird dies erstmal nicht beachtet, sondern einfach nur alle Bilder gerendert. Dafür werden alle Reihen durchgegangen und dann für jede Spalte das jeweilige Elemente dargestellt. Dies geschieht analog zur Bild-Text-Komponente mit einem einfach img tag.
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{BilderKomponente}{1}
+\caption{Nur Bilder - Komponente / ImageGallery.vue}
+\label{fig:Nur Bilder - Komponente}
+\end{figure}
 
 \paragraph{Trenner}
 
 Der Trenner(Divider.vue) unterscheidet sich von den anderen Komponenten. In der aktuellen Iteration nutzt er die elementData Property überhaupt nicht. Stattdessen wird im Template lediglich ein hr tag gerendert. Der Trenner hat im Typo3 Backend aber auch keine entsprechenden Eingabefelder, die dies benötigen würden. Er dient lediglich dazu, eine Linie über den Bildschirm zu ziehen. Dies wird mit dem hr tag erreicht.
 
 \paragraph{HTML}
+
+Im aktuellen Skeleton haben die HTML- und die Text-Komponente den gleichen Code. Ein div tag mit v-html. Die Pflege, wie dieses HTML entsteht unterscheidet sich aber im Typo3 Backend. Die HTML Komponente wird generell dazu genutzt, direkt HTML Code zu pflegen. Während bei der klassischen Text-Komponente der Text in einem Richtext Editor zu HTML Code umgewandelt wird.
 
 \subsection{finale Anwendung}
 \label{sec:finale Anwendung}
