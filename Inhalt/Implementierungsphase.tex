@@ -12,39 +12,6 @@ Als Image für das aktuellste Typo3 Docker-Setup wurde das Image von Martin Helm
 
 Damit die Typo3 Daten im JSON-Format ausgespielt werden, wird die Headless-Extension \linebreak (https://extensions.typo3.org/extension/headless) installiert. Danach muss die Extension zum Template hinzugefügt werden, damit Typo3 weiß, dass es das Template dementsprechend anpassen muss. Typo3 spielt nun die Daten im JSON-Format aus. Das JSON muss noch angepasst werden, damit eine Navigationsstruktur damit abgebildet werden kann. Dafür werden folgende Erweiterungen am Template vorgenommen.
 
-\colorlet{punct}{red!60!black}
-\definecolor{background}{HTML}{EEEEEE}
-\definecolor{delim}{RGB}{20,105,176}
-\colorlet{numb}{magenta!60!black}
-
-\lstdefinelanguage{json}{
-    basicstyle=\normalfont\ttfamily,
-    numbers=left,
-    numberstyle=\scriptsize,
-    stepnumber=1,
-    numbersep=8pt,
-    showstringspaces=false,
-    breaklines=true,
-    frame=lines,
-    backgroundcolor=\color{background},
-    literate=
-     *{0}{{{\color{numb}0}}}{1}
-      {1}{{{\color{numb}1}}}{1}
-      {2}{{{\color{numb}2}}}{1}
-      {3}{{{\color{numb}3}}}{1}
-      {4}{{{\color{numb}4}}}{1}
-      {5}{{{\color{numb}5}}}{1}
-      {6}{{{\color{numb}6}}}{1}
-      {7}{{{\color{numb}7}}}{1}
-      {8}{{{\color{numb}8}}}{1}
-      {9}{{{\color{numb}9}}}{1}
-      {:}{{{\color{punct}{:}}}}{1}
-      {,}{{{\color{punct}{,}}}}{1}
-      {\{}{{{\color{delim}{\{}}}}{1}
-      {\}}{{{\color{delim}{\}}}}}{1}
-      {[}{{{\color{delim}{[}}}}{1}
-      {]}{{{\color{delim}{]}}}}{1},
-}
 \begin{lstlisting}[language=json,firstnumber=1]
 lib.page = JSON
 lib.page {
@@ -261,7 +228,39 @@ Das Slidemenu zeigt die aktuelle Navigation an, welche aus Unterseiten eines and
 \subsubsection{TypoView.vue}
 \label{sec:TypoView.vue}
 
-In die TypoView.vue Datei werden die Contentdaten der Typo3-Seite reingeladen. Sie bekommt diese als Property/Eigenschaft in der [...slug].vue Datei. Die Daten enthalten alle Elemente die auf der jeweiligen Seite im Typo3 gepflegt wurden. Diese sind in Form eines Arrays aufbereitet. Das erste Element im Array entspricht dabei dem im Typo3 ganz oben auf der Seite gepflegten Element. Das letzte Element entspricht dem ganz unten gepflegten Element. Dies bedeutet, dass wenn die Elemente aus dem Array in ihrer Reihenfolge dargestellt werden, dass dann alle Elemente an ihrem Platz sind. Damit die Daten aber genutzt werden können, müssen sie noch ein wenig aufbereitet werden. Die TypoView muss irgendwie wissen, welche Datei zur Darstellung der jeweiligen Typo3 Komponente zuständig ist. Dafür wurde ein Daten-Mapping der Komponenten erstellt. Dieses Daten-Mapping wurde in einem neuen Composable gespeichert, welches in der Datei componentMapping.ts vorhanden ist. In dem Daten-Mapping steht beispielsweise, dass ein Text-Element mit dem default Layout 'cms-components-rich-text' entspricht. In einer mapTypo3Content Funktion, wird dann durch den gesamten Array durch iteriert. In dieser Funktion wird aus dem eindimensionalen Array ein zweidimensionaler. Dieser zweidimensionale Array entspricht dann den Sections mit ihren jeweiligen Elementen. Dafür wird bei jedem Element abgefragt ob es eine Section ist, wenn dies der Fall ist, wird ein neuer Eintrag im zweidimensionalen Array erstellt. Wenn das nicht der Fall ist, wird das Element bei letzten Element-Array im Sections-Array angehängt. Zusätzlich wird das Daten-Mapping angewandt und dem Element mitgegeben. Die TypoView Komponente iteriert dann im Template durch den zweidimensionalen Array. Für jede Section wird die Section Komponente aufgerufen und für jedes Element in der Section die entsprechende Komponente. Dafür wird bei einem <component> Tag die Nuxt 3 eigene resolveComponent() Funktion genutzt. Ihr kann als Parameter ein String gegeben werden. Der String entspricht hier dem Wert, welcher aus dem Daten-Mapping kommt. Nuxt 3 überprüft dann, ob es eine Komponente mit dem Namen gibt und rendert diese dann.
+In die TypoView.vue Datei werden die Contentdaten der Typo3-Seite reingeladen. Sie bekommt diese als Property/Eigenschaft in der [...slug].vue Datei. Die Daten enthalten alle Elemente die auf der jeweiligen Seite im Typo3 gepflegt wurden. Diese sind in Form eines Arrays aufbereitet. Das erste Element im Array entspricht dabei dem im Typo3 ganz oben auf der Seite gepflegten Element. Das letzte Element entspricht dem ganz unten gepflegten Element. Dies bedeutet, dass wenn die Elemente aus dem Array in ihrer Reihenfolge dargestellt werden, dass dann alle Elemente an ihrem Platz sind. Damit die Daten aber genutzt werden können, müssen sie noch ein wenig aufbereitet werden. Die TypoView muss irgendwie wissen, welche Datei zur Darstellung der jeweiligen Typo3 Komponente zuständig ist. Wenn aus dem Typo3 beispielsweise eine Datei vom Typen Text ausgespielt wird, sollte es eine Komponente geben, welche Text verarbeiten kann. Nuxt 3 muss dann wissen, dass es diese Komponente erstellen muss um die Daten zu verarbeiten.
+
+\paragraph{Daten-Mapping}
+
+Dafür wurde ein Daten-Mapping der Komponenten erstellt. Dieses Daten-Mapping wurde in einem neuen Composable gespeichert, welches in der Datei componentMapping.ts vorhanden ist. In dem Daten-Mapping steht beispielsweise, dass ein Text-Element mit dem default Layout 'cms-components-rich-text' entspricht. Zukünftig kann Typo3 um weitere Layouts erweitert werden, um unterschiedliche Darstellungen von Komponenten zu erlauben. Dies war aber nicht Teil des Projektes, weswegen nur default Layouts genommen werden. Es wurde hier aber schon für zukünftige Entwicklungen berücksichtigt.
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{Daten-Mapping}{1}
+\caption{Daten-Mapping der Komponententypen}
+\end{figure}
+
+In einer mapTypo3Content Funktion, wird dann durch den gesamten Array durch iteriert. In dieser Funktion wird aus dem eindimensionalen Array ein zweidimensionaler. Dieser zweidimensionale Array entspricht dann den Sections mit ihren jeweiligen Elementen. Dafür wird bei jedem Element abgefragt ob es eine Section ist, wenn dies der Fall ist, wird ein neuer Eintrag im zweidimensionalen Array erstellt. Wenn das nicht der Fall ist, wird das Element bei letzten Element-Array im Sections-Array angehängt. Zusätzlich wird das Daten-Mapping angewandt und dem Element mitgegeben. 
+
+\paragraph{Darstellung}
+Die TypoView Komponente iteriert dann im Template durch den zweidimensionalen Array. Für jede Section wird die Section Komponente aufgerufen und für jedes Element in der Section die entsprechende Komponente. Dafür wird bei einem <component> Tag die Nuxt 3 eigene resolveComponent() Funktion genutzt. Ihr kann als Parameter ein String gegeben werden. Der String entspricht hier dem Wert, welcher aus dem Daten-Mapping kommt. Nuxt 3 überprüft dann, ob es eine Komponente mit dem Namen gibt und rendert diese dann. Alle Elemente bekommen ihre Daten in Form einer Property mit dem Namen elementData übergeben.
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{DarstellungInhalt}{1}
+\caption{Darstellung des Contents}
+\end{figure}
+
+
+\paragraph{Layout}
+
+Wie im oberen Bild zu erkennen, gibt es noch einige unbeschriebene Code-Abschnitte. Wie man sehen kann, haben die Section Komponenten CSS-Klassen. Dies wären die Klassen 'flex' und 'flex-wrap'. Bei den Klassen handelt es sich um Klassen, welche in Tailwind / DaisyUI definiert sind. 'flex' erweitert die Elemente dabei um die CSS-Eigenschaft display mit dem Wert flex. Dadurch werden alle Elemente in einer Section als Flex-Elemente behandelt. 'flex-wrap' fügt die CSS-Eigenschaft flex-wrap, mit dem Wert wrap hinzu. Dadurch entstehen mehrere Zeilen in einem Flex-Container, wenn die Flex-Items zu groß für eine Zeile sind. Flex ist das standard Layout Werkzeug für Webentwicklung. Den Flex-Items kann nun eine Breite im Container zugewiesen werden. Flex-Items sind die Kinder des Flex-Containers. Im Fall des Projektes sind dies alle Komponenten, welche in den jeweiligen Sections sind. Dafür werden die in Kapitel \ref{sec:Skeleton-Extension / Layout} Skeleton-Extension / Layout Abschnitt Datenmodell genutzten Datenfelder genommen. Mit dem :class Attribut bekommen die Komponenten dynamisch CSS zugewiesen, welches ihnen für die jeweilige Bildschirmbreite ihre Breite zuweist. Dafür wird eine Hilfsfunktion mit dem Namen responsiveLayout genutzt. Sie returnt die jeweiligen CSS-Klassen als string. responsiveLayout nutzt wiederum eine weitere Hilfsfunktion mit dem Namen getResponsiveColumn. Sie wandelt die gepflegten Werte, mit einem switch case, in Tailwind/DaisyUI Klassen um. responsiveLayout ruft jeweils für mobile, tablet und desktop die getResponsiveColumn Funktion auf. Der zurückgegebene Wert wird dann mit String-Verkettung den jeweiligen Bildschirmgrößen zugewiesen. md und lg stehen dabei representativ für die jeweiligen Bildschirmbreiten 768px und 1024px. Was in diesem Fall tablet und desktop entspricht. Da Tailwind 'Mobile First' ist, braucht es bei der kleinsten Bildschirmgröße kein extra Zusatz, da diese als der Standard betrachtet wird.
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{responsiveHelpers}{1}
+\caption{Hilfsfunktionen fürs Layout}
+\end{figure}
 
 \subsubsection{Section Komponente}
 \label{sec:Section Komponente}
@@ -272,6 +271,42 @@ Die Section Komponente ist in dieser Iteration des Skeletons eine sehr einfache 
 \label{sec:Content Komponenten}
 
 Für alle restlichen Komponenten die laut Projektantrag dargestellt werden sollen, wurde jeweils eine Komponente erstellt. Im Beispiel des Text-Elements wurde im components Verzeichnis im Unterverzeichnis cms-components die Datei RichText.vue angelegt. Diese kann nun im Template von Nuxt 3 durch <cms-components-rich-text> aufgerufen werden. Dafür benötigt es keinen Import. Analog dazu wurden für alle anderen Komponenten ebenfalls Dateien nach diesem Namensschema angelegt. Das Daten-Mapping der Komponenten wurde dann mit den Namen aufgefüllt.
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{ComponentsDocumentation}{1}
+\caption{Komponenten Dateien}
+\end{figure}
+
+In den einzelnen Komponenten wurde keine komplexe Logik umgesetzt. Es wurden die Daten auf die einfachste Art und Weise dargestellt. Dies geschah aus dem einfachen Grund, dass sich das Design der Komponeten von Projekt zu Projekt stark ändern würde. 
+
+\paragraph{Text und Bilder \& Textelement}
+
+Wie in Figure \ref{fig:Bild-Text-Komponente} dargestellt, erhalten Komponenten im setup script ihre Daten als Property zugewiesen. Dies ist für alle Komponenten gleich. Die Property wird dann im Template genommen um die Inhalte der Komponente darzustellen. Da es sich in diesem Beispiel um das Text-Bild-Element handelt, wird ein Bild und ein Text dargestellt. Inhalte von Komponenten werden normalerweise im content Objekt gespeichert. Das content Objekt hat mehrere Objekte als Eigenschaften. In der gallery Eigenschaft, welches selber ein Objekt ist, werden die Bilder gepflegt. Um das Bild darzustellen, wird das zuerst gepflegte Bild genommen und einem img tag als src(kurz für source/Quelle) übergeben. Der Text wird mit v-html dargestellt. Es handelt sich also bei der bodytext Eigenschaft um einen string, welche HTML-Attribute enthält. Dies liegt daran, dass der Text im Typo3 Backend mit einem Richtext Editor gepflegt wird. Diese kann komplexere Anpassungen an Texten nehmen, welche in Form von HTML-Attributen gespeichert und dargestellt werden. v-html rendert diesen HTML-Code dann in die div hinein. Der Code von der RichText.vue Datei sieht, bis auf den img tag, genau wie der von der PictureAndText.vue Datei aus. Bei der Richtext.vue existiert dieser gar nicht.
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{BildTextKomponente}{1}
+\caption{Bild-Text-Komponente / PictureAndText.vue}
+\label{fig:Bild-Text-Komponente}
+\end{figure}
+\paragraph{Überschrift}
+Die Überschrift Komponente(Header.vue) wird genutzt um eine Überschrift und eine Unterüberschrift darzustellen. Die Überschrift findet sich in der header Eigenschaft des content Objektes. Analog dazu lässt sich die Unterüberschrift in subheader finden. Die Überschrift wurde in einem h1 tag gerendert, während die Unterüberschrift in einem h2 tag gerendert wurde.
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{Header}{1}
+\caption{Überschrift/ Header.vue}
+\label{fig:berschrift/ Header.vue}
+\end{figure}
+\paragraph{Überschrift}
+\paragraph{Nur Bilder}
+
+\paragraph{Trenner}
+
+Der Trenner(Divider.vue) unterscheidet sich von den anderen Komponenten. In der aktuellen Iteration nutzt er die elementData Property überhaupt nicht. Stattdessen wird im Template lediglich ein hr tag gerendert. Der Trenner hat im Typo3 Backend aber auch keine entsprechenden Eingabefelder, die dies benötigen würden. Er dient lediglich dazu, eine Linie über den Bildschirm zu ziehen. Dies wird mit dem hr tag erreicht.
+
+\paragraph{HTML}
 
 \subsection{finale Anwendung}
 \label{sec:finale Anwendung}

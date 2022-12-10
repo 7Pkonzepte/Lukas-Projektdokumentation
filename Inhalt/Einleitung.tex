@@ -30,9 +30,57 @@ Nuxt hat als Vorteil, dass es serverseitig gerendert wird. Dies führt zu schnel
 \subsection{Projektschnittstellen} 
 \label{sec:Projektschnittstellen}
 
-Die finale Nuxt Anwendung interagiert nur mit der Typo3 Schnittstelle. Projekte, die mit dem Skeleton entwickelt werden, können aber weitere Schnittstellen einbinden. Im Fall von \acs{BAL} würde dies beispielsweise oft eine Schnittstelle zu einem Shopware-System(E-Commerce Platform) sein. Zukünftige Iterationen des Skeletons könnten diese auch als Standard beinhalten.
+Die finale Nuxt Anwendung interagiert nur mit der Typo3 Schnittstelle. Die Daten des Typo3 werden nach erfolgreichen installieren der Headless-Extension(erstes Projektziel) wie folgt ausgespielt:
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
 
-Die Mittel für das Projekt werden von  \acs{BAL} zur Verfügung gestellt. Da die Entwickler von \acs{BAL} auch die zukünftigen Nutzer des Projekts sind. Dementsprechend muss das Projekt auch den Entwicklern später präsentiert und eine Dokumentation für diese geschrieben werden. Projekte, welche aus dem Skeleton entwickelt werden, würden aber in der Zukunft Kunden präsentiert werden und Teile des Skeletons enthalten.
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+\begin{lstlisting}[language=json,firstnumber=1]
+id	87
+type	"Standard"
+slug	"/"
+media	[]
+meta	{…}
+categories	""
+breadcrumbs	[…]
+appearance	{…}
+content	{…}
+i18n	[…]
+page	{…}
+languages	[…]
+\end{lstlisting}
+Die wichtigsten Objekte der Typo3 Schnittstelle sind die content und page Objekte. Sie beinhalten den Content und die Navigation.
+Projekte, die mit dem Skeleton entwickelt werden, können aber weitere Schnittstellen einbinden. Im Fall von \acs{BAL} würde dies beispielsweise oft eine Schnittstelle zu einem Shopware-System(E-Commerce Platform) sein. Zukünftige Iterationen des Skeletons könnten diese auch als Standard beinhalten.
+Die Mittel für das Projekt werden von  \acs{BAL} zur Verfügung gestellt, da die Entwickler von \acs{BAL} auch die zukünftigen Nutzer des Projekts sind. Dementsprechend muss das Projekt auch den Entwicklern später präsentiert und eine Dokumentation für diese geschrieben werden. Projekte, welche aus dem Skeleton entwickelt werden, würden aber in der Zukunft Kunden präsentiert werden und Teile des Skeletons enthalten.
 
 
 \subsection{Projektabgrenzung} 
