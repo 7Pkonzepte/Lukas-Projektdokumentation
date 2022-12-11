@@ -5,53 +5,40 @@
 \subsection{Docker-Setup}
 \label{sec:Docker-Setup}
 
-Als Image für das aktuellste Typo3 Docker-Setup wurde das Image von Martin Helmich genutzt (https://github.com/martin-helmich/docker-typo3). Ein Docker-Image ist eine Datei, welche aus Anweisungen besteht, welche vollständige und ausführbare Version einer Anwendung erstellt. Diese Anweisungen werden in einer docker-compose.yml Daten gespeichert und dann mit dem Befehl docker-compose up ausgeführt. Nach dem Ausführen des Befehls, wird eine Typo3 Instanz erstellt und gestartet. Abhängig von dem angegebenen Port, kann dann das Typo3 über Localhost aufgerufen werden. Nach dem ausführen der Anweisungen, wird dort der Installations-Screen(siehe Abbildung) von Typo3 angezeigt. Nach dem Installieren, kann ausgewählt werden, ob das Typo3 mit einer leeren Startseite gestartet werden soll, oder weitere Konfigurationen installiert/ausgeführt werden sollen. Um das Skeleton möglichst minimal zu halten, wird das Typo3 mit einer leeren Startseite initialisiert.
+Als Image für das aktuellste Typo3 Docker-Setup wurde das Image von Martin Helmich genutzt (https://github.com/martin-helmich/docker-typo3). Ein Docker-Image ist eine Datei, welche aus Anweisungen besteht, welche vollständige und ausführbare Version einer Anwendung erstellt. Diese Anweisungen werden in einer docker-compose.yml Daten gespeichert und dann mit dem Befehl docker-compose up ausgeführt. Falls noch kein Docker installiert ist, muss die natürlich vorher geschehen. Nach dem Ausführen des Befehls, wird eine Typo3 Instanz erstellt und gestartet. Abhängig von dem angegebenen Port, kann dann das Typo3 über Localhost aufgerufen werden. Nach dem ausführen der Anweisungen, wird dort der Installations-Screen von Typo3 angezeigt. Nach dem Installieren, kann ausgewählt werden, ob das Typo3 mit einer leeren Startseite gestartet werden soll, oder weitere Konfigurationen installiert/ausgeführt werden sollen. Um das Skeleton möglichst minimal zu halten, wird das Typo3 mit einer leeren Startseite initialisiert.
+
+Das langfristige Ziel ist es, dass ein Image erstellt wird, welches bereits alle nötigen Anpassungen an das Typo3 automatisch durchführt. Das Erstellen hätte den Rahmen der Projektarbeit aber übertroffen. Aus diesem Grund wurde fürs erste ein bereits erstelltes Image genutzt.
 
 \subsection{Ausspielen der Typo3 Daten}
 \label{sec:Ausspielen der Typo3 Daten}
 
-Damit die Typo3 Daten im JSON-Format ausgespielt werden, wird die Headless-Extension \linebreak (https://extensions.typo3.org/extension/headless) installiert. Danach muss die Extension zum Template hinzugefügt werden, damit Typo3 weiß, dass es das Template dementsprechend anpassen muss. Typo3 spielt nun die Daten im JSON-Format aus. Das JSON muss noch angepasst werden, damit eine Navigationsstruktur damit abgebildet werden kann. Dafür werden folgende Erweiterungen am Template vorgenommen.
+Damit die Typo3 Daten im JSON-Format ausgespielt werden, wird die Headless-Extension \linebreak (https://extensions.typo3.org/extension/headless) installiert. Danach muss die Extension zum Template hinzugefügt werden, damit Typo3 weiß, dass es das Template dementsprechend anpassen muss. Dies geschieht im Backend von Typo3(siehe https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/UsingSetting/Entering.html). Standardmäßig ist dort der Root-Page ein Template zugewiesen, was bearbeitet werden kann.
 
-\begin{lstlisting}[language=json,firstnumber=1]
-lib.page = JSON
-lib.page {
-  fields {
-    navigation {
-      fields {
-        main {
-          dataProcessing {
-            10 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
-            10 {              
-				       special = categories
-				       special.value = 1
-				       levels = 7
-				       as = main
-				       expandAll = 1
-				       includeSpacer = 1
-				       titleField = nav_title // title	
-              	dataProcessing {
-                	10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
-                	10 {
-                  		references.fieldName = media
-                  		as = media
-                	}
-              	}
-                 overwriteMenuLevelConfig {
-                  stdWrap.cObject {
-                    100 = TEXT
-                    100.field = uid
-                    100.wrap = ,"uid":|
-                  }
-                }   
-            }
-          }
-        }
-      }      
-    }
-  }
-}
-\end{lstlisting}
-Durch diese Anpassungen erhält das page Objekt die property navigation. Die Eigenschaft navigation hat wiederrum die Eigenschaft main. Mit der Hilfe des Menuprocessor von der Headless Extension, werden in die main Eigenschaft alle Seiten + Unterseiten geladen, welche der 1. Kategorie zugewiesen werden (special = categories \& special value = 1). Falls Bilder für die Seiten gepflegt sind, werden diese ebenfalls durch den FilesProcessor ausgespielt. Diese werde in dem Skeleton aber nicht verwendet. Dies dient nur zum Nutzen von potentiellen zukünftigen Projekten. Die Anpassungen können sowohl in der Skeleton-Extension stattfinden, als auch im Typo3 Backend.
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{AddHeadlessToTemplate}{1}
+\caption{Headless zum Template hinzufügen}
+\label{fig:Headless zum Template hinzufügen}
+\end{figure}
+
+Typo3 spielt nun die Daten im JSON-Format aus. Das JSON muss noch angepasst werden, damit eine Navigationsstruktur damit abgebildet werden kann. Dafür wurden Erweiterungen am Template vorgenommen. Diese Anpassungen können sowohl im Backend, als auch in einer eigenen Extension gemacht werden. In Typo3 Extension gibt es die setup.typoscript Datei im TypoScript Verzeichnis, welche automatisch beim installieren geladen wird. 
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{TemplateAnpassung}{1}
+\caption{Template Anpassungen für Navigation}
+\label{fig:Template Anpassungen für Navigation}
+\end{figure}
+
+
+Durch diese Anpassungen erhält das page Objekt die Eigenschaft navigation. Die Eigenschaft navigation hat wiederrum die Eigenschaft main. Mit der Hilfe des Menuprocessor von der Headless Extension, werden in die main Eigenschaft alle Seiten + Unterseiten geladen, welche der 1. Kategorie zugewiesen werden (special = categories \& special value = 1). Falls Bilder für die Seiten gepflegt sind, werden diese ebenfalls durch den FilesProcessor ausgespielt. Diese werde in dem Skeleton aber nicht verwendet. Dies dient nur zum Nutzen von potentiellen zukünftigen Projekten. Die Anpassungen können sowohl in der Skeleton-Extension stattfinden, als auch im Typo3 Backend.
+
+\subsection{Typoscript}
+\label{sec:Typoscript}
+
+'TypoScript is a syntax for defining information in a hierarchical structure using simple ASCII text content.'\footnote{\Vgl \citet{TypoScript}.}
+
+TypoScript ist eine Typo3 eigene Erfindung. Es ist eine Syntax, welche primär dazu genutzt wird um das Template der Website zu definieren. TypoScript selber kann keine komplexen Funktionen ausführen. Es kann aber auf komplexere Funktionen verweisen, welche dann im Template benutzt werden. Ein Beispiel wäre der MenuProcessor von Abbildung \ref{fig:Template Anpassungen für Navigation}. Das TypoScript-Template enthält also die Informationen wie die Daten einer Typo3 Seite ausgespielt werden.
 
 \subsection{Skeleton-Extension / Layout}
 \label{sec:Skeleton-Extension / Layout}
@@ -67,7 +54,7 @@ CREATE TABLE tt_content (
 );
 \end{lstlisting}
 Anpassungen an bestehende Tabellen in der Datenbank werden in der ext\_tables.sql Datei vorgenommen. Diese Datei wird automatisch beim installieren von Extensions ausgelesen und die Anpassungen durchgeführt. Felder, welche als Input für Inhaltselemente dienen, werden in Typo3 in der tt\_content Tabelle gespeichert. Diese Felder müssen noch mit angemessenen Auswahlmöglichkeiten versehen werden und dann allen Elementen zugewiesen werden.
-\paragraph{Backend:} Die Inputfelder werden als Selects dargestellt. Die Auswahlmöglichkeiten werden im Code vorgegeben.
+\paragraph{Backend:} Die Inputfelder werden als Selects dargestellt. Die Auswahlmöglichkeiten werden im Code vorgegeben. Der folgende Code wurde in der Configuration/TCA/Overrides/tt\_content.php Datei hinzugefügt. In der tt\_content werden praktisch alle Inhaltselemente gespeichert und damit auch welche Eingabefelder sie haben.
 \begin{lstlisting}[language=json,firstnumber=1]
 "tx_responsive_mobile" => Array (
         "exclude" => 1,
@@ -92,26 +79,21 @@ Anpassungen an bestehende Tabellen in der Datenbank werden in der ext\_tables.sq
 Analog zum oberen Code, werden für Tablet und Desktop ebenfalls Konfigurationen vorgenommen und im Array \$tempColumns gespeichert. Welche Eigenschaften Inputfelder brauchen und welche Optionen es bei den Inputfeldern gibt, lässt sich in der Typo3 Dokumentation(https://docs.typo3.org/m/typo3/\newline reference-tca/main/en-us/Columns/Index.html) nachlesen. Um die Inputfelder nun allen Elementen hinzuzufügen, wird die ExtensionManagementUtility Klasse aus dem Typo3 Core genutzt.
 \begin{lstlisting}[language=json,firstnumber=1]
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns("tt_content",$tempColumns,1);
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content','--div--;Responsive,tx_responsive_mobile,tx_responsive_tablet,tx_responsive_desktop','','after:addToAllTCAtypes');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content','--div--;Responsive,tx_responsive_mobile,tx_responsive_tablet,tx_responsive_desktop','');
 \end{lstlisting}
 
-Die erste Zeile Code speichert die Inputfelder ab, die zweite Zeile Code, fügt sie allen Inhaltselementen hinzu. --div--;Responsive sorgt dafür, dass diese in einem eigenen Tab mit dem Namen Responsive dargestellt werden. Danach wird aufgelistet werden Inputfelder hinzugefügt werden.
+Die erste Zeile Code speichert die Inputfelder ab und fügt sie der tt\_content Tabelle hinzu. Die zweite Zeile Code, fügt sie allen Inhaltselementen(Elemente in tt\_content.php) hinzu. --div--;Responsive sorgt dafür, dass diese in einem eigenen Tab mit dem Namen Responsive dargestellt werden. Danach wird aufgelistet welche Inputfelder hinzugefügt werden. Hier erhalten Da hier kein spezielles Element genannt wird, welchem die neuen Selects hinzugefügt werden sollen, werden sie allen Elementen hinzugefügt.
 
 \paragraph{Ausspielen ans Frontend:}
 
-Damit die gepflegten Daten auch ans Frontend ausgespielt werden, muss das Template von Typo3 um diese erweitert werden. Extensions haben dafür im Pfad \newline Configuration->TypoScript die Datei setup.typoscript. Hier können Anpassungen ans Template gepflegt werden, diese Anpassungen werden erst aktiv, wenn man die Extension dem Typo3 Template zuweist.
+Damit die gepflegten Daten auch ans Frontend ausgespielt werden, muss das Template von Typo3 um diese erweitert werden. Extensions haben dafür im Pfad Configuration/TypoScript die Datei setup.typoscript. Hier können Anpassungen ans Template gepflegt werden, diese Anpassungen werden erst aktiv, wenn man die Extension dem Typo3 Template zuweist(analog zur Headless Extension Installation).
 
-\begin{lstlisting}[language=json,firstnumber=1]
-lib.appearance {
-    fields {
-        responsive_desktop = TEXT
-        responsive_desktop {
-            field = tx_responsive_desktop
-        }
-        responsive_tablet = TEXT ......
-    }
-}
-\end{lstlisting}
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{SetupTypoScriptResponsive}{1}
+\caption{Template Anpassungen für Navigation}
+\label{fig:Template Anpassungen für Navigation}
+\end{figure}
 
 Die gepflegten Daten werden nun in der Eigenschaft appearance ausgespielt und können von Nuxt3 ausgelesen werden.
 
@@ -120,15 +102,10 @@ Um die Elemente auf einer Seite in Bereiche auszuteilen, wurde ein komplett neue
 
 Damit das neue Element auch in der Auswahl von Elementen angezeigt wird, muss das Element noch in der ext\_localconf.php Datei im Root Verzeichnes der Extension hinzugefügt werden.\newline \Anhang{ext_localconf.php} \newline Übersetzungen für den Namen und die Beschreibung der Section wurden in einer .xlf Datei gespflegt.
 
+Dieser Code wurde größtenteils aus bereits vorhanden Extensions extrahiert und nur von zusätzlichen Funktionen / Eingabefeldern bereinigt, weswegen hier nicht größer auf ihn eingegangen wird.
 
 \subsection{Setup der Implementierung der Benutzeroberfläche}
 \label{sec:Setup der ImplementierungBenutzeroberflaeche}
-
-\begin{itemize}
-	\item Beschreibung der Implementierung der Benutzeroberfläche, falls dies separat zur Implementierung der Geschäftslogik erfolgt (\zB bei \acs{HTML}-Oberflächen und Stylesheets).
-	\item \Ggfs Beschreibung des Corporate Designs und dessen Umsetzung in der Anwendung.
-	\item Screenshots der Anwendung
-\end{itemize}
 
 \subsubsection{Nuxt3 aufsetzen um DaisyUI installieren}
 \label{sec:Nuxt3 aufsetzen um DaisyUI installieren}

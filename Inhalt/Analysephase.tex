@@ -5,10 +5,6 @@
 
 \subsection{Ist-Analyse} 
 \label{sec:IstAnalyse}
-\begin{itemize}
-	\item Wie ist die bisherige Situation (\zB bestehende Programme, Wünsche der Mitarbeiter)?
-	\item Was gilt es zu erstellen/verbessern?
-\end{itemize}
 
 Zum Zeitpunkt des Projektstarts hatte \acs{BAL} mehrere Projekte mit Typo3 in Verbindung mit Nuxt2 erstellt. Das genutzte Typo3 System war nicht auf der aktuellen Version. Dazu bestand noch kein vorhandenes Skeleton. Diese Situation gilt es zu verbessern. Dies bedeutet, sowohl die neuste Version von Nuxt, als auch von Typo3 zu nutzen, um ein Skeleton zu erstellen.
 
@@ -81,12 +77,28 @@ Natürlich darf die Ladezeit der Website auch nicht sonderlich groß sein, damit
 \subsection{Nuxt 2 vs Nuxt 3}
 \label{sec:Nuxt 2 vs Nuxt 3}
 
-Es wurde sich entschieden für das Projekt Nuxt 3 zu nutzen. Bis jetzt hatte \acs{BAL} Nuxt 2 und Vue 3 genutzt um sich mit Headless-Typo3 Systemen zu verbinden. Der Grund für die Entscheidung liegt unter anderem der Erweiterung der Wissensbasis der Firma. Eine genauere Analyse, warum sich für Nuxt im allgemeinen und nicht für andere Frontend Webframeworks entschieden wurde, finden sie in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}. Zum Zeitpunkt der Projektarbeit war Nuxt 3 noch in der Beta. Am 16.11.2022 wurde die erste stable Version von Nuxt veröffentlicht. Dies ist natürlich erstmal ein Nachteil, da Betaversionen von Programmen häufiger von Bugs geplagt sind. Zusätzlich werden in Betaversionen häufiger stärkere Veränderungen durchgeführt, welche zu Problemen bei bestehenden Programmcode führen könnten. Nuxt 2 ist seit Jahren offziell veröffentlicht und \acs{BAL} hat bereits mehrere Projekte erfolgreich mit Nuxt 2 abgeschlossen. Zusätzlich hat \acs{BAL} bereits Nuxt 2 erfolgreich mit einem Headless-Typo3 verbunden. Es wäre also sehr viel einfacher das Skeleton mit Nuxt 2 umzusetzen. Es gibt also folgende gute Gründe Nuxt 2 anstelle von Nuxt 3 zu nutzen:
+\subsubsection{Was ist Nuxt überhaupt?}
+\label{sec:Was ist Nuxt überhaupt?}
+
+Es wurde sich entschieden für das Projekt Nuxt 3 zu nutzen. Bis jetzt hatte \acs{BAL} Nuxt 2 und Vue 3 genutzt um sich mit Headless-Typo3 Systemen zu verbinden. Der Grund für die Entscheidung liegt unter anderem der Erweiterung der Wissensbasis der Firma. Eine genauere Analyse, warum sich für Nuxt im allgemeinen und nicht für andere Frontend Webframeworks entschieden wurde, finden sie in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
+
+\paragraph{Nuxt}
+
+'The Intuitive Vue
+Framework. Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'\footnote{\Vgl \citet{Nuxt}.} 
+
+Nuxt basiert auf Vue. Vue ist ein JavaScript-Webframework zum Erstellen von Single-Page-Webanwendungen. Generell hat Nuxt alle Features, die Vue auch hat. Es folgt einer gleichen Syntax und Logik. Nuxt unterscheidet sich von Vue primär darin, dass es serverseitig gerendert wird. Dies bedeutet, dass das HTML teilweise/komplett bereits auf dem Server erstellt wird und an den Clienten geschickt wird. Das führt dazu, dass die Seiten generell schneller benutzbar sind. Nuxt 2 basiert analog auf Vue 2, während Nuxt 3 viele Features von Vue 3 übernommen hat.
+
+\subsubsection{Warum sollte man Nuxt 2 nutzen?}
+\label{sec:Warum sollte man Nuxt 2 nutzen?}
+
+Zum Zeitpunkt der Projektarbeit war Nuxt 3 noch in der Beta. Am 16.11.2022 wurde die erste stable Version von Nuxt veröffentlicht. Dies ist natürlich erstmal ein Nachteil, da Betaversionen von Programmen häufiger von Bugs geplagt sind. Zusätzlich werden in Betaversionen häufiger stärkere Veränderungen durchgeführt, welche zu Problemen bei bestehenden Programmcode führen könnten. Nuxt 2 ist seit Jahren offziell veröffentlicht und \acs{BAL} hat bereits mehrere Projekte erfolgreich mit Nuxt 2 abgeschlossen. Zusätzlich hat \acs{BAL} bereits Nuxt 2 erfolgreich mit einem Headless-Typo3 verbunden. Es wäre also sehr viel einfacher das Skeleton mit Nuxt 2 umzusetzen. Es gibt also folgende gute Gründe Nuxt 2 anstelle von Nuxt 3 zu nutzen:
 \begin{itemize}
 	\item Programmcode aus vorherigen Projekten kann genutzt werden. --> Zeitersparnis
 	\item Wissensbasis in Nuxt 2 vorhanden. --> potentiell weniger Bugs / schnelleres Entwickeln
 	\item Programm kann schneller von Arbeitskollegen verstanden werden --> potentiell schnellere Entwicklungszeit / Einarbeitungszeit bei ersten neuen Projekten mit Skeleton
 \end{itemize}
+
 
 \subsubsection{Warum wurde sich trotzdem für Nuxt 3 entschieden?}
 \label{sec:Warum wurde sich trotzdem für Nuxt 3 entschieden?}

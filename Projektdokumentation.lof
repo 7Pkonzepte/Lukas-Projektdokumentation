@@ -1,15 +1,18 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Github Template Einstellung}}{19}{figure.183}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Daten-Mapping der Komponententypen}}{24}{figure.221}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Darstellung des Contents}}{25}{figure.224}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Hilfsfunktionen fürs Layout}}{26}{figure.227}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Komponenten Dateien}}{27}{figure.230}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Bild-Text-Komponente / PictureAndText.vue}}{28}{figure.233}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Überschrift/ Header.vue}}{28}{figure.236}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Nur Bilder - Komponente / ImageGallery.vue}}{29}{figure.239}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Start der Menüführung durch klicken auf Test2}}{viii}{figure.467}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Sidemenu öffnet sich. Beim klicken auf Test2 öffnet sich Test2 Seite, beim klick auf Test3 wird die open() Funktion angewandt.}}{viii}{figure.468}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Test3 hat Children, also wird neue Seitennavigation angezeigt.}}{viii}{figure.469}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Ausspielen der Komponenten im Frontend}}{ix}{figure.471}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Pflegen der Komponenten im Backend}}{ix}{figure.472}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Headless zum Template hinzufügen}}{16}{figure.102}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Template Anpassungen für Navigation}}{16}{figure.103}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Template Anpassungen für Navigation}}{19}{figure.142}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Github Template Einstellung}}{20}{figure.148}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Daten-Mapping der Komponententypen}}{25}{figure.186}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Darstellung des Contents}}{26}{figure.189}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Hilfsfunktionen fürs Layout}}{27}{figure.192}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Komponenten Dateien}}{27}{figure.195}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Bild-Text-Komponente / PictureAndText.vue}}{28}{figure.198}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Überschrift/ Header.vue}}{28}{figure.201}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Nur Bilder - Komponente / ImageGallery.vue}}{29}{figure.204}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Start der Menüführung durch klicken auf Test2}}{viii}{figure.432}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Sidemenu öffnet sich. Beim klicken auf Test2 öffnet sich Test2 Seite, beim klick auf Test3 wird die open() Funktion angewandt.}}{viii}{figure.433}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Test3 hat Children, also wird neue Seitennavigation angezeigt.}}{viii}{figure.434}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Ausspielen der Komponenten im Frontend}}{ix}{figure.436}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Pflegen der Komponenten im Backend}}{ix}{figure.437}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -11,14 +11,13 @@ Als Framework für TS wurde sich für Nuxt3 entschieden. Nuxt3 ist ein serversei
 
 Als UI-Framework wurde DaisyUI genutzt. Für die Umsetzung des Skeletons war die Nutzung eines UI-Frameworks nicht wirklich nötig. Insgesamt musste während der Entwicklung des Skeleton nicht viel CSS / Styling genutzt werden. Das Framework liefert vorgestylte Komponenten und CSS-Klassen, welche die zukünftige Entwicklung beschleunigen sollen. DaisyUI basiert auf Tailwind, weswegen alle Tailwind Klassen auch in dem Projekt genutzt werden können.
 
-Um Typo3 besser testen zu können, wird Typo3 in einem Docker-Container ausgeführt. Docker ist eine Open-Source-Tool, welches es erlaubt Software in abgekapselten Umgebungen/Containern laufen zu lassen. Ein Docker-Container ist Softwarepaket, was alle nötigen Werkzeuge enthält um ein Programm laufen zu lassen. Docker ermöglicht es verschiedenste Programme (andere Programmiersprachen, Systemanforderungen, Libraries, etc.) in unterschiedlichen Containern laufen zu lassen. Beispielsweise kann auf einem Rechner/Server in einem Docker-Container Typo3 laufen, während in einem anderen Nuxt läuft. Docker-Container können schnell hoch und runter gefahren werden, was testen von neuem Code, oder neustarten von Systemen sehr schnell macht.
+Um Typo3 besser testen zu können, wird Typo3 in einem Docker-Container ausgeführt. Docker ist eine Open-Source-Tool, welches es erlaubt Software in abgekapselten Umgebungen/Containern laufen zu lassen. Ein Docker-Container ist Softwarepaket, was alle nötigen Werkzeuge enthält um ein Programm laufen zu lassen. Docker ermöglicht es verschiedenste Programme (andere Programmiersprachen, Systemanforderungen, Libraries, etc.) in unterschiedlichen Containern laufen zu lassen. Beispielsweise kann auf einem Rechner/Server in einem Docker-Container Typo3 laufen, während in einem anderen Nuxt läuft. Docker-Container können schnell hoch und runter gefahren werden, was testen von neuem Code, oder neustarten von Systemen sehr schnell macht. Bei Docker-Containern handelt es sich nicht um virtuelle Maschinen. Vielmehr sind Docker-Container virtuelle Betriebssysteme. Dadurch können Docker-Container mehr Ressourcen mit ihrem Host-System teilen. Deswegen verbrauchen sie insgesamt weniger Leistung als virtuelle Maschinen.
 
 
 Sonst wurden die klassischen Webtechnologien HTML und CSS genutzt.
 
 Genauere Vergleiche zu anderen Frameworks / Technologien, werden im folgenden Kapitel analysiert.
 
-\pagebreak
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
@@ -52,15 +51,10 @@ Layout / Spalteneinteilung: Standardmäßig hat Typo3 keine Tools um Komponenten
 
 \subsection{Entwurf der Benutzeroberfläche}
 \label{sec:Benutzeroberflaeche} 
-\begin{itemize}
-	\item Entscheidung für die gewählte Benutzeroberfläche (\zB GUI, Webinterface).
-	\item Beschreibung des visuellen Entwurfs der konkreten Oberfläche (\zB Mockups, Menüführung).
-	\item \Ggfs Erläuterung von angewendeten Richtlinien zur Usability und Verweis auf Corporate Design.
-\end{itemize}
 
 \paragraph{Frontend} 
 \linebreak
-Das Ziel der Benutzeroberfläche des Skeletons ist, dass Komponenten dargestellt werden und zwischen Seiten des Typo3 navigiert werden kann. Es muss noch keine gute Benutzeroberfläche erstellt werden, welche Kunden nützen können. Stattdessen muss es für Entwickler einfach und flexibel sein, eine gute Benutzeroberfläche für Kunden, aus der Benutzeroberfläche des Skeletons, zu entwickeln. Dafür werden die Komponenten und die Navigation stylistisch sehr minimalistisch gehalten und primär ihre Logik erstellt. Die Navigation befindet sich klassisch am Anfang der Website und unter ihr wird der Content der Seite gerendert. Dies wurde auch hier angewandt.
+Das Ziel der Benutzeroberfläche des Skeletons ist, dass Komponenten dargestellt werden und zwischen Seiten des Typo3 navigiert werden kann. Es muss noch keine gute Benutzeroberfläche erstellt werden, welche Kunden nützen können. Stattdessen muss es für Entwickler einfach und flexibel sein, eine gute Benutzeroberfläche für Kunden, aus der Benutzeroberfläche des Skeletons, zu entwickeln. Dafür werden die Komponenten und die Navigation stilistisch sehr minimalistisch gehalten und primär ihre Logik erstellt. Die Navigation befindet sich klassisch am Anfang der Website und unter ihr wird der Content der Seite gerendert. Dies wurde auch hier angewandt.
 
 
 \paragraph{Backend} 
@@ -69,15 +63,18 @@ Die Benutzeroberfläche des Backends/CMS ist größtenteils durch Typo3 vorgegeb
 
 \paragraph{Menüführung}  
 \linebreak
-Die Hauptnavigationspunkte, welche aus dem Typo3 ausgespielt werden, werden oben in der Menüleiste angezeigt. Ihre Kinder(Children/Unterseiten) werden ebenfalls ausgespielt, aber erst angezeigt, wenn durch die Navigation navigiert wird. Wenn einer der Hauptnavigationspunkte angeklickt wird, wird überprüft, ob dieser Children(Unterseiten) hat oder nicht. Wenn dies nicht der Fall ist, wird direkt die Seite von dem Hauptnavigationspunkt aufgerufen. Wenn dies der Fall ist, wird das Sidemenu aufgerufen. Das Sidemenu enthält sowohl den zuletzt angeklickten Navigationspunkt, als auch alle Children von ihm. Eine Darstellung der Menüführung finden sie im Beispielentwürfe finden sich im \Anhang{Screenshots des Menüs}. Zusätzlich gibt es einen Button, mit welchem zurück navigiert werden kann. Wenn der zuletzt angeklickte Navigationspunkt hier nochmal angeklickt wird, wird dessen Seite aufgerufen. Wenn ein Child angeklickt wird, wird wieder überprüft, ob es Children hat oder nicht. Falls nein, wird die Seite aufgerufen, falls ja wird das Child zum zuletzt angeklickten Navigationspunkt. 
+Die Hauptnavigationspunkte, welche aus dem Typo3 ausgespielt werden, werden oben in der Menüleiste angezeigt. Ihre Kinder(Children/Unterseiten) werden ebenfalls ausgespielt, aber erst angezeigt, wenn durch die Navigation navigiert wird. Wenn einer der Hauptnavigationspunkte angeklickt wird, wird überprüft, ob dieser Children(Unterseiten) hat oder nicht. Wenn dies nicht der Fall ist, wird direkt die Seite von dem Hauptnavigationspunkt aufgerufen. Wenn dies der Fall ist, wird das Slidemenu aufgerufen. Das Slidemenu enthält sowohl den zuletzt angeklickten Navigationspunkt, als auch alle Children von ihm. Der Name des Slidemenu kommt von einer CSS Animation, welche das Menü in den Screen sliden lässt. Eine Darstellung der Menüführung finden sie im Beispielentwürfe finden sich im \Anhang{Screenshots des Menüs}. Zusätzlich gibt es einen Button, mit welchem zurück navigiert werden kann. Wenn der zuletzt angeklickte Navigationspunkt hier nochmal angeklickt wird, wird dessen Seite aufgerufen. Wenn ein Child angeklickt wird, wird wieder überprüft, ob es Children hat oder nicht. Falls nein, wird die Seite aufgerufen, falls ja wird das Child zum zuletzt angeklickten Navigationspunkt. 
 
+\paragraph{rendern der verschiedenen Typo3-Inhaltselemente}
+Im Typo3 können viele verschiedene Inhaltselemente gepflegt werden. Um diese darzustellen, wurde sich entschieden für jedes Inhaltselement eine eigene Komponente zu erstellen. Für die Zuweisung der Inhaltselemente zu ihrer jeweiligen Nuxt 3 Komponente, wurde eine weitere Nuxt 3 Komponente erstellt. Diese analysiert/verarbeitet den Content der Seite und kümmert sich um die Zuweisungen.
+
+\subsubsection{Typo3 Datenverarbeitung durch Nuxt / Flussdiagramm}
+\label{sec:Typo3 Datenverarbeitung durch Nuxt / Flussdiagramm} 
+
+Um die Typo3 Datenverarbeitung von Nuxt 3 darzustellen wurde ein Flussdiagramm erstellt. Wie sich im Flussdiagramm erkennen lässt, werden alle Daten als erstes von einer Komponente([...slug].vue) ausgelesen. Diese Datei wertet teilweise die Daten aus, verschickt aber auch Teile der Daten weiter an andere Komponenten. Die Navigationsdaten im page Objekt werden an die Navigation.vue Komponente weitergeleitet. Die Navigation.vue Komponente besteht aus zwei weiteren Komponenten. Einmal der TopNavigation.vue und einmal der SlideMenu.vue. Alle drei Komponenten nutzen das navigation Composable um miteinander zu kommunizieren und die Menüführung darzustellen. Der Content wird an die Typoview.vue Komponente weitergeleitet. Dies ist die Komponente, welche sich um die Zuweisung der Typo3-Inhaltselemente zu den jeweiligen Nuxt 3 Komponenten kümmert. Die Breadcrumbs werden in die Breadcrumbs.vue Komponente weitergeleitet. Dort werden diese auch direkt dargestellt. Die Metadaten werden direkt in der [...slug].vue Komponente zu den Metainformationen der Website hinzugefügt.
 
 \subsection{Maßnahmen zur Qualitätssicherung}
 \label{sec:Qualitaetssicherung}
-\begin{itemize}
-	\item Welche Maßnahmen werden ergriffen, um die Qualität des Projektergebnisses (siehe Kapitel~\ref{sec:Qualitaetsanforderungen}: \nameref{sec:Qualitaetsanforderungen}) zu sichern (\zB automatische Tests, Anwendertests)?
-	\item \Ggfs Definition von Testfällen und deren Durchführung (durch Programme/Benutzer).
-\end{itemize}
 
 Um die SEO von dem Skeleton abschätzen zu können kann Lighthouse von Google verwendet werden. Lighthouse analysiert die Seite bezüglich SEO und liefert abhängig davon einen Wert von 0 – 100. Falls es SEO Schwierigkeiten gibt, werden diese hier erläutert. Da noch nicht viel Content auf den Seiten gepflegt ist, kann es sein, dass es dadurch zu Abzügen kommt. Dies wird sich aber dann automatisch anpassen, wenn mit dem Skeleton eine vernünftige Website erstellt wird.
 
