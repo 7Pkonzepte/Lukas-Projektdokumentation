@@ -49,43 +49,49 @@
 \contentsline {paragraph}{\nonumberline Sections:}{18}{paragraph*.180}%
 \contentsline {subsection}{\numberline {5.4}Setup der Implementierung der Benutzeroberfläche}{19}{subsection.181}%
 \contentsline {subsubsection}{\numberline {5.4.1}Nuxt3 aufsetzen um DaisyUI installieren}{19}{subsubsection.182}%
-\contentsline {subsection}{\numberline {5.5}Navigation der Implementierung der Benutzeroberfläche}{19}{subsection.183}%
-\contentsline {subsubsection}{\numberline {5.5.1}Dynamische Seiten}{19}{subsubsection.184}%
-\contentsline {subsubsection}{\numberline {5.5.2}Verarbeitung der Typo3 Daten}{20}{subsubsection.185}%
-\contentsline {subsubsection}{\numberline {5.5.3}Setup Navigation}{21}{subsubsection.207}%
-\contentsline {subsubsection}{\numberline {5.5.4}Aufteilung Navigation}{22}{subsubsection.208}%
-\contentsline {subsubsection}{\numberline {5.5.5}TopNavigation.vue}{22}{subsubsection.209}%
-\contentsline {subsubsection}{\numberline {5.5.6}open() Funktion}{22}{subsubsection.214}%
-\contentsline {subsubsection}{\numberline {5.5.7}Slidemenu.vue}{23}{subsubsection.215}%
-\contentsline {subsection}{\numberline {5.6}Implementierung des Contents der Benutzeroberfläche}{23}{subsection.216}%
-\contentsline {subsubsection}{\numberline {5.6.1}TypoView.vue}{23}{subsubsection.217}%
-\contentsline {paragraph}{\nonumberline Daten-Mapping}{23}{paragraph*.219}%
-\contentsline {paragraph}{\nonumberline Darstellung}{24}{paragraph*.222}%
-\contentsline {paragraph}{\nonumberline Layout}{25}{paragraph*.225}%
-\contentsline {subsubsection}{\numberline {5.6.2}Section Komponente}{25}{subsubsection.227}%
-\contentsline {subsubsection}{\numberline {5.6.3}Content Komponenten}{26}{subsubsection.228}%
-\contentsline {paragraph}{\nonumberline Text und Bilder \& Textelement}{26}{paragraph*.231}%
-\contentsline {paragraph}{\nonumberline Überschrift}{27}{paragraph*.234}%
-\contentsline {paragraph}{\nonumberline Nur Bilder}{27}{paragraph*.237}%
-\contentsline {paragraph}{\nonumberline Trenner}{28}{paragraph*.240}%
-\contentsline {paragraph}{\nonumberline HTML}{28}{paragraph*.242}%
-\contentsline {subsection}{\numberline {5.7}finale Anwendung}{28}{subsection.243}%
-\contentsline {section}{\numberline {6}Abnahmephase}{28}{section.244}%
-\contentsline {section}{\numberline {7}Einführungsphase}{29}{section.245}%
-\contentsline {section}{\numberline {8}Dokumentation}{29}{section.246}%
-\contentsline {section}{\numberline {9}Fazit}{30}{section.247}%
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{30}{subsection.248}%
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{30}{subsection.250}%
-\contentsline {subsection}{\numberline {9.3}Ausblick}{31}{subsection.251}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{32}{section*.253}%
-\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{33}{section*.255}%
-\contentsline {section}{\numberline {A}Anhang}{i}{appendix.256}%
-\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.257}%
-\contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.258}%
-\contentsline {subsection}{\numberline {A.3}ext\_localconf.php}{iii}{subsection.298}%
-\contentsline {subsection}{\numberline {A.4}[...slug].vue}{iv}{subsection.333}%
-\contentsline {subsection}{\numberline {A.5}navigation.ts}{v}{subsection.366}%
-\contentsline {subsection}{\numberline {A.6}SlideMenu.vue}{vi}{subsection.428}%
-\contentsline {subsection}{\numberline {A.7}Screenshots des Menüs}{viii}{subsection.464}%
-\contentsline {subsection}{\numberline {A.8}Screenshots der Anwendung}{ix}{subsection.468}%
+\contentsline {subsubsection}{\numberline {5.4.2}Versionierungssystem Github}{19}{subsubsection.183}%
+\contentsline {subsection}{\numberline {5.5}Navigation der Implementierung der Benutzeroberfläche}{20}{subsection.185}%
+\contentsline {subsubsection}{\numberline {5.5.1}Dynamische Seiten}{20}{subsubsection.186}%
+\contentsline {subsubsection}{\numberline {5.5.2}Verarbeitung der Typo3 Daten}{20}{subsubsection.187}%
+\contentsline {subsubsection}{\numberline {5.5.3}Setup Navigation}{22}{subsubsection.209}%
+\contentsline {subsubsection}{\numberline {5.5.4}Aufteilung Navigation}{22}{subsubsection.210}%
+\contentsline {subsubsection}{\numberline {5.5.5}TopNavigation.vue}{22}{subsubsection.211}%
+\contentsline {subsubsection}{\numberline {5.5.6}open() Funktion}{23}{subsubsection.216}%
+\contentsline {subsubsection}{\numberline {5.5.7}Slidemenu.vue}{23}{subsubsection.217}%
+\contentsline {subsection}{\numberline {5.6}Implementierung des Contents der Benutzeroberfläche}{24}{subsection.218}%
+\contentsline {subsubsection}{\numberline {5.6.1}TypoView.vue}{24}{subsubsection.219}%
+\contentsline {paragraph}{\nonumberline Daten-Mapping}{24}{paragraph*.221}%
+\contentsline {paragraph}{\nonumberline Darstellung}{25}{paragraph*.224}%
+\contentsline {paragraph}{\nonumberline Layout}{25}{paragraph*.227}%
+\contentsline {subsubsection}{\numberline {5.6.2}Section Komponente}{26}{subsubsection.229}%
+\contentsline {subsubsection}{\numberline {5.6.3}Content Komponenten}{26}{subsubsection.230}%
+\contentsline {paragraph}{\nonumberline Text und Bilder \& Textelement}{27}{paragraph*.233}%
+\contentsline {paragraph}{\nonumberline Überschrift}{27}{paragraph*.236}%
+\contentsline {paragraph}{\nonumberline Nur Bilder}{27}{paragraph*.239}%
+\contentsline {paragraph}{\nonumberline Trenner}{28}{paragraph*.242}%
+\contentsline {paragraph}{\nonumberline HTML}{28}{paragraph*.244}%
+\contentsline {subsection}{\numberline {5.7}finale Anwendung}{29}{subsection.245}%
+\contentsline {section}{\numberline {6}Abnahmephase}{29}{section.246}%
+\contentsline {section}{\numberline {7}Einführungsphase}{29}{section.247}%
+\contentsline {section}{\numberline {8}Dokumentation}{30}{section.248}%
+\contentsline {section}{\numberline {9}Fazit}{30}{section.249}%
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{30}{subsection.250}%
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{31}{subsection.252}%
+\contentsline {subsection}{\numberline {9.3}Ausblick}{32}{subsection.253}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{33}{section*.255}%
+\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{34}{section*.257}%
+\contentsline {section}{\numberline {A}Anhang}{i}{appendix.258}%
+\contentsline {subsection}{\numberline {A.1}Detaillierte Zeitplanung}{i}{subsection.259}%
+\contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.260}%
+\contentsline {subsection}{\numberline {A.3}ext\_localconf.php}{iii}{subsection.300}%
+\contentsline {subsection}{\numberline {A.4}[...slug].vue}{iv}{subsection.335}%
+\contentsline {subsection}{\numberline {A.5}navigation.ts}{v}{subsection.368}%
+\contentsline {subsection}{\numberline {A.6}SlideMenu.vue}{vi}{subsection.430}%
+\contentsline {subsection}{\numberline {A.7}Screenshots des Menüs}{viii}{subsection.466}%
+\contentsline {subsection}{\numberline {A.8}Screenshots der Anwendung}{ix}{subsection.470}%
+\contentsline {subsection}{\numberline {A.9}Entwicklerdokumentation}{x}{subsection.473}%
+\contentsline {paragraph}{\nonumberline lokales Setup}{x}{paragraph*.475}%
+\contentsline {paragraph}{\nonumberline Typo3 bereits machen}{x}{paragraph*.477}%
+\contentsline {paragraph}{\nonumberline Verbindung zwischen Typo3 und Nuxt 3}{x}{paragraph*.479}%
+\contentsline {paragraph}{\nonumberline Verarbeitung der Typo3 Daten}{x}{paragraph*.481}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

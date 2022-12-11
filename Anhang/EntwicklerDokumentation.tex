@@ -1,0 +1,22 @@
+\subsection{Entwicklerdokumentation}
+\label{app:Doc}
+
+\paragraph{lokales Setup}
+
+Um das Skeleton lokal zu starten, müssen zwei Dinge geschehen. Es muss das Typo3 lokal gestartet werden, alternativ kann auch ein vorhandenes Typo3 auf einem Server angesteuert werden. Als zweites muss Nuxt 3 gestartet werden und mit dem Typo3 Verbunden werden. 
+
+Um Typo3 lokal zu starten, wurde ein Docker-Image erstellt, welches sich auf Github runterladen lässt. Mit dem Befehl docker-compose up lässt sich dieses starten. Je nachdem welcher Port im Image angegeben wurde kann das Typo3 jetzt über localhost angesteuert werden.
+
+Um Nuxt 3 lokal zu starten, bedarf es kein Docker. Docker kann aber auch genutzt werden, wenn dies erwünscht ist. Dafür muss sich das aktuelle Github Repository heruntergeladen werden. Mit dem Befehl npm i(angenommen node.js/npm ist installiert), werden die benötigten Pakete heruntergeladen um Nuxt 3 zu starten. Mit dem Befehl npm run dev kann nun Nuxt 3 gestartet werden.
+
+\paragraph{Typo3 bereits machen}
+
+Um die Ausgabe von Typo3 in ein JSON-Format umzuwandeln, muss noch die Headless-Extension installiert werden. Um die ausgespielten Daten in die Struktur zu bringen, die der Nuxt 3 Client erwartet, muss ebenfalls die Skeleton-Extension installiert werden.
+
+\paragraph{Verbindung zwischen Typo3 und Nuxt 3}
+
+Um den Nuxt 3 Clienten mit dem lokalen Typo3 zu verbinden, muss in der nuxt.config.ts noch die entsprechende URL gepflegt werden. Dies geschieht in dem runtimeConfig.public Objekt. Dort ist eine Eigenschaft mit dem Namen typo3 gepflegt. In ihr kann die Typo3 URL ausgetauscht werden. Die Daten des Typo3 werden in der [...slug].vue Datei im pages Verzeichnis abgerufen.
+
+\paragraph{Verarbeitung der Typo3 Daten}
+
+Wie die Daten von dem Nuxt 3 verarbeitet werden und die entsprechenden Elemente / Navigation dargestellt wird, lässt sich an dem Flussdiagramm erkennen.
