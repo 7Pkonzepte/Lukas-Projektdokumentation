@@ -12,7 +12,7 @@ Zum Zeitpunkt des Projektstarts hatte \acs{BAL} mehrere Projekte mit Typo3 in Ve
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
 
-\acs{BAL} schätzt, dass durch das erstellte Skeleton ca. 20 Stunden Arbeit, pro umgesetztes Projekt, eingespart werden können. Bei durchschnittlichen Entwicklerkosten von 45€ pro Stunde (30€ Stundenlohn + 15€ Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner etc.}) ergibt dies eine Ersparnis von 20 * 45€ = \eur{900} pro Projekt. Damit sich das Skeleton für die Firma lohnt, müssen die Projektkosten kleiner als die Einsparungen. Dafür müssen die Projektkosten berechnet werden und überprüft werden, wie oft das Skeleton wahrscheinlich genutzt wird.
+\acs{BAL} schätzt, dass durch das erstellte Skeleton ca. 20 Stunden Arbeit pro umgesetztes Projekt eingespart werden können. Bei durchschnittlichen Entwicklerkosten von 45€ pro Stunde (30€ Stundenlohn + 15€ Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner etc.}) ergibt dies eine Ersparnis von 20 * 45€ = \eur{900} pro Projekt. Damit sich das Skeleton für die Firma lohnt, müssen die Projektkosten kleiner als die Einsparungen. Dafür müssen die Projektkosten berechnet werden und überprüft werden, wie oft das Skeleton wahrscheinlich genutzt wird.
 
 
 \subsubsection{Projektkosten}
@@ -37,7 +37,7 @@ Eine Aufstellung der Kosten befindet sich in Tabelle~\ref{tab:Kostenaufstellung}
 \subsubsection{Amortisationsdauer}
 \label{sec:Amortisationsdauer}
 
-Bei Einsparungen von ca. \eur{900} pro zukünftigen Projekt und Projektkosten von \eur{2621.2} ergibt sich ein Amortisationsdauer von \eur{2621.2} / \eur{900} = 2,921 Projekten. Aufgerundet sind dies 3 Projekte. \acs{BAL} muss also 3 Projekte mit dem Skeleton entwickeln, damit sich das Projekt/Skeleton gelohnt hat. Aktuell sind bei \acs{BAL} drei Projekte in Planung, welche das Skeleton nutzen werden. Dazu gehört die eigene Firmenwebsite, als auch zwei Kundenprojekte. Diese werden im Laufe des nächsten Jahres abgearbeitet. Dadurch wird sich das Projekt bis Ende 2023 amortisiert haben. Ein genaueres Datum kann zum aktuellen Zeitpunkt nicht ermittelt werden, da die zukünftigen Projekte noch keinen festen Zeitplan haben. Wahrscheinlich werden im Laufe der nächsten Jahren aber auch weitere Projekte mit dem Skeleton umgesetzt. Das Projekt hat sich also finanziell für \acs{BAL} gelohnt.
+Bei Einsparungen von ca. \eur{900} pro zukünftigen Projekt und Projektkosten von \eur{2621.2} ergibt sich eine Amortisationsdauer von \eur{2621.2} / \eur{900} = 2,921 Projekten. Aufgerundet sind dies 3 Projekte. \acs{BAL} muss also 3 Projekte mit dem Skeleton entwickeln, damit sich das Projekt/Skeleton gelohnt hat. Aktuell sind bei \acs{BAL} drei Projekte in Planung, welche das Skeleton nutzen werden. Dazu gehört die eigene Firmenwebsite als auch zwei Kundenprojekte. Diese werden im Laufe des nächsten Jahres abgearbeitet. Dadurch wird sich das Projekt bis Ende 2023 amortisiert haben. Ein genaueres Datum kann zum aktuellen Zeitpunkt nicht ermittelt werden, da die zukünftigen Projekte noch keinen festen Zeitplan haben. Wahrscheinlich werden im Laufe der nächsten Jahren aber auch weitere Projekte mit dem Skeleton umgesetzt. Das Projekt hat sich also finanziell für \acs{BAL} gelohnt.
 
 
 \subsection{Nutzwertanalyse}
@@ -59,19 +59,29 @@ Dafür wurde folgende Nutzwertanalyse erstellt: \newline
 \rowcolor{odd}\textbf{Nutzwert:}                        & & \textbf{4,25} & \textbf{2,75} & \textbf{3,125} \\
 \end{tabular} \newline
 
-Das Skeleton hat die geringste Einarbeitungszeit(dadurch den höchsten Wert, da hohe Einarbeitungszeit schlecht ist). Dies liegt daran, dass beim Skeleton eine kleine Codebasis besteht, welche die Verbindung zum Typo3 schon übernimmt. Ein Frontend Entwickler kann sich beispielsweise an das Projekt setzen und bekommt direkt seine Daten aus dem Typo3. Gleichzeitig besteht aber kein anderer Code, welcher zu Komplikationen/Verwirrung führen könnte. Geklonte Projekte würden zwar auch schon ihre Daten aus dem Typo3 bekommen, aber neue Entwickler müssten sich erstmal in die große bestehende Codebase einarbeiten. Wenn kein vorheriger Code genutzt wird, ist die Codebase zwar am geringsten(leeres Typo3 und Nuxt 3). Dies führt aber dazu, dass sich ein neuer Entwickler erstmal damit beschäftigen muss, wie er an die Daten des Typo3 kommt und diese verarbeitet. Das Skeleton ist auch am wenigsten fehleranfällig. Bei geklonten Projekten können alte Codeabschnitte mit neuen auf unerwartete Art und Weisen miteinander interagieren. Neuer Code kann zwar theoretisch fehlerfrei geschrieben werden, aber ein Skeleton, welches häufiger genutzt wird, wird auch häufiger getestet. Der größte Nachteil eines Skeletons gegenüber den Alternativen sind die Kosten. Die beiden anderen Alternativen haben initial keine/sehr geringe Kosten. Da sich die Kosten des Skeletons aber in einem geringen Rahmen halten(Kapitel~\ref{sec:Wirtschaftlichkeitsanalyse}: \nameref{sec:Wirtschaftlichkeitsanalyse}) und die Kosten durch zukünftige Vorteile ausgeglichen werden, schlägt dies nicht so sehr ins Gewicht.
+Das Skeleton hat die geringste Einarbeitungszeit(dadurch den höchsten Wert, da hohe Einarbeitungszeit schlecht ist). Dies liegt daran, dass beim Skeleton eine kleine Codebasis besteht, welche die Verbindung zum Typo3 schon übernimmt. Ein Frontend Entwickler kann sich beispielsweise an das Projekt setzen und bekommt direkt seine Daten aus dem Typo3. Gleichzeitig besteht aber kein anderer Code, welcher zu Komplikationen/Verwirrung führen könnte. 
+
+Geklonte Projekte würden zwar auch schon ihre Daten aus dem Typo3 bekommen, aber neue Entwickler müssten sich erst mal in die große bestehende Codebase einarbeiten. 
+
+Wenn kein vorheriger Code genutzt wird, ist die Codebase zwar am geringsten(leeres Typo3 und Nuxt 3). Dies führt aber dazu, dass sich ein neuer Entwickler erstmal damit beschäftigen muss, wie er an die Daten des Typo3 kommt und diese verarbeitet. 
+
+Das Skeleton ist auch am wenigsten fehleranfällig. Bei geklonten Projekten können alte Codeabschnitte mit neuen auf unerwartete Art und Weisen miteinander interagieren. Neuer Code kann zwar theoretisch fehlerfrei geschrieben werden, aber ein Skeleton, welches häufiger genutzt wird, wird auch häufiger getestet. 
+
+Der größte Nachteil eines Skeletons gegenüber den Alternativen sind die Kosten. Die beiden anderen Alternativen haben initial keine/sehr geringe Kosten. Da sich die Kosten des Skeletons aber in einem geringen Rahmen halten(Kapitel~\ref{sec:Wirtschaftlichkeitsanalyse}: \nameref{sec:Wirtschaftlichkeitsanalyse}) und die Kosten durch zukünftige Vorteile ausgeglichen werden, schlägt dies nicht so sehr ins Gewicht.
+
 Es wurden zusätzlich unterschiedliche Technologien verglichen um so ein Skeleton zu erstellen. Genauere Analysen zum Nutzwert der Technologien finden sie in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}. 
 
 
 \subsection{Anwendungsfälle}
 \label{sec:Anwendungsfaelle}
 
-Das Skeleton kann theoretisch für sämtliche Websiten genutzt werden, welche ein \acs{CMS} nutzen. Natürlich muss analysiert werden, ob dies auch sinnvoll wäre. Typo3 ist ein Enterprise \acs{CMS}, was bedeutet, dass es sich auf große Firmen spezialisiert hat. Für kleinere Projekte wäre es vielleicht sinnvoller ein anderes \acs{CMS} zu nutzen. Nicht jedes Projekt braucht auch eine custom Lösung im Frontend. Für einige Projekte wäre es vielleicht sinnvoller vorhandene Software zu nutzen. Dies kann ebenfalls ein Typo3 mit vorgegebenen Theme sein, oder ein komplett anderes \acs{CMS}.
+Das Skeleton kann theoretisch für sämtliche Websiten genutzt werden, welche ein \acs{CMS} nutzen. Natürlich muss analysiert werden, ob dies auch sinnvoll wäre. Typo3 ist ein Enterprise \acs{CMS}, was bedeutet, dass es sich auf große Firmen spezialisiert hat. Für kleinere Projekte wäre es vielleicht sinnvoller, ein anderes \acs{CMS} zu nutzen. Nicht jedes Projekt braucht auch eine Custom-Lösung im Frontend. Für einige Projekte wäre es vielleicht sinnvoller, vorhandene Software zu nutzen. Dies kann ebenfalls ein Typo3 mit vorgegebenen Theme, oder ein komplett anderes \acs{CMS} sein.
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
 
-Da verschiedene Projekte mit dem Skeleton umgesetzt werden, ist es sehr wichtig, dass das Skeleton flexibel ist. Da unterschiedlichen Projekte, zumindest teilweise, von verschiedenen Entwicklern umgesetzt werden, muss der Code leicht zu verstehen sein. Der Code muss also leicht erweiterbar und leserlich sein. 
+Da verschiedene Projekte mit dem Skeleton umgesetzt werden, ist es sehr wichtig, dass das Skeleton flexibel ist. Da unterschiedliche Projekte zumindest teilweise von verschiedenen Entwicklern umgesetzt werden, muss der Code leicht zu verstehen sein. Der Code muss also leicht erweiterbar und leserlich sein.
+
 Natürlich darf die Ladezeit der Website auch nicht sonderlich groß sein, damit die SEO-Performance nicht zu schlecht wird. Dies ist wichtig, damit mit dem Skeleton entwickelte Projekte über google / anderen Suchmaschinen gefunden werden können. Zusätzlich erhöht eine schnelle Ladezeit die Benutzerfreundlichkeit.
 
 \subsection{Nuxt 2 vs Nuxt 3}
@@ -80,19 +90,21 @@ Natürlich darf die Ladezeit der Website auch nicht sonderlich groß sein, damit
 \subsubsection{Was ist Nuxt überhaupt?}
 \label{sec:Was ist Nuxt überhaupt?}
 
-Es wurde sich entschieden für das Projekt Nuxt 3 zu nutzen. Bis jetzt hatte \acs{BAL} Nuxt 2 und Vue 3 genutzt um sich mit Headless-Typo3 Systemen zu verbinden. Der Grund für die Entscheidung liegt unter anderem der Erweiterung der Wissensbasis der Firma. Eine genauere Analyse, warum sich für Nuxt im allgemeinen und nicht für andere Frontend Webframeworks entschieden wurde, finden sie in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
+Es wurde sich entschieden, für das Projekt Nuxt 3 zu nutzen. Bis jetzt hatte \acs{BAL} Nuxt 2 und Vue 3 genutzt, um sich mit Headless-Typo3 Systemen zu verbinden. Der Grund für die Entscheidung liegt unter anderem der Erweiterung der Wissensbasis der Firma. Eine genauere Analyse, warum sich für Nuxt im Allgemeinen und nicht für andere Frontend Webframeworks entschieden wurde, finden sie in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
 
 \paragraph{Nuxt}
 
 'The Intuitive Vue
 Framework. Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'\footnote{\Vgl \citet{Nuxt}.} 
 
-Nuxt basiert auf Vue. Vue ist ein JavaScript-Webframework zum Erstellen von Single-Page-Webanwendungen. Generell hat Nuxt alle Features, die Vue auch hat. Es folgt einer gleichen Syntax und Logik. Nuxt unterscheidet sich von Vue primär darin, dass es serverseitig gerendert wird. Dies bedeutet, dass das HTML teilweise/komplett bereits auf dem Server erstellt wird und an den Clienten geschickt wird. Das führt dazu, dass die Seiten generell schneller benutzbar sind. Nuxt 2 basiert analog auf Vue 2, während Nuxt 3 viele Features von Vue 3 übernommen hat.
+Nuxt basiert auf Vue. Vue ist ein JavaScript-Webframework zum Erstellen von Single-Page-Webanwendungen. Generell hat Nuxt alle Features, die Vue auch hat. Es folgt einer gleichen Syntax und Logik. Nuxt unterscheidet sich von Vue primär darin, dass es serverseitig gerendert wird. Dies bedeutet, dass das HTML teilweise/komplett bereits auf dem Server erstellt wird und an den Client geschickt wird. Das führt dazu, dass die Seiten generell schneller benutzbar sind. Nuxt 2 basiert analog auf Vue 2, während Nuxt 3 viele Features von Vue 3 übernommen hat.
 
 \subsubsection{Warum sollte man Nuxt 2 nutzen?}
 \label{sec:Warum sollte man Nuxt 2 nutzen?}
 
-Zum Zeitpunkt der Projektarbeit war Nuxt 3 noch in der Beta. Am 16.11.2022 wurde die erste stable Version von Nuxt veröffentlicht. Dies ist natürlich erstmal ein Nachteil, da Betaversionen von Programmen häufiger von Bugs geplagt sind. Zusätzlich werden in Betaversionen häufiger stärkere Veränderungen durchgeführt, welche zu Problemen bei bestehenden Programmcode führen könnten. Nuxt 2 ist seit Jahren offziell veröffentlicht und \acs{BAL} hat bereits mehrere Projekte erfolgreich mit Nuxt 2 abgeschlossen. Zusätzlich hat \acs{BAL} bereits Nuxt 2 erfolgreich mit einem Headless-Typo3 verbunden. Es wäre also sehr viel einfacher das Skeleton mit Nuxt 2 umzusetzen. Es gibt also folgende gute Gründe Nuxt 2 anstelle von Nuxt 3 zu nutzen:
+Zum Zeitpunkt der Projektarbeit war Nuxt 3 noch in der Beta. Am 16.11.2022 wurde die erste Stable-Version von Nuxt veröffentlicht. Dies ist natürlich erst mal ein Nachteil, da Betaversionen von Programmen häufiger von Bugs geplagt sind. Zusätzlich werden in Betaversionen häufiger stärkere Veränderungen durchgeführt, welche zu Problemen bei bestehenden Programmcode führen könnten. 
+
+Nuxt 2 ist seit Jahren offziell veröffentlicht und \acs{BAL} hat bereits mehrere Projekte erfolgreich mit Nuxt 2 abgeschlossen. Zusätzlich hat \acs{BAL} bereits Nuxt 2 erfolgreich mit einem Headless-Typo3 verbunden. Es wäre also sehr viel einfacher, das Skeleton mit Nuxt 2 umzusetzen. Es gibt also folgende gute Gründe Nuxt 2 anstelle von Nuxt 3 zu nutzen:
 \begin{itemize}
 	\item Programmcode aus vorherigen Projekten kann genutzt werden. --> Zeitersparnis
 	\item Wissensbasis in Nuxt 2 vorhanden. --> potentiell weniger Bugs / schnelleres Entwickeln
@@ -103,17 +115,27 @@ Zum Zeitpunkt der Projektarbeit war Nuxt 3 noch in der Beta. Am 16.11.2022 wurde
 \subsubsection{Warum wurde sich trotzdem für Nuxt 3 entschieden?}
 \label{sec:Warum wurde sich trotzdem für Nuxt 3 entschieden?}
 
-Nuxt 3 biete gegenüber von Nuxt 2 einige Vorteile. Der erste Vorteil ist, dass Typescript unterstüzt wird. Zwar konnte Typescript auch in Nuxt 2 und Vue 2 Projekten genutzt werden, es war aber immer mit Komplikationen verbunden. Nuxt 3(und Vue 3) unterstützen dies von Anfang an, was zu einer erleichterten Nutzung von Typescript führt. Selbst wenn kein Typescript genutzt wird, beeinhaltet Nuxt 3 einige Vorteile gegenüber von Nuxt 2. Beispielsweise hat Nuxt 3 eine komplett neue Server-Engine bekommen. Diese hat den Namen Nitro. Nitro hat dank dynamischen Code-Splitting eine bessere Leistung als Nuxt 2. Es gibt zusätzlich viele neue Features, wie die neue Composition API, automatische Imports, verbesserte Devtools, etc. Aus diesen Gründen scheint Nuxt 3 langfristig die bessere Entscheidung für die Entwicklung neuer Projekte zu sein, als Nuxt 2. Die Projektarbeit wäre trotzdem wahrscheinlich sehr viel schneller und einfacher mit Nuxt 2 umzusetzen gewesen. Aus den oben genannten Gründen ist ein Umstieg auf Nuxt 3 aber absehbar. Deswegen entschied sich \acs{BAL} das Projekt in Nuxt 3 umzusetzen. Die Wissensbasis von Nuxt 3 soll mithilfe des Projektes erweitert und der Grundstein für zukünftige Nuxt 3 Projekte gelegt werden.
+Nuxt 3 biete gegenüber von Nuxt 2 einige Vorteile. Der erste Vorteil ist, dass Typescript unterstüzt wird. Zwar konnte Typescript auch in Nuxt 2 und Vue 2 Projekten genutzt werden, es war aber immer mit Komplikationen verbunden. Nuxt 3(und Vue 3) unterstützen dies von Anfang an, was zu einer erleichterten Nutzung von Typescript führt. 
+
+Selbst wenn kein Typescript genutzt wird, beinhaltet Nuxt 3 einige Vorteile gegenüber von Nuxt 2. Beispielsweise hat Nuxt 3 eine komplett neue Server-Engine bekommen. Diese hat den Namen Nitro. Nitro hat dank dynamischen Code-Splitting eine bessere Leistung als Nuxt 2. Es gibt zusätzlich viele neue Features, wie die neue Composition API, automatische Imports, verbesserte Devtools, etc. Aus diesen Gründen scheint Nuxt 3 langfristig die bessere Entscheidung für die Entwicklung neuer Projekte zu sein, als Nuxt 2. 
+
+Die Projektarbeit wäre trotzdem wahrscheinlich sehr viel schneller und einfacher mit Nuxt 2 umzusetzen gewesen. Aus den oben genannten Gründen ist ein Umstieg auf Nuxt 3 aber absehbar. Deswegen entschied sich \acs{BAL} das Projekt in Nuxt 3 umzusetzen. Die Wissensbasis von Nuxt 3 soll mithilfe des Projektes erweitert und der Grundstein für zukünftige Nuxt 3 Projekte gelegt werden.
 
 \subsubsection{neue Nuxt 3 Features}
 \label{sec:neue Nuxt 3 Features}
 
-Wie oben genannt, hat Nuxt 3 einige neue Features, ein paar davon werden in dieser Projektarbeit genutzt um das Skeleton umzusetzen. Composables sind eins der neuen Features.
+Wie oben genannt, hat Nuxt 3 einige neue Features, ein paar davon werden in dieser Projektarbeit genutzt, um das Skeleton umzusetzen. Composables sind eins der neuen Features.
 
 \paragraph{Composables}
 
-Composables sind effektiv Funktionen, welche von der gesamten Anwendung aus aufgerufen werden können. Der Unterschied zwischen normalen Funktionen, welche wieder verwendet werden, ist dass ihr State bestehen bleibt. Wenn ein Composable an einer Stelle im Programm aufgerufen wird, gibt es ein Objekt zurück, welches Variablen und/oder Funktionen besitzt. Falls sich der Wert einer Variable ändert, ändert sich dieser Wert bei allen Dateien, die das Composable aufgerufen haben. Composables sind nur zugänglich für Dateien, die deren Funktion aufgerufen haben. Dadurch unterscheiden sie sich von einem generellen State-Management. Bei so einem State-Management hätten alle Dateien in der Anwendung Zugriff auf den State. Wenn also mehrere Dateien eine ähnliche Logik haben und es sinnvoll wäre state zu teilen, kann es sinnvoll sein ein Composable zu nutzen.
+Composables sind effektiv Funktionen, welche von der gesamten Anwendung aus aufgerufen werden können. Der Unterschied zwischen normalen Funktionen, welche wieder verwendet werden, ist, dass ihr State bestehen bleibt. Wenn ein Composable an einer Stelle im Programm aufgerufen wird, gibt es ein Objekt zurück, welches Variablen und/oder Funktionen besitzt. Falls sich der Wert einer Variable ändert, ändert sich dieser Wert bei allen Dateien, die das Composable aufgerufen haben. Composables sind nur zugänglich für Dateien, die deren Funktion aufgerufen haben. 
+
+Dadurch unterscheiden sie sich von einem generellen State-Management. Bei so einem State-Management hätten alle Dateien in der Anwendung Zugriff auf den State. Wenn also mehrere Dateien eine ähnliche Logik haben und es sinnvoll wäre state zu teilen, kann es sinnvoll sein ein Composable zu nutzen.
 
 \paragraph{neues State-Management}
 
-Unter State-Management(Zustandsverwaltung) versteht man die Verwaltung von mehreren Datenflüssen über die ganze Anwendung hinweg. Daten die im State gespeichert sind, können von allen Dateien in der Anwendung aufgerufen/manipuliert werden. So ist es einfach Daten zwischen Dateien zu teilen. In Nuxt 2 wurde primär vuex als State-Management genutzt. Dies kann auch weiterhin in Nuxt 3 genutzt werden. Das hat den Vorteil, dass alte Programme leichter nach Nuxt 3 portiert werden können. Nuxt 3 bietet aber auch neue Möglichkeiten den State der Anwendung zu managen. Es wurde Pinia entwickelt, welches als Nachfolger von vuex betrachtet wird. Ähnlich wie vuex bietet es viele Funktionalitäten und der State wird in einem dedizierten Verzeichnis gemanagt. Nuxt 3 kann auch ohne irgendwelche Bibliotheken den State managen. Dafür gibt es die neue useState() Funktion. In ihr kann ein State mit einem Key definiert werden und danach durch den Key in jeder Datei aufgerufen werden. Letzteres wird später in der Implementierungsphase genutzt werden um den State zu managen.
+Unter State-Management(Zustandsverwaltung) versteht man die Verwaltung von mehreren Datenflüssen über die ganze Anwendung hinweg. Daten, die im State gespeichert sind, können von allen Dateien in der Anwendung aufgerufen/manipuliert werden. So ist es einfach, Daten zwischen Dateien zu teilen. 
+
+In Nuxt 2 wurde primär vuex als State-Management genutzt. Dies kann auch weiterhin in Nuxt 3 genutzt werden. Das hat den Vorteil, dass alte Programme leichter nach Nuxt 3 portiert werden können. Nuxt 3 bietet aber auch neue Möglichkeiten, den State der Anwendung zu managen. Es wurde Pinia entwickelt, welches als Nachfolger von vuex betrachtet wird. Ähnlich wie vuex bietet es viele Funktionalitäten und der State wird in einem dedizierten Verzeichnis gemanagt. 
+
+Nuxt 3 kann auch ohne irgendwelche Bibliotheken den State managen. Dafür gibt es die neue useState() Funktion. In ihr kann ein State mit einem Key definiert werden und danach durch den Key in jeder Datei aufgerufen werden. Letzteres wird später in der Implementierungsphase genutzt werden, um den State zu managen.

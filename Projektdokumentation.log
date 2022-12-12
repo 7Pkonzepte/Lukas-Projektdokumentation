@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.13)  12 DEC 2022 00:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7) (preloaded format=pdflatex 2022.10.13)  12 DEC 2022 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1394,7 +1394,7 @@ Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 21.
 on.toc
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 44.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 40.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
 
 
@@ -1406,7 +1406,7 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=53.63744pt'.
 (scrlayer-scrpage)                I'll also decrease \topmargin on input line 4
-4.
+0.
 
 
 Overfull \vbox (10.95831pt too high) has occurred while \output is active []
@@ -1418,7 +1418,7 @@ Overfull \vbox (10.95831pt too high) has occurred while \output is active []
 ]
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 92.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 93.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [2])
 \tf@toc=\write5
@@ -1543,7 +1543,7 @@ Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 75.
 ] (Inhalt.tex (Inhalt/Einleitung.tex
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 28.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 29.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [1
 
@@ -1555,7 +1555,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.72 meta	{…}
+l.74 meta	{…}
                
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1570,7 +1570,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 breadcrumbs	[…]
+l.76 breadcrumbs	[…]
                       
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1585,7 +1585,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.75 appearance	{…}
+l.77 appearance	{…}
                      
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1600,7 +1600,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 content	{…}
+l.78 content	{…}
                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1615,7 +1615,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.77 i18n	[…]
+l.79 i18n	[…]
                
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1630,7 +1630,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.78 page	{…}
+l.80 page	{…}
                
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1645,7 +1645,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.79 languages	[…]
+l.81 languages	[…]
                     
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1655,22 +1655,22 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 94.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 96.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
 [2]) (Inhalt/Projektplanung.tex (Tabellen/ZeitplanungKurz.tex)
 (Tabellen/ZeitplanungKurzNeu.tex)
-File: Bilder//Firmenlogo.png Graphic file (type png)
-<use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 29.
-(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [3]
 (Tabellen/ZeitplanungImplementierungsphase.tex)
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 44.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 31.
+(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
+ [3]
+File: Bilder//Firmenlogo.png Graphic file (type png)
+<use Bilder//Firmenlogo.png>
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 46.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [4]
-Overfull \hbox (2.55525pt too wide) in paragraph at lines 59--60
+Overfull \hbox (2.55525pt too wide) in paragraph at lines 63--64
 []\T1/lmr/m/n/10.95 Zus�tzlich wur-de ei-ne LaTeX-Vorlage zum er-stel-len der D
 o-ku-men-ta-ti-on ver-wen-det. Die LaTeX-Vorlage[][][][][]
  []
@@ -1678,12 +1678,12 @@ o-ku-men-ta-ti-on ver-wen-det. Die LaTeX-Vorlage[][][][][]
 ) (Inhalt/Analysephase.tex
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 16.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 2.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [5] (Tabellen/Kostenaufstellung.tex)
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 41.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 35.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [6]
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
@@ -1714,41 +1714,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--61
 
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 64.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 62.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
 [7]
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 90.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 84.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [8]
-Overfull \hbox (32.05478pt too wide) in paragraph at lines 90--91
+Overfull \hbox (32.05478pt too wide) in paragraph at lines 100--101
 []\T1/lmr/m/n/10.95 Nuxt ba-siert auf Vue. Vue ist ein JavaScript-Webframework 
 zum Er-stel-len von Single-Page-Webanwendungen.
  []
 
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 108.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 109.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[9]) (Inhalt/Entwurfsphase.tex
+[9]
+Overfull \hbox (8.48195pt too wide) in paragraph at lines 133--134
+[]\T1/lmr/m/n/10.95 Dadurch un-ter-schei-den sie sich von ei-nem ge-ne-rel-len 
+State-Management. Bei so ei-nem State-Management
+ []
+
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 9.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 135.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [10] (Tabellen/Nutzwert_Nuxt3.tex)
+[10]) (Inhalt/Entwurfsphase.tex
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 31.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 17.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [11]
-(Tabellen/Nutzwert_DaisyUI.tex) (Tabellen/Nutzwert_Typo3.tex)
+ [11] (Tabellen/Nutzwert_Nuxt3.tex)
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 40.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 43.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [12]
-(Tabellen/Nutzwert_TS.tex)
+(Tabellen/Nutzwert_DaisyUI.tex) (Tabellen/Nutzwert_TS.tex)
+File: Bilder//Firmenlogo.png Graphic file (type png)
+<use Bilder//Firmenlogo.png>
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 59.
+(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
+ [13]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1756,7 +1765,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.57 D
+l.69 D
       as Ziel der Benutzeroberfläche des Skeletons ist, dass Komponenten da...
 
 Your command was ignored.
@@ -1770,7 +1779,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.62 D
+l.74 D
       ie Benutzeroberfläche des Backends/CMS ist größtenteils durch Typo3...
 
 Your command was ignored.
@@ -1784,7 +1793,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 D
+l.78 D
       ie Hauptnavigationspunkte, welche aus dem Typo3 ausgespielt werden, we...
 
 Your command was ignored.
@@ -1793,187 +1802,197 @@ or  <return>  to continue without it.
 
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 67.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 83.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[13]
+[14]
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 81.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 107.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [14]) (Inhalt/Implementierungsphase.tex
-Underfull \hbox (badness 1803) in paragraph at lines 15--16
+ [15]) (Inhalt/Implementierungsphase.tex
+Underfull \hbox (badness 1803) in paragraph at lines 17--18
 \T1/lmr/m/n/10.95 Damit die Ty-po3 Da-ten im JSON-Format aus-ge-spielt wer-den,
  wird die Headless-Extension
  []
 
 
-Overfull \hbox (26.87724pt too wide) in paragraph at lines 15--16
+Overfull \hbox (26.87724pt too wide) in paragraph at lines 17--18
 \T1/lmr/m/n/10.95 Dies ge-schieht im Ba-ckend von Ty-po3(siehe https://docs.typ
 o3.org/m/typo3/reference-typoscript/main/en-
  []
 
-<Bilder//AddHeadlessToTemplate.png, id=629, 1339.0025pt x 474.77374pt>
+File: Bilder//Firmenlogo.png Graphic file (type png)
+<use Bilder//Firmenlogo.png>
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 20.
+(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
+[16]
+<Bilder//AddHeadlessToTemplate.png, id=655, 1339.0025pt x 474.77374pt>
 File: Bilder//AddHeadlessToTemplate.png Graphic file (type png)
 <use Bilder//AddHeadlessToTemplate.png>
 Package pdftex.def Info: Bilder//AddHeadlessToTemplate.png  used on input line 
-19.
+23.
 (pdftex.def)             Requested size: 483.6955pt x 171.50522pt.
-File: Bilder//Firmenlogo.png Graphic file (type png)
-<use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 25.
-(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[15]
-<Bilder//TemplateAnpassung.png, id=634, 1124.2pt x 578.16pt>
+<Bilder//TemplateAnpassung.png, id=656, 1233.60875pt x 592.2125pt>
 File: Bilder//TemplateAnpassung.png Graphic file (type png)
 <use Bilder//TemplateAnpassung.png>
-Package pdftex.def Info: Bilder//TemplateAnpassung.png  used on input line 28.
-(pdftex.def)             Requested size: 483.6882pt x 248.75392pt.
+Package pdftex.def Info: Bilder//TemplateAnpassung.png  used on input line 32.
+(pdftex.def)             Requested size: 483.68428pt x 232.19992pt.
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 36.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 41.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [16 <./Bilder//AddHeadlessToTemplate.png (PNG copy)> <./Bilder//TemplateAnpass
+ [17 <./Bilder//AddHeadlessToTemplate.png (PNG copy)> <./Bilder//TemplateAnpass
 ung.png (PNG copy)>]
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 58.
-(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [17]
-File: Bilder//Firmenlogo.png Graphic file (type png)
-<use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 87.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 64.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [18]
-<Bilder//SetupTypoScriptResponsive.png, id=686, 1122.1925pt x 304.13625pt>
+File: Bilder//Firmenlogo.png Graphic file (type png)
+<use Bilder//Firmenlogo.png>
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 95.
+(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
+ [19]
+<Bilder//SetupTypoScriptResponsive.png, id=709, 1122.1925pt x 304.13625pt>
 File: Bilder//SetupTypoScriptResponsive.png Graphic file (type png)
 <use Bilder//SetupTypoScriptResponsive.png>
 Package pdftex.def Info: Bilder//SetupTypoScriptResponsive.png  used on input l
-ine 93.
+ine 101.
 (pdftex.def)             Requested size: 483.69775pt x 131.0916pt.
 
-Overfull \hbox (7.96364pt too wide) in paragraph at lines 101--102
+Overfull \hbox (7.96364pt too wide) in paragraph at lines 109--110
 \T1/lmr/m/n/10.95 eben-falls in der tt_content Ta-bel-le ein Feld an-ge-legt. I
 n dem Fall mit dem Na-men tx_bal_column_color.
  []
 
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 113.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 121.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[19 <./Bilder//SetupTypoScriptResponsive.png (PNG copy)>]
-<Bilder//GithubRepository.png, id=702, 645.41125pt x 191.71625pt>
+[20 <./Bilder//SetupTypoScriptResponsive.png (PNG copy)>]
+<Bilder//GithubRepository.png, id=724, 645.41125pt x 191.71625pt>
 File: Bilder//GithubRepository.png Graphic file (type png)
 <use Bilder//GithubRepository.png>
-Package pdftex.def Info: Bilder//GithubRepository.png  used on input line 121.
+Package pdftex.def Info: Bilder//GithubRepository.png  used on input line 129.
 (pdftex.def)             Requested size: 483.69287pt x 143.67859pt.
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 132.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 140.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [20 <./Bilder//GithubRepository.png (PNG copy)>]
+ [21 <./Bilder//GithubRepository.png (PNG copy)>]
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 158.
-(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [21]
-File: Bilder//Firmenlogo.png Graphic file (type png)
-<use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 181.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 166.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [22]
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 207.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 189.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [23]
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 222.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 215.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [24]
-<Bilder//Daten-Mapping.png, id=761, 982.67125pt x 451.6875pt>
+File: Bilder//Firmenlogo.png Graphic file (type png)
+<use Bilder//Firmenlogo.png>
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 230.
+(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
+ [25]
+<Bilder//Daten-Mapping.png, id=784, 982.67125pt x 451.6875pt>
 File: Bilder//Daten-Mapping.png Graphic file (type png)
 <use Bilder//Daten-Mapping.png>
-Package pdftex.def Info: Bilder//Daten-Mapping.png  used on input line 228.
+Package pdftex.def Info: Bilder//Daten-Mapping.png  used on input line 236.
 (pdftex.def)             Requested size: 483.7023pt x 222.33507pt.
-<Bilder//DarstellungInhalt.png, id=762, 932.48375pt x 203.76125pt>
+<Bilder//DarstellungInhalt.png, id=785, 932.48375pt x 203.76125pt>
 File: Bilder//DarstellungInhalt.png Graphic file (type png)
 <use Bilder//DarstellungInhalt.png>
-Package pdftex.def Info: Bilder//DarstellungInhalt.png  used on input line 239.
+Package pdftex.def Info: Bilder//DarstellungInhalt.png  used on input line 247.
 
 (pdftex.def)             Requested size: 483.69914pt x 105.69528pt.
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 247.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 255.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [25 <./Bilder//Daten-Mapping.png>]
-<Bilder//responsiveHelpers.png, id=774, 1204.5pt x 551.05875pt>
+ [26 <./Bilder//Daten-Mapping.png>]
+<Bilder//responsiveHelpers.png, id=796, 1204.5pt x 551.05875pt>
 File: Bilder//responsiveHelpers.png Graphic file (type png)
 <use Bilder//responsiveHelpers.png>
-Package pdftex.def Info: Bilder//responsiveHelpers.png  used on input line 250.
+Package pdftex.def Info: Bilder//responsiveHelpers.png  used on input line 258.
 
 (pdftex.def)             Requested size: 483.7029pt x 221.29407pt.
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 263.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 271.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [26 <./Bilder//DarstellungInhalt.png>]
-<Bilder//ComponentsDocumentation.png, id=782, 676.5275pt x 201.75375pt>
+ [27 <./Bilder//DarstellungInhalt.png>]
+<Bilder//ComponentsDocumentation.png, id=804, 676.5275pt x 201.75375pt>
 File: Bilder//ComponentsDocumentation.png Graphic file (type png)
 <use Bilder//ComponentsDocumentation.png>
 Package pdftex.def Info: Bilder//ComponentsDocumentation.png  used on input lin
-e 266.
+e 274.
 (pdftex.def)             Requested size: 483.71349pt x 144.25282pt.
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 275.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 283.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [27 <./Bilder//responsiveHelpers.png> <./Bilder//ComponentsDocumentation.png>]
-<Bilder//BildTextKomponente.png, id=790, 588.1975pt x 196.735pt>
+ [28 <./Bilder//responsiveHelpers.png> <./Bilder//ComponentsDocumentation.png>]
+<Bilder//BildTextKomponente.png, id=812, 588.1975pt x 196.735pt>
 File: Bilder//BildTextKomponente.png Graphic file (type png)
 <use Bilder//BildTextKomponente.png>
-Package pdftex.def Info: Bilder//BildTextKomponente.png  used on input line 278
+Package pdftex.def Info: Bilder//BildTextKomponente.png  used on input line 286
 .
 (pdftex.def)             Requested size: 483.69827pt x 161.78302pt.
-<Bilder//Header.png, id=791, 634.37pt x 148.555pt>
+<Bilder//Header.png, id=813, 634.37pt x 148.555pt>
 File: Bilder//Header.png Graphic file (type png)
 <use Bilder//Header.png>
-Package pdftex.def Info: Bilder//Header.png  used on input line 287.
+Package pdftex.def Info: Bilder//Header.png  used on input line 295.
 (pdftex.def)             Requested size: 483.71367pt x 113.2747pt.
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 295.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 303.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [28 <./Bilder//BildTextKomponente.png> <./Bilder//Header.png>]
-<Bilder//BilderKomponente.png, id=802, 608.2725pt x 189.70876pt>
+ [29 <./Bilder//BildTextKomponente.png> <./Bilder//Header.png>]
+<Bilder//BilderKomponente.png, id=824, 608.2725pt x 189.70876pt>
 File: Bilder//BilderKomponente.png Graphic file (type png)
 <use Bilder//BilderKomponente.png>
-Package pdftex.def Info: Bilder//BilderKomponente.png  used on input line 298.
+Package pdftex.def Info: Bilder//BilderKomponente.png  used on input line 306.
 (pdftex.def)             Requested size: 483.71356pt x 150.86115pt.
-) (Inhalt/Abnahmephase.tex)
-(Inhalt/Einfuehrungsphase.tex
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 2.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 323.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [29 <./Bilder//BilderKomponente.png (PNG copy)>]) (Inhalt/Dokumentation.tex) (
-Inhalt/Fazit.tex
+ [30 <./Bilder//BilderKomponente.png (PNG copy)>]
+<Bilder//BreadCrumbs.png, id=835, 608.2725pt x 159.59625pt>
+File: Bilder//BreadCrumbs.png Graphic file (type png)
+<use Bilder//BreadCrumbs.png>
+Package pdftex.def Info: Bilder//BreadCrumbs.png  used on input line 326.
+(pdftex.def)             Requested size: 483.71356pt x 126.91492pt.
+)
+(Inhalt/Abnahmephase.tex) (Inhalt/Einfuehrungsphase.tex
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 2.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 6.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [30] (Tabellen/Zeitnachher.tex)
+ [31 <./Bilder//BreadCrumbs.png (PNG copy)>]) (Inhalt/Dokumentation.tex) (Inhal
+t/Fazit.tex
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
-Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 21.
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 9.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-
-[31]))
+ [32]
+(Tabellen/Zeitnachher.tex)
+File: Bilder//Firmenlogo.png Graphic file (type png)
+<use Bilder//Firmenlogo.png>
+Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 27.
+(pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
+ [33]))
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
 Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 82.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [32] (Projektdokumentation.bbl
+ [34] (Projektdokumentation.bbl
 Underfull \hbox (badness 1852) in paragraph at lines 71--77
 \T1/lmr/m/sc/10.95 Re-gie-rung der Bun-des-re-pu-blik Deutsch-land\T1/lmr/m/n/1
 0.95 :  \T1/lmr/m/it/10.95 Ver-ord-nung �ber die Be-rufs-aus-bil-
@@ -1997,14 +2016,14 @@ File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
 Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 95.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
-[33
+[35
 
 ]) (Erklaerung.tex
 File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
 Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 2.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [34]
+ [36]
 Underfull \hbox (badness 10000) in paragraph at lines 12--15
 
  []
@@ -2014,7 +2033,7 @@ File: Bilder//Firmenlogo.png Graphic file (type png)
 <use Bilder//Firmenlogo.png>
 Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 89.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
- [35
+ [37
 
 ] (Anhang.tex (Tabellen/ZeitplanungKomplett.tex)
 File: Bilder//Firmenlogo.png Graphic file (type png)
@@ -2055,17 +2074,17 @@ File: Bilder//Firmenlogo.png Graphic file (type png)
 Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 233.
 (pdftex.def)             Requested size: 100.29901pt x 33.78632pt.
  [7] (Anhang/AnhangMenü.tex
-<Bilder//MenüFührungStart.png, id=1088, 1026.83624pt x 463.7325pt>
+<Bilder//MenüFührungStart.png, id=1119, 1026.83624pt x 463.7325pt>
 File: Bilder//MenüFührungStart.png Graphic file (type png)
 <use Bilder//MenüFührungStart.png>
 Package pdftex.def Info: Bilder//MenüFührungStart.png  used on input line 5.
 (pdftex.def)             Requested size: 299.89009pt x 135.43423pt.
-<Bilder//MenüFührung.png, id=1089, 1104.125pt x 482.80376pt>
+<Bilder//MenüFührung.png, id=1120, 1104.125pt x 482.80376pt>
 File: Bilder//MenüFührung.png Graphic file (type png)
 <use Bilder//MenüFührung.png>
 Package pdftex.def Info: Bilder//MenüFührung.png  used on input line 10.
 (pdftex.def)             Requested size: 299.88673pt x 131.13228pt.
-<Bilder//MenüFührung2.png, id=1090, 1340.00626pt x 523.9575pt>
+<Bilder//MenüFührung2.png, id=1121, 1340.00626pt x 523.9575pt>
 File: Bilder//MenüFührung2.png Graphic file (type png)
 <use Bilder//MenüFührung2.png>
 Package pdftex.def Info: Bilder//MenüFührung2.png  used on input line 15.
@@ -2079,12 +2098,12 @@ Package pdftex.def Info: Bilder//Firmenlogo.png  used on input line 18.
  <./Bilder//MenüFührungStart.png (PNG copy)> <./Bilder//MenüFührung.png (PN
 G copy)> <./Bilder//MenüFührung2.png (PNG copy)>]) (Anhang/AnhangScreenshots.
 tex
-<Bilder//Frontend1.png, id=1096, 1924.18875pt x 949.5475pt>
+<Bilder//Frontend1.png, id=1126, 1924.18875pt x 949.5475pt>
 File: Bilder//Frontend1.png Graphic file (type png)
 <use Bilder//Frontend1.png>
 Package pdftex.def Info: Bilder//Frontend1.png  used on input line 5.
 (pdftex.def)             Requested size: 442.08434pt x 218.1595pt.
-<Bilder//Backend1.png, id=1097, 1923.185pt x 958.58125pt>
+<Bilder//Backend1.png, id=1127, 1923.185pt x 958.58125pt>
 File: Bilder//Backend1.png Graphic file (type png)
 <use Bilder//Backend1.png>
 Package pdftex.def Info: Bilder//Backend1.png  used on input line 10.
@@ -2115,10 +2134,10 @@ Package rerunfilecheck Info: File `Projektdokumentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 33181 strings out of 478338
- 652089 string characters out of 2836699
- 1230892 words of memory out of 3000000
- 50367 multiletter control sequences out of 15000+600000
+ 33209 strings out of 478338
+ 652430 string characters out of 2836699
+ 1230895 words of memory out of 3000000
+ 50390 multiletter control sequences out of 15000+600000
  558930 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,25n,113p,10772b,2200s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2140,9 +2159,9 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/email
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/email
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/email
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Projektdokumentation.pdf (57 pages, 1474040 bytes).
+Output written on Projektdokumentation.pdf (59 pages, 1494188 bytes).
 PDF statistics:
- 1538 PDF objects out of 1728 (max. 8388607)
- 524 named destinations out of 1000 (max. 500000)
- 771 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1587 PDF objects out of 1728 (max. 8388607)
+ 532 named destinations out of 1000 (max. 500000)
+ 824 words of extra memory for PDF output out of 10000 (max. 10000000)
 
