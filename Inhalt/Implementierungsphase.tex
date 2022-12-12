@@ -2,6 +2,18 @@
 \section{Implementierungsphase} 
 \label{sec:Implementierungsphase}
 
+\subsection{Versionierungssystem Github}
+\label{sec:Versionierungssystem Github}
+
+Für das Skeleton wurde ein Github-Repository angelegt. In ihm wird das aktuelle Typo3-Image und der Nuxt 3 Code gespeichert. Github ermöglicht es mehreren Entwicklern an einer Codebase zu arbeiten und diese herunterzuladen. Es gibt bei Github die Möglichkeit ein Repository als Template zu deklarieren. Das ermöglicht es anderen Entwicklern neue Projekte mit dem Template zu initialisieren. Dies wurde hier gemacht, da das Skeleton dafür gemacht wurde neue Projekte zu entwickeln.
+
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{GithubRepository}{1}
+\caption{Github Template Einstellung}
+\label{fig:Github Template Einstellung}
+\end{figure}
+
 \subsection{Docker-Setup}
 \label{sec:Docker-Setup}
 
@@ -15,8 +27,6 @@ Das langfristige Ziel ist es, dass ein Image erstellt wird, welches bereits alle
 \label{sec:Ausspielen der Typo3 Daten}
 
 Damit die Typo3 Daten im JSON-Format ausgespielt werden, wird die Headless-Extension \linebreak (https://extensions.typo3.org/extension/headless) installiert. Danach muss die Extension zum Template hinzugefügt werden, damit Typo3 weiß, dass es das Template dementsprechend anpassen muss. Dies geschieht im Backend von Typo3(siehe https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/UsingSetting/Entering.html). Standardmäßig ist dort der Root-Page ein Template zugewiesen, was bearbeitet werden kann.
-
-\pagebreak
 
 \begin{figure}[htb]
 \centering
@@ -44,7 +54,7 @@ Falls Bilder für die Seiten gepflegt sind, werden diese ebenfalls durch den Fil
 
 'TypoScript is a syntax for defining information in a hierarchical structure using simple ASCII text content.'\footnote{\Vgl \citet{TypoScript}.}
 
-TypoScript ist eine Typo3 eigene Erfindung. Es ist eine Syntax, welche primär dazu genutzt wird um das Template der Website zu definieren. TypoScript selber kann keine komplexen Funktionen ausführen. Es kann aber auf komplexere Funktionen verweisen, welche dann im Template benutzt werden. Ein Beispiel wäre der MenuProcessor von Abbildung \ref{fig:Template Anpassungen für Navigation}. Das TypoScript-Template enthält also die Informationen, wie die Daten einer Typo3 Seite ausgespielt werden.
+TypoScript ist eine Typo3 eigene Erfindung. Es ist eine Syntax, welche primär dazu genutzt wird um das Template der Website zu definieren. TypoScript selber kann keine komplexen Funktionen ausführen. Es kann aber auf komplexere Funktionen verweisen, welche dann im Template benutzt werden. Ein Beispiel wäre der MenuProcessor von Abbildung \ref{fig:Template Anpassungen für Navigation}. Das TypoScript-Template enthält also die Informationen, wie die Daten einer Typo3 Seite ausgespielt werden. Wie genau die Syntax auszusehen hat, lässt sich anhand der Typo3 Dokumentation erschließen.
 
 \subsection{Skeleton-Extension / Layout}
 \label{sec:Skeleton-Extension / Layout}
@@ -106,42 +116,42 @@ Damit die gepflegten Daten auch ans Frontend ausgespielt werden, muss das Templa
 Die gepflegten Daten werden nun in der Eigenschaft appearance ausgespielt und können von Nuxt 3 ausgelesen werden. Jedes Inhaltselement hat die Eigenschaft standardmäßig vorhanden.
 
 \paragraph{Sections:}
-Um die Elemente auf einer Seite in Bereiche auszuteilen, wurde ein komplett neues Inhaltselement erstellt. Dieses wurde als Section bezeichnet. Sections können Hintergrundfarben haben, wodurch Abschnitte im Frontend farblich voneinander getrennt dargestellt werden können. Dafür wurde ebenfalls in der tt\_content Tabelle ein Feld angelegt. In dem Fall mit dem Namen tx\_bal\_column\_color. Damit das neue Inhaltselement in Typo3 genutzt werden kann, muss die tt\_content.php Datei um folgenden Code erweitert werden. \Anhang{tt_content.php} \newline Die Datei lässt sich im Pfad Configuration->TCA->Overrides der Extension finden.
+Um die Elemente auf einer Seite in Bereiche auszuteilen, wurde ein komplett neues Inhaltselement erstellt. Dieses wurde als Section bezeichnet. Sections können Hintergrundfarben haben, wodurch Abschnitte im Frontend farblich voneinander getrennt dargestellt werden können. Dafür wurde ebenfalls in der tt\_content Tabelle ein Feld angelegt. In dem Fall mit dem Namen tx\_bal\_column\_color. Damit das neue Inhaltselement in Typo3 genutzt werden kann, muss die tt\_content.php Datei um folgenden Code erweitert werden. \Anhang{tt_content.php}
 
-Damit das neue Element auch in der Auswahl von Elementen angezeigt wird, muss das Element noch in der ext\_localconf.php Datei im Root Verzeichnes der Extension hinzugefügt werden.\newline \Anhang{ext_localconf.php} \newline Übersetzungen für den Namen und die Beschreibung der Section wurden in einer .xlf Datei gespflegt.
+Die Datei lässt sich im Pfad Configuration/TCA/Overrides der Extension finden.
 
-Dieser Code wurde größtenteils aus bereits vorhanden Extensions extrahiert und nur von zusätzlichen Funktionen / Eingabefeldern bereinigt, weswegen hier nicht größer auf ihn eingegangen wird.
+Damit das neue Element auch in der Auswahl von Elementen angezeigt wird, muss das Element noch in der ext\_localconf.php Datei im Root Verzeichnes der Extension hinzugefügt werden. \Anhang{ext_localconf.php}
+
+Übersetzungen für den Namen und die Beschreibung der Section wurden in einer .xlf Datei gespflegt.
+
+Dieser Code wurde größtenteils aus bereits vorhandenen Extensions extrahiert und nur von zusätzlichen Funktionen / Eingabefeldern bereinigt, weswegen hier nicht größer auf ihn eingegangen wird.
 
 \subsection{Setup der Implementierung der Benutzeroberfläche}
 \label{sec:Setup der ImplementierungBenutzeroberflaeche}
 
 \subsubsection{Nuxt3 aufsetzen um DaisyUI installieren}
 \label{sec:Nuxt3 aufsetzen um DaisyUI installieren}
-Um Nuxt 3 nutzen zu können, muss eine aktuelle Version von Node.js auf der Betriebssystem installiert werden. Zum installieren von Nuxt 3 und DaisyUI wurde der Node Package Manager genutzt. Um das neue Nuxt 3 Projekt aufzusetzen, wurde der Befehl npm nuxi init bal-skeleton ausgeführt. Dies erstellt ein neues Nuxt 3 Projekt mit dem Namen bal-skeleton in dem Verzeichnis, indem es ausgeführt wurde. Also Software für version-control wurde Github genutzt. Das Nuxt 3 Projekt kann nun, im entsprechenden Verzeichnis, durch den Befehl npm run dev gestartet werden. Im Browser wird nun auf localhost:3000 die Website dargestellt. Änderungen am Code werden direkt angewandt und im Browser angezeigt.
+Um Nuxt 3 nutzen zu können, muss eine aktuelle Version von Node.js auf der Betriebssystem installiert werden. Zum Installieren von Nuxt 3 und DaisyUI wurde der Node Package Manager genutzt. Um das neue Nuxt 3 Projekt aufzusetzen, wurde der Befehl npm nuxi init bal-skeleton ausgeführt. Dies erstellt ein neues Nuxt 3 Projekt mit dem Namen bal-skeleton in dem Verzeichnis, indem es ausgeführt wurde. 
 
-\subsubsection{Versionierungssystem Github}
-\label{sec:Versionierungssystem Github}
-
-Für das Skeleton wurde ein Github-Repository angelegt. In ihm wird das aktuelle Typo3-Image und der Nuxt 3 Code gespeichert. Github ermöglicht es mehreren Entwicklern an einer Codebase zu arbeiten und diese herunterzuladen. Es gibt bei Github die Möglichkeit ein Repository als Template zu deklarieren. Das ermöglicht es anderen Entwicklern neue Projekte mit dem Template zu initialisieren. Dies wurde hier gemacht, da das Skeleton dafür gemacht wurde neue Projekte zu entwickeln.
-
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{GithubRepository}{1}
-\caption{Github Template Einstellung}
-\label{fig:Github Template Einstellung}
-\end{figure}
+Das Nuxt 3 Projekt kann nun im entsprechenden Verzeichnis durch den Befehl npm run dev gestartet werden. Im Browser wird nun auf localhost:3000 die Website dargestellt. Änderungen am Code werden direkt angewandt und im Browser angezeigt.
 
 \subsection{Navigation der Implementierung der Benutzeroberfläche}
 \label{sec:Navigation der der ImplementierungBenutzeroberflaeche}
 
 \subsubsection{Dynamische Seiten}
 \label{sec:Dynamische Seiten}
-Websiten haben normalerweise nicht nur eine Startseite, sondern sie haben meisten auch mehrere Unterseiten. Damit Nuxt 3 weiß, welche Dateien als Seiten fungieren werden diese Dateien in ein bestimmtes Verzeichnis gelegt. Alle Seiten der Nuxt 3 Anwendungen befinden sich im pages Verzeichnis. Da Nuxt 3 und wir als Programmierer nicht wissen, wie der Seitenbaum von Typo3 aussieht und dieser sich ständig ändert, können die einzelnen Seiten nicht per Hand eingepflegt werden. Damit Nuxt3 trotzdem weiß welcher Code bei den unterschiedlichen Seiten ausgeführt werden soll, gibt es eine Catch-all Route. Eine Datei/Seite die den Namen [...slug].vue erhält, fungiert als Catch-all Route. Dies bedeutet, dass alle Seiten die nicht gepflegt sind, durch diese Datei verarbeitet werden. Wenn aber beispielsweise eine Shop-Seite angelegt werde soll, die ihre Daten durch eine E-Commerce Platform und nicht Typo3 bekommt. Dann kann im pages Ordner eine shop.vue Datei hinterlegt werden, welche dann für den Pfad /shop die Daten darstellt. Analog kann dies für alle möglichen Seiten geschehen. Das Skeleton bearbeitet also standardmäßig jeden Seitenaufruf gleich.
+Websiten haben normalerweise nicht nur eine Startseite, sondern sie haben meisten auch mehrere Unterseiten. Damit Nuxt 3 weiß, welche Dateien als Seiten fungieren, werden diese Dateien in ein bestimmtes Verzeichnis gelegt. Alle Seiten der Nuxt 3 Anwendungen befinden sich im pages Verzeichnis. Da Nuxt 3 und wir als Programmierer nicht wissen, wie der Seitenbaum von Typo3 aussieht und dieser sich ständig ändert, können die einzelnen Seiten nicht per Hand eingepflegt werden. Damit Nuxt3 trotzdem weiß, welcher Code bei den unterschiedlichen Seiten ausgeführt werden soll, gibt es eine Catch-all Route.
+
+Eine Datei/Seite, die den Namen [...slug].vue erhält, fungiert als Catch-all Route. Dies bedeutet, dass alle Seiten, die nicht gepflegt sind, durch diese Datei verarbeitet werden. Das Skeleton bearbeitet also standardmäßig jeden Seitenaufruf gleich. Es gibt nur Ausnahmen, für explizit gepflegte Dateien im pages Verzeichnis.
+
+Wenn beispielsweise eine Shop-Seite angelegt werde soll, die ihre Daten durch eine E-Commerce Platform und nicht Typo3 bekommt, dann kann im pages Ordner eine shop.vue Datei hinterlegt werden. Diese stellt dann für den Pfad /shop die Daten dar. Analog kann dies für alle möglichen Seiten geschehen. 
 
 \subsubsection{Verarbeitung der Typo3 Daten}
 \label{sec:Verarbeitung der Typo3 Daten}
 
-In der nuxt.config.ts Datei können generelle Konfigurationen am Nuxt3 vorgenommen werden. In ihr wurde die URL des Typo3 gespeichert. Dies hat den Vorteil, dass die URL in der Anwendung als Variable genutzt werden kann. Das heißt, dass bei späteren Entwicklungen lediglich die Variable einen anderen Wert bekommen muss und Nuxt automatisch alle Daten von einem anderen Typo3 bezieht.
+In der nuxt.config.ts Datei können generelle Konfigurationen am Nuxt3 vorgenommen werden. In ihr wurde die URL des Typo3 gespeichert. Dies hat den Vorteil, dass die URL in der Anwendung als Variable genutzt werden kann. 
+
+Das heißt, dass bei späteren Entwicklungen lediglich die Variable einen anderen Wert bekommen muss und Nuxt automatisch alle Daten von einem anderen Typo3 bezieht.
 
 \begin{lstlisting}[language=json,firstnumber=1]
 export default defineNuxtConfig({
@@ -153,7 +163,11 @@ export default defineNuxtConfig({
 })
 \end{lstlisting}
 
-Die Variable wird darauf hin in der [...slug].vue Datei genutzt um die Daten vom Typo3 zu laden. Dies geschieht im <script setup> Tag. Nuxt 3 Dateien können sowohl einen Script Tag haben, welcher Clientseitig ausgeführt wird, als auch ein Script Tag, welcher Serverseitig ausgeführt wird(hat den Zusatz setup). Da die Ladezeit minimal gehalten werden soll, werden die Typo3 Daten hier Serverseitig geladen. Zum Laden der Daten wird die Nuxt 3 eigene useAsyncData() Funktion genutzt. Mit ihr können Daten asynchron geladen werden. Zusätzlich hat sie viele Optionen um die Anfrage anzupassen. Eine der Optionen ist es den Cache auszuschalten. Für Entwicklungszwecke wird der Cache hier noch ausgeschaltet. Damit Änderungen im Typo3 direkt sichtbar werden. Wenn das Projekt in Produktion geht, sollte die Zeile {initialCache: false} entfernt werden. Dadurch Speichert Nuxt 3 die Daten im Cache und die Seite wird schnell geladen. Je nach Website kann programmiert werden, dass sich der Cache häufiger oder weniger häufiger leert.
+Die Variable wird darauf hin in der [...slug].vue Datei genutzt, um die Daten vom Typo3 zu laden. Dies geschieht im <script setup> Tag. Nuxt 3 Dateien können sowohl einen Script Tag haben, welcher Clientseitig ausgeführt wird, als auch ein Script Tag, welcher Serverseitig ausgeführt wird(hat den Zusatz setup). Da die Ladezeit minimal gehalten werden soll, werden die Typo3 Daten hier Serverseitig geladen. 
+
+Zum Laden der Daten wird die Nuxt 3 eigene useAsyncData() Funktion genutzt. Mit ihr können Daten asynchron geladen werden. Zusätzlich hat sie viele Optionen, um die Anfrage anzupassen. Eine der Optionen ist es, den Cache auszuschalten. Für Entwicklungszwecke wird der Cache hier noch ausgeschaltet. Damit Änderungen im Typo3 direkt sichtbar werden. Wenn das Projekt in Produktion geht, sollte die Zeile {initialCache: false} entfernt werden. Dadurch speichert Nuxt 3 die Daten im Cache und die Seite wird schnell geladen. Je nach Website kann programmiert werden, dass sich der Cache häufiger oder weniger häufiger leert.
+
+\pagebreak
 
 \begin{lstlisting}[language=json,firstnumber=1]
   const runtimeConfig = useRuntimeConfig()
@@ -165,9 +179,15 @@ Die Variable wird darauf hin in der [...slug].vue Datei genutzt um die Daten vom
   )
 \end{lstlisting}
 
-Im route Objekt ist der Pfad der aktuellen Website gespeichert. route.fullPath würde bei der Seite beispielseite.de/beispie1 dem Wert beispie1 entsprechen. Danach geht eine Anfrage an das Typo3 auf dem Pfad /beispiel. In diesem Fall wäre das http://localhost/beispiel. Das bedeutet, dass bei jedem Seitenaufruf, der Nuxt 3-Client das Typo3 anspricht. Wenn das Typo3 eine Seite unter dem Pfad hat, wird es die dementsprechenden Daten ausspielen. Normalerweise sollte dies der Fall sein, da die Elemente aus der Navigation alles Seiten aus dem Typo3 sind. Falls eine Seite angesteuert wird, die nicht im Typo3 existiert, wirft dieses einen 404 Fehler zurück. Das wurde hier in dem Projekt nicht beachtet. Sollte aber in zukünftigen Versionen des Projekts implementiert werden.
+Im route Objekt ist der Pfad der aktuellen Website gespeichert. route.fullPath würde bei der Seite beispielseite.de/beispie1 dem Wert beispie1 entsprechen. Danach geht eine Anfrage an das Typo3 auf dem Pfad /beispiel. In diesem Fall wäre das http://localhost/beispiel. Das bedeutet, dass bei jedem Seitenaufruf der Nuxt 3-Server das Typo3 anspricht. Wenn das Typo3 eine Seite unter dem Pfad hat, wird es die dementsprechenden Daten ausspielen. Normalerweise sollte dies der Fall sein, da die Elemente aus der Navigation alles Seiten aus dem Typo3 sind. 
 
-Die Daten aus dem Typo3(hier das data Objekt) wurden danach weiter verarbeitet. Der erste Schritt der Datenverarbeitung war es die Daten in Kategorien zu zerlegen. Dafür wurden vier Kategorien/Variablen angelegt. Die Variable breadcrumbs bekam die Daten bezüglich der Breadcrumbs der Seite. Die Variable Content bekam alle Daten bezüglich der Inhaltselemente auf der bestimmten Seite. Die Variable mainNavigation bekam alle Daten der Hauptnavigation. Als letztes bekam die Variable metaData alle Metadaten der Website. Die Breadcrumbs wurden bereits automatisch durch die Headless Extension generiert und sind im Datenobjekt vorhanden. Das gleiche gilt für die Metadaten und dem Großteil der Inhaltselemente. Die Navigationsdaten finden sich in der Eigenschaft main, welche zum Objekt navigation gehört, welches wiederum zum Objekt page gehört. Diese Logik wurde in \ref{sec:Ausspielen der Typo3 Daten} angelegt.
+Falls eine Seite angesteuert wird, die nicht im Typo3 existiert, wirft dieses einen 404 Fehler zurück. Das wurde hier in dem Projekt nicht beachtet. Die sollte aber in zukünftigen Versionen des Projekts implementiert werden.
+
+Die Daten aus dem Typo3(hier das data Objekt) wurden danach weiter verarbeitet. Der erste Schritt der Datenverarbeitung war es, die Daten in Kategorien zu zerlegen. Dafür wurden vier Kategorien/Variablen angelegt. 
+
+Die Variable breadcrumbs bekam die Daten bezüglich der Breadcrumbs der Seite. Die Variable Content bekam alle Daten bezüglich der Inhaltselemente auf der bestimmten Seite. Die Variable mainNavigation bekam alle Daten der Hauptnavigation. Als letztes bekam die Variable metaData alle Metadaten der Website. 
+
+Die Breadcrumbs wurden bereits automatisch durch die Headless Extension generiert und sind im Datenobjekt vorhanden. Das Gleiche gilt für die Metadaten und dem Großteil der Inhaltselemente. Die Navigationsdaten finden sich in der Eigenschaft main, welche zum Objekt navigation gehört, welches wiederum zum Objekt page gehört. Diese Logik wurde in \ref{sec:Ausspielen der Typo3 Daten} angelegt.
 
 \begin{lstlisting}[language=json,firstnumber=1]
   let breadcrumbs = data.value.breadcrumbs;
@@ -176,7 +196,9 @@ Die Daten aus dem Typo3(hier das data Objekt) wurden danach weiter verarbeitet. 
   let metaData = data.value.meta;
 \end{lstlisting}
 
-Mit der Nuxt3 Funktion useHead() können die Metadaten an die Website weiter gegeben werden. Für die Weiterverarbeitung der Breadcrumbs, die Navigation und den Content wurden eigene Komponenten erstellt. Diese erhalten die Variablen als Eigenschaften/Properties/Props zugewiesen. Da Nuxt3 einen automatischen Import von Komponenten hat, müssen diese lediglich im Template gepflegt werden und nicht zusätzlich importiert werden. Dafür wurden die Komponenten im components Ordner gepflegt, damit Nuxt3 diese automatisch importieren kann. Den vollständigen Code der [...slug].vue finden Sie unter \Anhang{[...slug].vue}.
+Mit der Nuxt 3 Funktion useHead() können die Metadaten an die Website weiter gegeben werden. Für die Weiterverarbeitung der Breadcrumbs, die Navigation und den Content wurden eigene Komponenten erstellt. Diese erhalten die Variablen als Eigenschaften zugewiesen. 
+
+Da Nuxt 3 einen automatischen Import von Komponenten hat, müssen diese lediglich im Template gepflegt werden und nicht zusätzlich importiert werden. Dafür wurden die Komponenten im components Verzeichnis gepflegt, damit Nuxt3 diese automatisch importieren kann. Den vollständigen Code der [...slug].vue finden Sie unter \Anhang{[...slug].vue}.
 
 \subsubsection{Setup Navigation}
 \label{sec:Setup Navigation}
@@ -190,12 +212,15 @@ Die Logik der Navigation wurde in eine Nuxt3 Composable ausgelagert. Die Navigat
 \end{itemize}
 
 Für das öffnen und schließen des Slidemenu wurden im Composable die Funktionen open() und close() erstellt. Der State, ob das Slidemenu geöffnet oder geschlossen ist, wird über die Variable navigationOpened gesteuert. Dafür wird die neue Nuxt3 eigene Funktion useState() genommen. Mit ihr lässt sich sehr einfach der State über die gesamt Anwendung verwalten. Der useState Funktion wird dabei ein Key übergeben, mit dem überall in der Anwendung auf den State zugegriffen werden kann. Zusätzlich kann der Wert des States optional initialisiert werden. Hier wird natürlich der Initialwert auf false gesetzt. Die Navigation soll sich erst öffnen, wenn der Nutzer der Website das möchte.
+
 Analog wurde jeweils ein State für die gesamte Navigation(fullNavList), die aktuelle im Slidemenu angezeigte Navigation(currentNavList) und dem Parent der aktuell angezeigten Navigation(previousNavItem) erstellt.
+
+Theoretisch hätte hier auch die ref() Funktion anstelle von der useState() Funktion genutzt werden können. Durch sie wird ein reaktives, veränderbares Ojekt zurückgegeben. useState() ist effektiv die globale ref() Funktion. Dies hätte den Vorteil gehabt, dass der State der Navigation nicht über die ganze Anwendung bekannt ist. Dies wäre einer der Vorteile des Composables gegenüber einer generellen State Lösung. In dem Fall war dies aber kein großes Problem, sondern nur nicht 'Best Practice'.
 
 \subsubsection{Aufteilung Navigation}
 \label{sec:Aufteilung Navigation}
 
-Die Navigation wurde in zwei Teile aufgeteilt, der erste Teil sind die Navigationspunkte, welche in der Navigationsbar der Website angezeigt werden. Sie sind die Seiten, welche im Typo3 die Kategorie 'main' zugewiesen bekommen haben. Der zweite Teil ist das Slidemenu. Das Slidemenu wird geöffnet, wenn ein Element in der Navigationsbar angeklickt wird und es Unterseiten(Children) hat. Im Slidemenu wird die currentNavList dargestellt. Initial sind dies die Unterseiten, des angeklickten Navigationselements. Die Navigationsbar wird in der Komponente TopNavigation.vue dargestellt und das Slidemenu in der Komponente SlideMenu.vue.
+Die Navigation wurde in zwei Teile aufgeteilt, der erste Teil sind die Navigationspunkte, welche in der Navigationsbar der Website angezeigt werden. Sie sind die Seiten, welche im Typo3 die Kategorie 'main' zugewiesen bekommen haben. Der zweite Teil ist das Slidemenu. Das Slidemenu wird geöffnet, wenn ein Element in der Navigationsbar angeklickt wird und es Unterseiten(Children) hat. Im Slidemenu wird die currentNavList dargestellt. Initial sind dies die Unterseiten des angeklickten Navigationselements. Die Navigationsbar wird in der Komponente TopNavigation.vue dargestellt und das Slidemenu in der Komponente SlideMenu.vue.
 
 \subsubsection{TopNavigation.vue}
 \label{sec:TopNavigation.vue}
@@ -217,7 +242,24 @@ Die open() Funktion besteht aus einem if else Statement. Den Programmcode finden
 \label{sec:Slidemenu.vue}
 
 Den kompletten Code des Slidemenu finden Sie im Anhang unter \Anhang{SlideMenu.vue}.
-Das Slidemenu zeigt die aktuelle Navigation an, welche aus Unterseiten eines anderen Navigationselement besteht. Dafür nutzt sie die gleiche Logik wie die Navigationsbar. Es wird genauso durch alle Elemente von currentNavList iteriert, wie es bei bei der Navigationsbar für fullNavList passiert ist. Der Unterschied liegt in der Funktion, welche bei @click hinterlegt wird. Es wird die Funktion navigate() aufgerufen, welche im Navigation Composable hinterlegt ist. Die Funktion navigate() ähnelt der Funktion open() sehr. Beide nehmen ein Navigationselement als Parameter. Beide Funktionen haben die gleichen if else Bedingungen. Der Unterschied liegt in dem Code, welcher nach der jeweiligen Bedingung ausgeführt wird. Wenn das Navigationselement keine Unterseiten hat, dann wird wie bei open() zur Seite navigiert. Zusätzlich wird aber auch das Slidemenu mit der close() Funktion geschlossen. Theoretisch könnte hier auch der State von navigationOpened direkt auf false gesetzt werden. Falls sich die close() Logik aber erweitert, muss dies dann nicht an meheren Orten angepasst werden. Falls das Element Unterseiten hat, wird die aktuelle angezeige Navigation den Unterseiten gleichgesetzt. 
+Das Slidemenu zeigt die aktuelle Navigation an, welche aus Unterseiten eines anderen Navigationselement besteht. Dafür nutzt sie die gleiche Logik wie die Navigationsbar. Es wird genauso durch alle Elemente von currentNavList iteriert, wie es bei bei der Navigationsbar für fullNavList passiert ist. Der Unterschied liegt in der Funktion, welche bei @click hinterlegt wird. 
+
+Es wird die Funktion navigate() aufgerufen, welche im Navigation Composable hinterlegt ist. Die Funktion navigate() ähnelt der Funktion open() sehr. Beide nehmen ein Navigationselement als Parameter. Beide Funktionen haben die gleichen if else Bedingungen. Der Unterschied liegt in dem Code, welcher nach der jeweiligen Bedingung ausgeführt wird. Wenn das Navigationselement keine Unterseiten hat, dann wird wie bei open() zur Seite navigiert. Zusätzlich wird aber auch das Slidemenu mit der close() Funktion geschlossen. Theoretisch könnte hier auch der State von navigationOpened direkt auf false gesetzt werden. Falls sich die close() Logik aber erweitert, muss dies dann nicht an mehreren Orten angepasst werden. Falls das Element Unterseiten hat, wird die aktuelle angezeige Navigation den Unterseiten gleichgesetzt.
+
+Das Slidemenu hat noch drei weitere Funktionen. Dies Funktionalitäten sind alle Teil des Navigation Composable \Anhang{navigation.ts}.
+
+Wenn das ursprünglich angeklickte Element, welches Unterseiten hat, tatsächlich angesteuert werden soll, kann dies hier geschehen. Die ursprüngliche Seite befindet sich ganz oben im Slidemenu. Im Composable ist es das previousNavItem.
+
+Es wurde eine back() Funktion eingebaut, welche es dem Nutzer erlaubt, in der Navigationsstruktur zurück zu steuern. Es könnte sein, dass der Nutzer eine Unterseite sucht, diese aber nicht bei der Seite gefunden hat, wo er es gedacht hätte. Dann will er vielleicht zurück steuern und eine andere Seite ausprobieren. Oder der Nutzer will vielleicht einfach nur erkunden, welche Seiten existieren. Um zurück zu kommen, muss der Parent des Parents der aktuellen Unterseiten(previousNavItem) gefunden werden. Damit die Unterseiten davon dargestellt werden können. Dafür wurde eine findParent() Funktion erstellt, welche rekursiv durch den Navigationsbaum geht, bis sie die passende id gefunden hat. Alternativ könnte auch der gesamte Navigationsprozess gespeichert und zurückgespielt werden.
+
+Zusätzlich kann das Slidemenu auch geschlossen werden, falls der Nutzer doch nicht woanders hinsteuern möchte. Dafür wurde die close Funktion im Composable hinterlegt. Sie setzt navigationOpened auf false. Dadurch bekommt das Slidemenu wieder eine Breite von 0 Pixeln und ist nicht zu sehen.
+
+Dies sieht im Template der SlideMenu.vue Komponente wir folgt aus:
+\begin{figure}[htb]
+\centering
+\includegraphicsKeepAspectRatio{SlideMenuExtra}{1}
+\caption{Daten-Mapping der Komponententypen}
+\end{figure}
 
 \subsection{Implementierung des Contents der Benutzeroberfläche}
 \label{sec:Implementierung des Contents der ImplementierungBenutzeroberflaeche}
@@ -225,7 +267,9 @@ Das Slidemenu zeigt die aktuelle Navigation an, welche aus Unterseiten eines and
 \subsubsection{TypoView.vue}
 \label{sec:TypoView.vue}
 
-In die TypoView.vue Datei werden die Contentdaten der Typo3-Seite reingeladen. Sie bekommt diese als Property/Eigenschaft in der [...slug].vue Datei. Die Daten enthalten alle Elemente die auf der jeweiligen Seite im Typo3 gepflegt wurden. Diese sind in Form eines Arrays aufbereitet. Das erste Element im Array entspricht dabei dem im Typo3 ganz oben auf der Seite gepflegten Element. Das letzte Element entspricht dem ganz unten gepflegten Element. Dies bedeutet, dass wenn die Elemente aus dem Array in ihrer Reihenfolge dargestellt werden, dass dann alle Elemente an ihrem Platz sind. Damit die Daten aber genutzt werden können, müssen sie noch ein wenig aufbereitet werden. Die TypoView muss irgendwie wissen, welche Datei zur Darstellung der jeweiligen Typo3 Komponente zuständig ist. Wenn aus dem Typo3 beispielsweise eine Datei vom Typen Text ausgespielt wird, sollte es eine Komponente geben, welche Text verarbeiten kann. Nuxt 3 muss dann wissen, dass es diese Komponente erstellen muss um die Daten zu verarbeiten.
+In die TypoView.vue Datei werden die Contentdaten der Typo3-Seite reingeladen. Sie bekommt diese als Property/Eigenschaft in der [...slug].vue Datei. Die Daten enthalten alle Elemente, die auf der jeweiligen Seite im Typo3 gepflegt wurden. Diese sind in Form eines Arrays aufbereitet. Das erste Element im Array entspricht dabei dem im Typo3 ganz oben auf der Seite gepflegten Element. Das letzte Element entspricht dem ganz unten gepflegten Element. Dies bedeutet, dass wenn die Elemente aus dem Array in ihrer Reihenfolge dargestellt werden, dass dann alle Elemente an ihrem Platz sind. 
+
+Damit die Daten aber genutzt werden können, müssen sie noch ein wenig aufbereitet werden. Die TypoView muss irgendwie wissen, welche Datei zur Darstellung der jeweiligen Typo3 Komponente zuständig ist. Wenn aus dem Typo3 beispielsweise eine Datei vom Typen Text ausgespielt wird, sollte es eine Komponente geben, welche Text verarbeiten kann. Nuxt 3 muss dann wissen, dass es diese Komponente erstellen muss, um die Daten zu verarbeiten.
 
 \paragraph{Daten-Mapping}
 
@@ -237,7 +281,7 @@ Dafür wurde ein Daten-Mapping der Komponenten erstellt. Dieses Daten-Mapping wu
 \caption{Daten-Mapping der Komponententypen}
 \end{figure}
 
-In einer mapTypo3Content Funktion, wird dann durch den gesamten Array durch iteriert. In dieser Funktion wird aus dem eindimensionalen Array ein zweidimensionaler. Dieser zweidimensionale Array entspricht dann den Sections mit ihren jeweiligen Elementen. Dafür wird bei jedem Element abgefragt ob es eine Section ist, wenn dies der Fall ist, wird ein neuer Eintrag im zweidimensionalen Array erstellt. Wenn das nicht der Fall ist, wird das Element bei letzten Element-Array im Sections-Array angehängt. Zusätzlich wird das Daten-Mapping angewandt und dem Element mitgegeben. 
+In einer mapTypo3Content Funktion wird dann durch den gesamten Array durch iteriert. In dieser Funktion wird aus dem eindimensionalen Array ein zweidimensionaler. Dieser zweidimensionale Array entspricht dann den Sections mit ihren jeweiligen Elementen. Dafür wird bei jedem Element abgefragt ob es eine Section ist, wenn dies der Fall ist, wird ein neuer Eintrag im zweidimensionalen Array erstellt. Wenn das nicht der Fall ist, wird das Element bei letzten Element-Array im Sections-Array angehängt. Zusätzlich wird das Daten-Mapping angewandt und dem Element mitgegeben. 
 
 \paragraph{Darstellung}
 Die TypoView Komponente iteriert dann im Template durch den zweidimensionalen Array. Für jede Section wird die Section Komponente aufgerufen und für jedes Element in der Section die entsprechende Komponente. Dafür wird bei einem <component> Tag die Nuxt 3 eigene resolveComponent() Funktion genutzt. Ihr kann als Parameter ein String gegeben werden. Der String entspricht hier dem Wert, welcher aus dem Daten-Mapping kommt. Nuxt 3 überprüft dann, ob es eine Komponente mit dem Namen gibt und rendert diese dann. Alle Elemente bekommen ihre Daten in Form einer Property mit dem Namen elementData übergeben.
@@ -251,23 +295,30 @@ Die TypoView Komponente iteriert dann im Template durch den zweidimensionalen Ar
 
 \paragraph{Layout}
 
-Wie im oberen Bild zu erkennen, gibt es noch einige unbeschriebene Code-Abschnitte. Wie man sehen kann, haben die Section Komponenten CSS-Klassen. Dies wären die Klassen 'flex' und 'flex-wrap'. Bei den Klassen handelt es sich um Klassen, welche in Tailwind / DaisyUI definiert sind. 'flex' erweitert die Elemente dabei um die CSS-Eigenschaft display mit dem Wert flex. Dadurch werden alle Elemente in einer Section als Flex-Elemente behandelt. 'flex-wrap' fügt die CSS-Eigenschaft flex-wrap, mit dem Wert wrap hinzu. Dadurch entstehen mehrere Zeilen in einem Flex-Container, wenn die Flex-Items zu groß für eine Zeile sind. Flex ist das standard Layout Werkzeug für Webentwicklung. Den Flex-Items kann nun eine Breite im Container zugewiesen werden. Flex-Items sind die Kinder des Flex-Containers. Im Fall des Projektes sind dies alle Komponenten, welche in den jeweiligen Sections sind. Dafür werden die in Kapitel \ref{sec:Skeleton-Extension / Layout} Skeleton-Extension / Layout Abschnitt Datenmodell genutzten Datenfelder genommen. Mit dem :class Attribut bekommen die Komponenten dynamisch CSS zugewiesen, welches ihnen für die jeweilige Bildschirmbreite ihre Breite zuweist. Dafür wird eine Hilfsfunktion mit dem Namen responsiveLayout genutzt. Sie returnt die jeweiligen CSS-Klassen als string. responsiveLayout nutzt wiederum eine weitere Hilfsfunktion mit dem Namen getResponsiveColumn. Sie wandelt die gepflegten Werte, mit einem switch case, in Tailwind/DaisyUI Klassen um. responsiveLayout ruft jeweils für mobile, tablet und desktop die getResponsiveColumn Funktion auf. Der zurückgegebene Wert wird dann mit String-Verkettung den jeweiligen Bildschirmgrößen zugewiesen. md und lg stehen dabei representativ für die jeweiligen Bildschirmbreiten 768px und 1024px. Was in diesem Fall tablet und desktop entspricht. Da Tailwind 'Mobile First' ist, braucht es bei der kleinsten Bildschirmgröße kein extra Zusatz, da diese als der Standard betrachtet wird.
+Wie im oberen Bild zu erkennen, gibt es noch einige unbeschriebene Code-Abschnitte. Wie man sehen kann, haben die Section Komponenten CSS-Klassen. Dies wären die Klassen 'flex' und 'flex-wrap'. Bei den Klassen handelt es sich um Klassen, welche in Tailwind / DaisyUI definiert sind. 'flex' erweitert die Elemente dabei um die CSS-Eigenschaft display mit dem Wert flex. Dadurch werden alle Elemente in einer Section als Flex-Elemente behandelt. 'flex-wrap' fügt die CSS-Eigenschaft flex-wrap, mit dem Wert wrap hinzu. Dadurch entstehen mehrere Zeilen in einem Flex-Container, wenn die Flex-Items zu groß für eine Zeile sind. Flex ist das Standard-Layout Werkzeug für Webentwicklung. Den Flex-Items kann nun eine Breite im Container zugewiesen werden. Flex-Items sind die Kinder des Flex-Containers. Im Fall des Projektes sind dies alle Komponenten, welche in den jeweiligen Sections sind. 
+
+Dafür werden die in Kapitel \ref{sec:Skeleton-Extension / Layout} Skeleton-Extension / Layout Abschnitt Datenmodell genutzten Datenfelder genommen. Mit dem :class Attribut bekommen die Komponenten dynamisch CSS zugewiesen, welches ihnen für die jeweilige Bildschirmbreite ihre Breite zuweist. Dafür wird eine Hilfsfunktion mit dem Namen responsiveLayout genutzt. Sie returnt die jeweiligen CSS-Klassen als string. responsiveLayout nutzt wiederum eine weitere Hilfsfunktion mit dem Namen getResponsiveColumn. siehe Abbildung \ref{fig:Hilfunktionen fürs Layout} auf der nächsten Seite.
+
+Sie wandelt die gepflegten Werte mit einem switch case, in Tailwind/DaisyUI Klassen um. responsiveLayout ruft jeweils für mobile, tablet und desktop die getResponsiveColumn Funktion auf. Der zurückgegebene Wert wird dann mit String-Verkettung den jeweiligen Bildschirmgrößen zugewiesen. md und lg stehen dabei repräsentativ für die jeweiligen Bildschirmbreiten 768px und 1024px. Was in diesem Fall tablet und desktop entspricht. 
+
+Da Tailwind 'Mobile First' ist, braucht es bei der kleinsten Bildschirmgröße kein extra Zusatz, da diese als der Standard betrachtet wird.
 
 \begin{figure}[htb]
 \centering
 \includegraphicsKeepAspectRatio{responsiveHelpers}{1}
 \caption{Hilfsfunktionen fürs Layout}
+\label{fig:Hilfunktionen fürs Layout}
 \end{figure}
 
 \subsubsection{Section Komponente}
 \label{sec:Section Komponente}
 
-Die Section Komponente ist in dieser Iteration des Skeletons eine sehr einfache Komponente. Sie teilt lediglich die Website in Bereiche ein. Diese Bereiche können dann in zukünftigen Projekten genutzt werden. Ein klassische Anwendung wäre beispielsweise die Hintergrundfarbe zu ändern. So dass unterschiedliche Bereiche der Website hervorgehoben werden können. Theoretisch könnte in der Section auch Abstände gepflegt werden, oder unterschiedliche Scrollverhalten. Das alles würde hier aber den Rahmen der Arbeit sprengen und ist für ein Skeleton auch nicht notwendig. In ihrer aktuellen Iteration hat die Section Komponente lediglich einen Slot, indem ihre Elemente reingerendert werden.
+Die Section Komponente ist in dieser Iteration des Skeletons eine sehr einfache Komponente. Sie teilt lediglich die Website in Bereiche ein. Diese Bereiche können dann in zukünftigen Projekten genutzt werden. Eine klassische Anwendung wäre beispielsweise die Hintergrundfarbe zu ändern. Sodass unterschiedliche Bereiche der Website hervorgehoben werden können. Theoretisch könnte in der Section auch Abstände gepflegt werden oder unterschiedliche Scrollverhalten. Das alles würde hier aber den Rahmen der Arbeit sprengen und ist für ein Skeleton auch nicht notwendig. In ihrer aktuellen Iteration hat die Section Komponente lediglich einen Slot, indem ihre Elemente reingerendert werden.
 
 \subsubsection{Content Komponenten}
 \label{sec:Content Komponenten}
 
-Für alle restlichen Komponenten die laut Projektantrag dargestellt werden sollen, wurde jeweils eine Komponente erstellt. Im Beispiel des Text-Elements wurde im components Verzeichnis im Unterverzeichnis cms-components die Datei RichText.vue angelegt. Diese kann nun im Template von Nuxt 3 durch <cms-components-rich-text> aufgerufen werden. Dafür benötigt es keinen Import. Analog dazu wurden für alle anderen Komponenten ebenfalls Dateien nach diesem Namensschema angelegt. Das Daten-Mapping der Komponenten wurde dann mit den Namen aufgefüllt.
+Für alle restlichen Komponenten, die laut Projektantrag dargestellt werden sollen, wurde jeweils eine Komponente erstellt. Im Beispiel des Text-Elements wurde im components Verzeichnis im Unterverzeichnis cms-components die Datei RichText.vue angelegt. Diese kann nun im Template von Nuxt 3 durch <cms-components-rich-text> aufgerufen werden. Dafür benötigt es keinen Import. Analog dazu wurden für alle anderen Komponenten ebenfalls Dateien nach diesem Namensschema angelegt. Das Daten-Mapping der Komponenten wurde dann mit den Namen aufgefüllt.
 
 \begin{figure}[htb]
 \centering
@@ -275,11 +326,15 @@ Für alle restlichen Komponenten die laut Projektantrag dargestellt werden solle
 \caption{Komponenten Dateien}
 \end{figure}
 
-In den einzelnen Komponenten wurde keine komplexe Logik umgesetzt. Es wurden die Daten auf die einfachste Art und Weise dargestellt. Dies geschah aus dem einfachen Grund, dass sich das Design der Komponeten von Projekt zu Projekt stark ändern würde. 
+In den einzelnen Komponenten wurde keine komplexe Logik umgesetzt. Es wurden die Daten auf die einfachste Art und Weise dargestellt. Dies geschah aus dem einfachen Grund, dass sich das Design der Komponenten von Projekt zu Projekt stark ändern würde. 
 
 \paragraph{Text und Bilder \& Textelement}
 
-Wie in Figure \ref{fig:Bild-Text-Komponente} dargestellt, erhalten Komponenten im setup script ihre Daten als Property zugewiesen. Dies ist für alle Komponenten gleich. Die Property wird dann im Template genommen um die Inhalte der Komponente darzustellen. Da es sich in diesem Beispiel um das Text-Bild-Element handelt, wird ein Bild und ein Text dargestellt. Inhalte von Komponenten werden normalerweise im content Objekt gespeichert. Das content Objekt hat mehrere Objekte als Eigenschaften. In der gallery Eigenschaft, welches selber ein Objekt ist, werden die Bilder gepflegt. Um das Bild darzustellen, wird das zuerst gepflegte Bild genommen und einem img tag als src(kurz für source/Quelle) übergeben. Der Text wird mit v-html dargestellt. Es handelt sich also bei der bodytext Eigenschaft um einen string, welche HTML-Attribute enthält. Dies liegt daran, dass der Text im Typo3 Backend mit einem Richtext Editor gepflegt wird. Diese kann komplexere Anpassungen an Texten nehmen, welche in Form von HTML-Attributen gespeichert und dargestellt werden. v-html rendert diesen HTML-Code dann in die div hinein. Der Code von der RichText.vue Datei sieht, bis auf den img tag, genau wie der von der PictureAndText.vue Datei aus. Bei der Richtext.vue existiert dieser gar nicht.
+Wie in Figure \ref{fig:Bild-Text-Komponente} dargestellt, erhalten Komponenten im setup script ihre Daten als Property zugewiesen. Dies ist für alle Komponenten gleich. Die Property wird dann im Template genommen um die Inhalte der Komponente darzustellen. 
+
+Da es sich in diesem Beispiel um das Text-Bild-Element handelt, wird ein Bild und ein Text dargestellt. Inhalte von Komponenten werden normalerweise im content Objekt gespeichert. Das content Objekt hat mehrere Objekte als Eigenschaften. In der gallery Eigenschaft, welches selber ein Objekt ist, werden die Bilder gepflegt. Um das Bild darzustellen, wird das zuerst gepflegte Bild genommen und einem img tag als src(kurz für source/Quelle) übergeben. Der Text wird mit v-html dargestellt. Es handelt sich also bei der bodytext Eigenschaft um einen string, welche HTML-Attribute enthält. Dies liegt daran, dass der Text im Typo3 Backend mit einem Richtext Editor gepflegt wird. Diese kann komplexere Anpassungen an Texten nehmen, welche in Form von HTML-Attributen gespeichert und dargestellt werden. v-html rendert diesen HTML-Code dann in die div hinein. 
+
+Der Code von der RichText.vue Datei(Textelement) sieht, bis auf den img tag, genau wie der von der PictureAndText.vue Datei aus. Bei der Richtext.vue existiert dieser gar nicht.
 
 \begin{figure}[htb]
 \centering
@@ -287,8 +342,11 @@ Wie in Figure \ref{fig:Bild-Text-Komponente} dargestellt, erhalten Komponenten i
 \caption{Bild-Text-Komponente / PictureAndText.vue}
 \label{fig:Bild-Text-Komponente}
 \end{figure}
+
+\pagebreak
+
 \paragraph{Überschrift}
-Die Überschrift Komponente(Header.vue) wird genutzt um eine Überschrift und eine Unterüberschrift darzustellen. Die Überschrift findet sich in der header Eigenschaft des content Objektes. Analog dazu lässt sich die Unterüberschrift in subheader finden. Die Überschrift wurde in einem h1 tag gerendert, während die Unterüberschrift in einem h2 tag gerendert wurde.
+Die Überschrift Komponente(Header.vue) wird genutzt, um eine Überschrift und eine Unterüberschrift darzustellen. Die Überschrift findet sich in der header Eigenschaft des content Objektes. Analog dazu lässt sich die Unterüberschrift in subheader finden. Die Überschrift wurde in einem h1 tag gerendert, während die Unterüberschrift in einem h2 tag gerendert wurde.
 
 \begin{figure}[htb]
 \centering
@@ -299,7 +357,11 @@ Die Überschrift Komponente(Header.vue) wird genutzt um eine Überschrift und ei
 
 \paragraph{Nur Bilder}
 
-In dieser Komponente werden nur Bilder gepflegt. Damit dies geschehen kann, bedarf es zwei verschachtelter Schleifen. Diese werden mit v-for dargestellt. Gepflegte Bilder in Typo3 werden in Reihen und Spalten unterteilt. Im Backend wird gepflegt wie viele Bilder pro Spalte enthalten sein können. Dies kann zur Darstellung von unterschiedlichen Layouts nützlich sein. Im Skeleton wird dies erstmal nicht beachtet, sondern einfach nur alle Bilder gerendert. Dafür werden alle Reihen durchgegangen und dann für jede Spalte das jeweilige Elemente dargestellt. Dies geschieht analog zur Bild-Text-Komponente mit einem einfach img tag.
+In dieser Komponente werden nur Bilder gepflegt. Damit dies geschehen kann, bedarf es zwei verschachtelter Schleifen. Diese werden mit v-for dargestellt. Gepflegte Bilder in Typo3 werden in Reihen und Spalten unterteilt. Im Backend wird gepflegt wie viele Bilder pro Spalte enthalten sein können. Dies kann zur Darstellung von unterschiedlichen Layouts nützlich sein. Im Skeleton wird dies erstmal nicht beachtet, sondern einfach nur alle Bilder dargestellt. 
+
+Dafür werden alle Reihen durchgegangen und dann für jede Spalte das jeweilige Elemente dargestellt. Dies geschieht analog zur Bild-Text-Komponente mit einem einfach img tag.
+
+\pagebreak
 
 \begin{figure}[htb]
 \centering
@@ -314,12 +376,14 @@ Der Trenner(Divider.vue) unterscheidet sich von den anderen Komponenten. In der 
 
 \paragraph{HTML}
 
-Im aktuellen Skeleton haben die HTML- und die Text-Komponente den gleichen Code. Ein div tag mit v-html. Die Pflege, wie dieses HTML entsteht unterscheidet sich aber im Typo3 Backend. Die HTML Komponente wird generell dazu genutzt, direkt HTML Code zu pflegen. Während bei der klassischen Text-Komponente der Text in einem Richtext Editor zu HTML Code umgewandelt wird.
+Im aktuellen Skeleton haben die HTML- und die Text-Komponente den gleichen Code. Ein div tag mit v-html. Die Pflege, wie dieses HTML entsteht, unterscheidet sich aber im Typo3 Backend. Die HTML Komponente wird generell dazu genutzt, direkt HTML Code zu pflegen. Während bei der klassischen Text-Komponente der Text in einem Richtext Editor zu HTML Code umgewandelt wird.
 
 \subsubsection{Breadcrumbs}
 \label{sec:Breadcrumbs}
 
-Typo3 spielt nach dem installieren der Headless Extension automatisch Breadcrumbs mit aus. Diese wurden in der [...slug].vue Komponente an die Breadcrumbs.vue Komponente weiter gereicht. Hier wurden diese lediglich dargestellt. DaisyUI hat dafür bereits extra CSS-Klassen, die dafür geschaffen wurden. Deswegen werden diese einfach genommen und mit den Daten der Breadcrumbs gefüllt. Die Links der Breadcrumbs werden mit NuxtLink Komponenten und nicht mit a tags dargestellt. NuxtLinks werden genutzt um interne Links der Anwendung darzustellen. NuxtLinks können prefetching der internen Seiten betreiben. Das bedeutet, dass vor dem Aufruf der jeweiligen Seite bereits Ressourcen geladen werden und das navigieren schneller funktioniert. Bei externen Links sollten weiterhin die a tags genutzt werden. Wobei natürlich auch bei internen Links a tags genutzt werden können. Sie wären in dem Fall nur langsamer. NuxtLinks kompilieren beim Build-Prozess auch zu a tags.
+Typo3 spielt nach dem installieren der Headless Extension automatisch Breadcrumbs mit aus. Diese wurden in der [...slug].vue Komponente an die Breadcrumbs.vue Komponente weiter gereicht. Hier wurden diese lediglich dargestellt. DaisyUI hat dafür bereits extra CSS-Klassen, die dafür geschaffen wurden. Deswegen werden diese einfach genommen und mit den Daten der Breadcrumbs gefüllt. 
+
+Die Links der Breadcrumbs werden mit NuxtLink Komponenten und nicht mit a tags dargestellt. NuxtLinks werden genutzt um interne Links der Anwendung darzustellen. NuxtLinks können prefetching der internen Seiten betreiben. Das bedeutet, dass vor dem Aufruf der jeweiligen Seite bereits Ressourcen geladen werden und das Navigieren schneller funktioniert. Bei externen Links sollten weiterhin die a tags genutzt werden. Wobei natürlich auch bei internen Links a tags genutzt werden können. Sie wären in dem Fall nur langsamer. NuxtLinks kompilieren beim Build-Prozess auch zu a tags.
 
 \begin{figure}[htb]
 \centering

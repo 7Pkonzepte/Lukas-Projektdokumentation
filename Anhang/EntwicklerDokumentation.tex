@@ -11,11 +11,11 @@ Um Nuxt 3 lokal zu starten, bedarf es kein Docker. Docker kann aber auch genutzt
 
 \paragraph{Typo3 bereit machen}
 
-Um die Ausgabe von Typo3 in ein JSON-Format umzuwandeln, muss noch die Headless-Extension installiert werden. Um die ausgespielten Daten in die Struktur zu bringen, die der Nuxt 3 Client erwartet, muss ebenfalls die Skeleton-Extension installiert werden. Wie diese Extension erweitert werden kann, lässt sich in der Entwicklerdokumentation von Typo3 nachlesen(https://docs.typo3.org/Home/ExtensionManuals.html).
+Um die Ausgabe von Typo3 in ein JSON-Format umzuwandeln, muss noch die Headless-Extension installiert werden. Um die ausgespielten Daten in die Struktur zu bringen, die der Nuxt 3 Server erwartet, muss ebenfalls die Skeleton-Extension installiert werden. Wie diese Extension erweitert werden kann, lässt sich in der Entwicklerdokumentation von Typo3 nachlesen(https://docs.typo3.org/Home/ExtensionManuals.html).
 
 \paragraph{Verbindung zwischen Typo3 und Nuxt 3}
 
-Um den Nuxt 3 Clienten mit dem lokalen Typo3 zu verbinden, muss in der nuxt.config.ts noch die entsprechende URL gepflegt werden. Dies geschieht in dem runtimeConfig.public Objekt. Dort ist eine Eigenschaft mit dem Namen typo3 gepflegt. In ihr kann die Typo3 URL ausgetauscht werden. Die Daten des Typo3 werden in der [...slug].vue Datei im pages Verzeichnis abgerufen.
+Um den Nuxt 3 Server mit dem lokalen Typo3 zu verbinden, muss in der nuxt.config.ts noch die entsprechende URL gepflegt werden. Dies geschieht in dem runtimeConfig.public Objekt. Dort ist eine Eigenschaft mit dem Namen typo3 gepflegt. In ihr kann die Typo3 URL ausgetauscht werden. Die Daten des Typo3 werden in der [...slug].vue Datei im pages Verzeichnis abgerufen.
 
 \paragraph{Verarbeitung der Typo3 Daten}
 

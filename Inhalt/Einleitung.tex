@@ -5,7 +5,7 @@
 
 \subsection{Projektumfeld} 
 \label{sec:Projektumfeld}
-Die bits \& likes GmbH(\acs{BAL}) ist eine Fullservice-Digitalagentur aus Dortmund. Sie bietet sowohl Onlinemarketing als auch Websitenentwicklung an. Aktuell beschäfftigt sie ca. 50 Mitarbeiter, die Tendenz ist steigend.
+Die bits \& likes GmbH(\acs{BAL}) ist eine Fullservice-Digitalagentur aus Dortmund. Sie bietet sowohl Onlinemarketing als auch Websitenentwicklung an. Aktuell beschäftigt sie ca. 50 Mitarbeiter, die Tendenz ist steigend.
 
 Die Idee für das Projekt kam bei der Entwicklung einer Website für die Murtfeldt Kunststoffe GmbH \& Co. KG(Murtfeldt). Historisch nutzte Murtfeldt Typo3 als Content-Management-System(\acs{CMS}). \acs{BAL} entwickelte mit Nuxt 2 eine Headless Lösung für diese neue Website. Dieser Technologiestack soll nun mit der neuesten Version von Typo3(Version 11.5 zum Zeitpunkt des Projekts) als auch der neusten Version von Nuxt(Nuxt 3)\footnote{\Vgl \citet{Nuxt3}.} neu entwickelt werden. Damit zukünftige Murtfeldt Projekte als auch andere Projekte(z.B. \acs{BAL} Firmenwebsite, andere Kundenprojekte, ..) eine Vorlage(Skeleton) haben, mit welcher sie umgesetzt werden können.
 
@@ -14,7 +14,7 @@ Der Ausbilder des Prüfungsbewerbers ist Matthäus Schmedding.
 
 \subsection{Projektziel} 
 \label{sec:Projektziel}
-Das Ziel des Projektes ist es eine Typo3 Nuxt 3 Skeleton zu erstellen, auf dessen Basis neue Projekte umgesetzt werden können. Dazu müssen folgende Punkte erreicht werden:
+Das Ziel des Projektes ist es, ein Typo3 Nuxt 3 Skeleton zu erstellen, auf dessen Basis neue Projekte umgesetzt werden können. Dazu müssen folgende Punkte erreicht werden:
 \begin{itemize}
 	\item Content aus dem Typo3 System im JSON-Format ausspielen.
 	\item Potentielle Erweiterungen an den JSON-Daten um alle technischen Voraussetzungen zu erfüllen
@@ -23,16 +23,16 @@ Das Ziel des Projektes ist es eine Typo3 Nuxt 3 Skeleton zu erstellen, auf desse
 
 \subsection{Projektbegründung} 
 \label{sec:Projektbegruendung}
-Bis jetzt klonte \acs{BAL} immer alte Websiten auf dem Typo3 \& Nuxt2 Technologiestack um neue Websiten zu entwickeln. Dies bedeutete, dass viel Content, als auch alter Code erstmal händisch aus dem Projekt gelöscht werden musste. Zusätzlich musste die Datenbank bereinigt werden, damit die neue Website, keine Altlasten / kritische Daten aus dem vorherigen Projekt mit übernimmt. Die Alternative war, ein komplett neues Typo3 und Nuxt2 Projekt aufzusetzen und jedes mal viel Code / Template-Anpassungen neu schreiben. Dieser unnötige Aufwand soll mit diesem Projekt umgangen werden. Dadurch entstehen sowohl Kostenersparnisse durch kürzere Entwicklungszeiten, als auch weniger potentielle Fehler/Komplikationen mit alten Code/Daten von anderen Projekten.
+Bis jetzt klonte \acs{BAL} immer alte Websiten auf dem Typo3 \& Nuxt 2 Technologiestack um neue Websiten zu entwickeln. Dies bedeutete, dass viel Content als auch alter Code erst mal händisch aus dem Projekt gelöscht werden musste. Zusätzlich musste die Datenbank bereinigt werden, damit die neue Website keine Altlasten / kritische Daten aus dem vorherigen Projekt mit übernimmt. Die Alternative war, ein komplett neues Typo3 und Nuxt2 Projekt aufzusetzen und jedes mal viel Code / Template-Anpassungen neu schreiben. Dieser unnötige Aufwand soll mit diesem Projekt umgangen werden. Dadurch entstehen sowohl Kostenersparnisse durch kürzere Entwicklungszeiten als auch weniger potenzielle Fehler/Komplikationen mit alten Code/Daten von anderen Projekten.
 
-Ein Vorteil von Typo3, gegenüber anderen \acs{CMS} ist, dass Typo3 sich stark auf den deutschen Markt fokussiert hat. Das bedeutet, dass es für Typo3 schnelle Anpassungen an die deutsche Gesetzgebung gibt. Dies ist beispielsweise relevant für die \acs{DSGVO}. Dazu haben Kunden häufiger bereits Expertise in Typo3, was Zeit und Kosten in der Einarbeitung spart. Typo3 ist auf Enterprise Anwendungen spezialisiert, weswegen die Sicherheitsstandards sehr hoch sind.
+Ein Vorteil von Typo3, gegenüber anderen \acs{CMS} ist, dass Typo3 sich stark auf den deutschen Markt fokussiert hat. Das bedeutet, dass es für Typo3 schnelle Anpassungen an die deutsche Gesetzgebung gibt. Dies ist beispielsweise relevant für die \acs{DSGVO}. Dazu haben Kunden häufiger bereits Expertise in Typo3, was Zeit und Kosten in der Einarbeitung spart. Typo3 ist auf Enterprise-Anwendungen spezialisiert, weswegen die Sicherheitsstandards sehr hoch sind.
 
 Nuxt hat als Vorteil, dass es serverseitig gerendert wird. Dies führt zu schnelleren Ladegeschwindigkeiten der Seite. Dies verbessert die Search-Engine-Optimization-Performance(\acs{SEO}-Performance). Zusätzlich hat \acs{BAL} bereits viel expertise in Vue und alten Nuxt Versionen. Weswegen die Einarbeitung in die Technologie einfacher ist.
 
 \subsection{Projektschnittstellen} 
 \label{sec:Projektschnittstellen}
 
-Die finale Nuxt Anwendung interagiert nur mit der Typo3 Schnittstelle. Die Daten des Typo3 werden nach erfolgreichen installieren der Headless-Extension(erstes Projektziel) wie folgt ausgespielt:
+Die finale Nuxt Anwendung interagiert nur mit der Typo3 Schnittstelle. Die Daten des Typo3 werden nach erfolgreichen Installieren der Headless-Extension(erstes Projektziel) wie folgt ausgespielt:
 \colorlet{punct}{red!60!black}
 \definecolor{background}{HTML}{EEEEEE}
 \definecolor{delim}{RGB}{20,105,176}

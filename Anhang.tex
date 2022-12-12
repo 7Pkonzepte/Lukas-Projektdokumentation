@@ -13,7 +13,6 @@
 
 defined('TYPO3_MODE') || die();
 
-// static TypoScript
 (static function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
         array(
@@ -35,12 +34,10 @@ defined('TYPO3_MODE') || die();
             )
         ),
     );
-
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns(
         'tt_content',
         $temporaryColumn
     );
-
     $GLOBALS['TCA']['tt_content']['types']['tx_bal_column'] = array(
         'showitem' => '
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
@@ -124,6 +121,8 @@ call_user_func(
      </div>
 </template>
 \end{lstlisting}
+
+\pagebreak
 
 \subsection{navigation.ts}
 \label{navigation.ts}
