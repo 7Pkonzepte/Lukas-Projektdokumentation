@@ -12,9 +12,9 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Überschrift/ Header.vue}}{31}{figure.179}%
 \contentsline {figure}{\numberline {12}{\ignorespaces Nur Bilder - Komponente / ImageGallery.vue}}{32}{figure.181}%
 \contentsline {figure}{\numberline {13}{\ignorespaces Breadcrumbs}}{33}{figure.185}%
-\contentsline {figure}{\numberline {14}{\ignorespaces FlussDiagramm Nuxt 3 Anwendung}}{viii}{figure.199}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Start der Menüführung durch klicken auf Test2}}{ix}{figure.404}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Sidemenu öffnet sich. Beim klicken auf Test2 öffnet sich Test2 Seite, beim klick auf Test3 wird die open() Funktion angewandt.}}{ix}{figure.405}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Test3 hat Children, also wird neue Seitennavigation angezeigt.}}{ix}{figure.406}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Ausspielen der Komponenten im Frontend}}{x}{figure.408}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Pflegen der Komponenten im Backend}}{x}{figure.409}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Flussdiagramm der Nuxt 3 Anwendung}}{i}{figure.200}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Start der Menüführung durch klicken auf Test2}}{viii}{figure.405}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Sidemenu öffnet sich. Beim klicken auf Test2 öffnet sich Test2 Seite, beim klick auf Test3 wird die open() Funktion angewandt.}}{viii}{figure.406}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Test3 hat Children, also wird neue Seitennavigation angezeigt.}}{viii}{figure.407}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Ausspielen der Komponenten im Frontend}}{ix}{figure.409}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Pflegen der Komponenten im Backend}}{ix}{figure.410}%

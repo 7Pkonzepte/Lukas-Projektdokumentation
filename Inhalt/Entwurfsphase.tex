@@ -87,7 +87,7 @@ Im Typo3 können viele verschiedene Inhaltselemente gepflegt werden. Um diese da
 \subsubsection{Typo3 Datenverarbeitung durch Nuxt / Flussdiagramm}
 \label{sec:Typo3 Datenverarbeitung durch Nuxt / Flussdiagramm} 
 
-Um die Typo3 Datenverarbeitung von Nuxt 3 darzustellen, wurde ein Flussdiagramm erstellt. Wie sich im Flussdiagramm erkennen lässt, werden alle Daten als erstes von einer Komponente([...slug].vue) ausgelesen. Diese Datei wertet teilweise die Daten aus, verschickt aber auch Teile der Daten weiter an andere Komponenten. 
+Um die Typo3 Datenverarbeitung von Nuxt 3 darzustellen, wurde ein Flussdiagramm erstellt. siehe Abbildung \ref{FlussDiagramm} des Anhangs. Wie sich im Flussdiagramm erkennen lässt, werden alle Daten als erstes von einer Komponente([...slug].vue) ausgelesen. Diese Datei wertet teilweise die Daten aus, verschickt aber auch Teile der Daten weiter an andere Komponenten. 
 
 Die Navigationsdaten im page Objekt werden an die Navigation.vue Komponente weitergeleitet. Die Navigation.vue Komponente besteht aus zwei weiteren Komponenten. Einmal der TopNavigation.vue und einmal der SlideMenu.vue. Alle drei Komponenten nutzen das navigation.ts Composable um miteinander zu kommunizieren und die Menüführung darzustellen.
 

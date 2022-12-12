@@ -93,15 +93,16 @@
 \contentsline {section}{\nonumberline Literaturverzeichnis}{37}{section*.196}%
 \contentsline {section}{\nonumberline Eidesstattliche Erklärung}{39}{section*.197}%
 \contentsline {section}{\numberline {A}Anhang}{i}{appendix.198}%
-\contentsline {subsection}{\numberline {A.1}tt\_content.php}{ii}{subsection.200}%
-\contentsline {subsection}{\numberline {A.2}ext\_localconf.php}{iii}{subsection.237}%
-\contentsline {subsection}{\numberline {A.3}[...slug].vue}{iv}{subsection.272}%
-\contentsline {subsection}{\numberline {A.4}navigation.ts}{v}{subsection.305}%
-\contentsline {subsection}{\numberline {A.5}SlideMenu.vue}{vi}{subsection.367}%
-\contentsline {subsection}{\numberline {A.6}Screenshots des Menüs}{ix}{subsection.403}%
-\contentsline {subsection}{\numberline {A.7}Screenshots der Anwendung}{x}{subsection.407}%
-\contentsline {subsection}{\numberline {A.8}Entwicklerdokumentation}{xi}{subsection.410}%
-\contentsline {paragraph}{\nonumberline lokales Setup}{xi}{section*.411}%
-\contentsline {paragraph}{\nonumberline Typo3 bereit machen}{xi}{section*.412}%
-\contentsline {paragraph}{\nonumberline Verbindung zwischen Typo3 und Nuxt 3}{xi}{section*.413}%
-\contentsline {paragraph}{\nonumberline Verarbeitung der Typo3 Daten}{xi}{section*.414}%
+\contentsline {subsection}{\numberline {A.1}FlussDiagramm}{i}{subsection.199}%
+\contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.201}%
+\contentsline {subsection}{\numberline {A.3}ext\_localconf.php}{iii}{subsection.238}%
+\contentsline {subsection}{\numberline {A.4}[...slug].vue}{iv}{subsection.273}%
+\contentsline {subsection}{\numberline {A.5}navigation.ts}{v}{subsection.306}%
+\contentsline {subsection}{\numberline {A.6}SlideMenu.vue}{vi}{subsection.368}%
+\contentsline {subsection}{\numberline {A.7}Screenshots des Menüs}{viii}{subsection.404}%
+\contentsline {subsection}{\numberline {A.8}Screenshots der Anwendung}{ix}{subsection.408}%
+\contentsline {subsection}{\numberline {A.9}Entwicklerdokumentation}{x}{subsection.411}%
+\contentsline {paragraph}{\nonumberline lokales Setup}{x}{section*.412}%
+\contentsline {paragraph}{\nonumberline Typo3 bereit machen}{x}{section*.413}%
+\contentsline {paragraph}{\nonumberline Verbindung zwischen Typo3 und Nuxt 3}{x}{section*.414}%
+\contentsline {paragraph}{\nonumberline Verarbeitung der Typo3 Daten}{x}{section*.415}%
