@@ -1,20 +1,21 @@
-\babel@toc {nil}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Github Template Einstellung}}{16}{figure.87}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Headless zum Template hinzufügen}}{17}{figure.90}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Template Anpassungen für Navigation}}{18}{figure.91}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Template Anpassungen für Navigation}}{20}{figure.127}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Daten-Mapping der Komponententypen}}{26}{figure.164}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Daten-Mapping der Komponententypen}}{27}{figure.168}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Darstellung des Contents}}{28}{figure.170}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Hilfsfunktionen fürs Layout}}{29}{figure.172}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Komponenten Dateien}}{30}{figure.175}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Bild-Text-Komponente / PictureAndText.vue}}{31}{figure.177}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Überschrift/ Header.vue}}{31}{figure.179}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Nur Bilder - Komponente / ImageGallery.vue}}{32}{figure.181}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Breadcrumbs}}{33}{figure.185}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Flussdiagramm der Nuxt 3 Anwendung}}{i}{figure.200}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Start der Menüführung durch klicken auf Test2}}{viii}{figure.405}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Sidemenu öffnet sich. Beim klicken auf Test2 öffnet sich Test2 Seite, beim klick auf Test3 wird die open() Funktion angewandt.}}{viii}{figure.406}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Test3 hat Children, also wird neue Seitennavigation angezeigt.}}{viii}{figure.407}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Ausspielen der Komponenten im Frontend}}{ix}{figure.409}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Pflegen der Komponenten im Backend}}{ix}{figure.410}%
+\babel@toc {ngerman}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Github Template Einstellung}}{16}{figure.92}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Headless zum Template hinzufügen}}{17}{figure.95}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Template Anpassungen für Navigation}}{18}{figure.96}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Template Anpassungen für Navigation}}{20}{figure.135}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Daten-Mapping der Komponententypen}}{26}{figure.173}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Daten-Mapping der Komponententypen}}{27}{figure.178}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Darstellung des Contents}}{28}{figure.181}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Hilfsfunktionen fürs Layout}}{29}{figure.184}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Komponenten Dateien}}{30}{figure.187}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Bild-Text-Komponente / PictureAndText.vue}}{30}{figure.190}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Überschrift/ Header.vue}}{31}{figure.193}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Nur Bilder - Komponente / ImageGallery.vue}}{31}{figure.196}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Breadcrumbs}}{32}{figure.202}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Flussdiagramm der Nuxt 3 Anwendung}}{i}{figure.219}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Start der Menüführung durch klicken auf Test2}}{viii}{figure.424}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Sidemenu öffnet sich. Beim klicken auf Test2 öffnet sich Test2 Seite, beim klick auf Test3 wird die open() Funktion angewandt.}}{viii}{figure.425}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Test3 hat Children, also wird neue Seitennavigation angezeigt.}}{viii}{figure.426}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Ausspielen der Komponenten im Frontend}}{ix}{figure.428}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Pflegen der Komponenten im Backend}}{ix}{figure.429}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
