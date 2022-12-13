@@ -1,96 +1,96 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {section}{\nonumberline Abbildungsverzeichnis}{IV}{section*.6}%
-\contentsline {section}{\nonumberline Tabellenverzeichnis}{V}{section*.8}%
-\contentsline {section}{Abkürzungsverzeichnis}{VI}{section*.9}%
-\contentsline {section}{\numberline {1}Einleitung}{1}{section.10}%
-\contentsline {subsection}{\numberline {1.1}Projektumfeld}{1}{subsection.11}%
-\contentsline {subsection}{\numberline {1.2}Projektziel}{1}{subsection.13}%
-\contentsline {subsection}{\numberline {1.3}Projektbegründung}{1}{subsection.14}%
-\contentsline {subsection}{\numberline {1.4}Projektschnittstellen}{2}{subsection.15}%
-\contentsline {subsection}{\numberline {1.5}Projektabgrenzung}{3}{subsection.29}%
-\contentsline {section}{\numberline {2}Projektplanung}{3}{section.30}%
-\contentsline {subsection}{\numberline {2.1}Projektphasen}{3}{subsection.31}%
-\contentsline {subsubsection}{\numberline {2.1.1}Implementierungsphase Zeitplanung}{4}{subsubsection.34}%
-\contentsline {subsection}{\numberline {2.2}Abweichungen vom Projektantrag}{4}{subsection.36}%
-\contentsline {subsubsection}{\numberline {2.2.1}Zeitplanung}{5}{subsubsection.37}%
-\contentsline {subsection}{\numberline {2.3}Ressourcenplanung}{5}{subsection.38}%
-\contentsline {subsection}{\numberline {2.4}Entwicklungsprozess}{6}{subsection.41}%
-\contentsline {section}{\numberline {3}Analysephase}{6}{section.42}%
-\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{6}{subsection.43}%
-\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{6}{subsection.44}%
-\contentsline {subsubsection}{\numberline {3.2.1}Projektkosten}{6}{subsubsection.46}%
-\contentsline {subsubsection}{\numberline {3.2.2}Amortisationsdauer}{7}{subsubsection.50}%
-\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{7}{subsection.51}%
-\contentsline {subsection}{\numberline {3.4}Anwendungsfälle}{8}{subsection.52}%
-\contentsline {subsection}{\numberline {3.5}Qualitätsanforderungen}{9}{subsection.53}%
-\contentsline {subsection}{\numberline {3.6}Nuxt 2 vs Nuxt 3}{9}{subsection.54}%
-\contentsline {subsubsection}{\numberline {3.6.1}Was ist Nuxt überhaupt?}{9}{subsubsection.55}%
-\contentsline {paragraph}{\nonumberline Nuxt}{9}{paragraph*.57}%
-\contentsline {subsubsection}{\numberline {3.6.2}Warum sollte man Nuxt 2 nutzen?}{9}{subsubsection.59}%
-\contentsline {subsubsection}{\numberline {3.6.3}Warum wurde sich trotzdem für Nuxt 3 entschieden?}{10}{subsubsection.60}%
-\contentsline {subsubsection}{\numberline {3.6.4}neue Nuxt 3 Features}{10}{subsubsection.61}%
-\contentsline {paragraph}{\nonumberline Composables}{10}{paragraph*.63}%
-\contentsline {paragraph}{\nonumberline neues State-Management}{11}{paragraph*.65}%
-\contentsline {section}{\numberline {4}Entwurfsphase}{11}{section.66}%
-\contentsline {subsection}{\numberline {4.1}Zielplattform}{11}{subsection.67}%
-\contentsline {subsubsection}{\numberline {4.1.1}TypeScript}{11}{subsubsection.68}%
-\contentsline {subsubsection}{\numberline {4.1.2}Nuxt 3}{12}{subsubsection.70}%
-\contentsline {subsubsection}{\numberline {4.1.3}DaisyUI / Tailwind}{12}{subsubsection.71}%
-\contentsline {subsubsection}{\numberline {4.1.4}Docker}{12}{subsubsection.72}%
-\contentsline {subsubsection}{\numberline {4.1.5}Sonstiges}{12}{subsubsection.73}%
-\contentsline {subsection}{\numberline {4.2}Architekturdesign}{13}{subsection.74}%
-\contentsline {subsection}{\numberline {4.3}Entwurf der Benutzeroberfläche}{14}{subsection.78}%
-\contentsline {paragraph}{\nonumberline Frontend}{14}{paragraph*.80}%
-\contentsline {paragraph}{\nonumberline Backend}{14}{paragraph*.82}%
-\contentsline {paragraph}{\nonumberline Menüführung}{14}{paragraph*.84}%
-\contentsline {paragraph}{\nonumberline rendern der verschiedenen Typo3-Inhaltselemente}{15}{paragraph*.86}%
-\contentsline {subsubsection}{\numberline {4.3.1}Typo3 Datenverarbeitung durch Nuxt / Flussdiagramm}{15}{subsubsection.87}%
-\contentsline {subsection}{\numberline {4.4}Maßnahmen zur Qualitätssicherung}{15}{subsection.88}%
-\contentsline {subsection}{\numberline {4.5}Pflichtenheft}{16}{subsection.89}%
-\contentsline {section}{\numberline {5}Implementierungsphase}{16}{section.90}%
-\contentsline {subsection}{\numberline {5.1}Versionierungssystem Github}{16}{subsection.91}%
-\contentsline {subsection}{\numberline {5.2}Docker-Setup}{16}{subsection.93}%
-\contentsline {subsection}{\numberline {5.3}Ausspielen der Typo3 Daten}{17}{subsection.94}%
-\contentsline {subsection}{\numberline {5.4}Typoscript}{18}{subsection.97}%
-\contentsline {subsection}{\numberline {5.5}Skeleton-Extension / Layout}{18}{subsection.99}%
-\contentsline {paragraph}{\nonumberline Datenmodell:}{19}{paragraph*.101}%
-\contentsline {paragraph}{\nonumberline Backend:}{19}{paragraph*.109}%
-\contentsline {paragraph}{\nonumberline Ausspielen ans Frontend:}{20}{paragraph*.134}%
-\contentsline {paragraph}{\nonumberline Sections:}{20}{paragraph*.137}%
-\contentsline {subsection}{\numberline {5.6}Setup der Implementierung der Benutzeroberfläche}{21}{subsection.138}%
-\contentsline {subsubsection}{\numberline {5.6.1}Nuxt3 aufsetzen um DaisyUI installieren}{21}{subsubsection.139}%
-\contentsline {subsection}{\numberline {5.7}Navigation der Implementierung der Benutzeroberfläche}{21}{subsection.140}%
-\contentsline {subsubsection}{\numberline {5.7.1}Dynamische Seiten}{21}{subsubsection.141}%
-\contentsline {subsubsection}{\numberline {5.7.2}Verarbeitung der Typo3 Daten}{22}{subsubsection.142}%
-\contentsline {subsubsection}{\numberline {5.7.3}Setup Navigation}{24}{subsubsection.164}%
-\contentsline {subsubsection}{\numberline {5.7.4}Aufteilung Navigation}{24}{subsubsection.165}%
-\contentsline {subsubsection}{\numberline {5.7.5}TopNavigation.vue}{25}{subsubsection.166}%
-\contentsline {subsubsection}{\numberline {5.7.6}open() Funktion}{25}{subsubsection.171}%
-\contentsline {subsubsection}{\numberline {5.7.7}Slidemenu.vue}{25}{subsubsection.172}%
-\contentsline {subsection}{\numberline {5.8}Implementierung des Contents der Benutzeroberfläche}{26}{subsection.174}%
-\contentsline {subsubsection}{\numberline {5.8.1}TypoView.vue}{26}{subsubsection.175}%
-\contentsline {paragraph}{\nonumberline Daten-Mapping}{27}{paragraph*.177}%
-\contentsline {paragraph}{\nonumberline Darstellung}{28}{paragraph*.180}%
-\contentsline {paragraph}{\nonumberline Layout}{28}{paragraph*.183}%
-\contentsline {subsubsection}{\numberline {5.8.2}Section Komponente}{29}{subsubsection.185}%
-\contentsline {subsubsection}{\numberline {5.8.3}Content Komponenten}{29}{subsubsection.186}%
-\contentsline {paragraph}{\nonumberline Text und Bilder \& Textelement}{30}{paragraph*.189}%
-\contentsline {paragraph}{\nonumberline Überschrift}{31}{paragraph*.192}%
-\contentsline {paragraph}{\nonumberline Nur Bilder}{31}{paragraph*.195}%
-\contentsline {paragraph}{\nonumberline Trenner}{31}{paragraph*.198}%
-\contentsline {paragraph}{\nonumberline HTML}{32}{paragraph*.200}%
-\contentsline {subsubsection}{\numberline {5.8.4}Breadcrumbs}{32}{subsubsection.201}%
-\contentsline {subsection}{\numberline {5.9}finale Anwendung}{32}{subsection.203}%
-\contentsline {section}{\numberline {6}Abnahmephase}{33}{section.204}%
-\contentsline {section}{\numberline {7}Einführungsphase}{33}{section.205}%
-\contentsline {section}{\numberline {8}Dokumentation}{34}{section.206}%
-\contentsline {section}{\numberline {9}Fazit}{34}{section.207}%
-\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{34}{subsection.208}%
-\contentsline {subsubsection}{\numberline {9.1.1}Abweichungen Bearbeitungszeitraum}{35}{subsubsection.210}%
-\contentsline {subsection}{\numberline {9.2}Lessons Learned}{35}{subsection.211}%
-\contentsline {subsection}{\numberline {9.3}Ausblick}{35}{subsection.212}%
-\contentsline {section}{\nonumberline Literaturverzeichnis}{36}{section*.214}%
-\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{37}{section*.216}%
+\contentsline {section}{\nonumberline Abbildungsverzeichnis}{IV}{section*.5}%
+\contentsline {section}{\nonumberline Tabellenverzeichnis}{V}{section*.7}%
+\contentsline {section}{Abkürzungsverzeichnis}{VI}{section*.8}%
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.9}%
+\contentsline {subsection}{\numberline {1.1}Projektumfeld}{1}{subsection.10}%
+\contentsline {subsection}{\numberline {1.2}Projektziel}{1}{subsection.12}%
+\contentsline {subsection}{\numberline {1.3}Projektbegründung}{1}{subsection.13}%
+\contentsline {subsection}{\numberline {1.4}Projektschnittstellen}{2}{subsection.14}%
+\contentsline {subsection}{\numberline {1.5}Projektabgrenzung}{3}{subsection.28}%
+\contentsline {section}{\numberline {2}Projektplanung}{3}{section.29}%
+\contentsline {subsection}{\numberline {2.1}Projektphasen}{3}{subsection.30}%
+\contentsline {subsubsection}{\numberline {2.1.1}Implementierungsphase Zeitplanung}{4}{subsubsection.33}%
+\contentsline {subsection}{\numberline {2.2}Abweichungen vom Projektantrag}{4}{subsection.35}%
+\contentsline {subsubsection}{\numberline {2.2.1}Zeitplanung}{5}{subsubsection.36}%
+\contentsline {subsection}{\numberline {2.3}Ressourcenplanung}{5}{subsection.37}%
+\contentsline {subsection}{\numberline {2.4}Entwicklungsprozess}{6}{subsection.40}%
+\contentsline {section}{\numberline {3}Analysephase}{6}{section.41}%
+\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{6}{subsection.42}%
+\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{6}{subsection.43}%
+\contentsline {subsubsection}{\numberline {3.2.1}Projektkosten}{6}{subsubsection.45}%
+\contentsline {subsubsection}{\numberline {3.2.2}Amortisationsdauer}{7}{subsubsection.49}%
+\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{7}{subsection.50}%
+\contentsline {subsection}{\numberline {3.4}Anwendungsfälle}{8}{subsection.51}%
+\contentsline {subsection}{\numberline {3.5}Qualitätsanforderungen}{9}{subsection.52}%
+\contentsline {subsection}{\numberline {3.6}Nuxt 2 vs Nuxt 3}{9}{subsection.53}%
+\contentsline {subsubsection}{\numberline {3.6.1}Was ist Nuxt überhaupt?}{9}{subsubsection.54}%
+\contentsline {paragraph}{\nonumberline Nuxt}{9}{paragraph*.56}%
+\contentsline {subsubsection}{\numberline {3.6.2}Warum sollte man Nuxt 2 nutzen?}{9}{subsubsection.58}%
+\contentsline {subsubsection}{\numberline {3.6.3}Warum wurde sich trotzdem für Nuxt 3 entschieden?}{10}{subsubsection.59}%
+\contentsline {subsubsection}{\numberline {3.6.4}neue Nuxt 3 Features}{10}{subsubsection.60}%
+\contentsline {paragraph}{\nonumberline Composables}{10}{paragraph*.62}%
+\contentsline {paragraph}{\nonumberline neues State-Management}{11}{paragraph*.64}%
+\contentsline {section}{\numberline {4}Entwurfsphase}{11}{section.65}%
+\contentsline {subsection}{\numberline {4.1}Zielplattform}{11}{subsection.66}%
+\contentsline {subsubsection}{\numberline {4.1.1}TypeScript}{11}{subsubsection.67}%
+\contentsline {subsubsection}{\numberline {4.1.2}Nuxt 3}{12}{subsubsection.69}%
+\contentsline {subsubsection}{\numberline {4.1.3}DaisyUI / Tailwind}{12}{subsubsection.70}%
+\contentsline {subsubsection}{\numberline {4.1.4}Docker}{12}{subsubsection.71}%
+\contentsline {subsubsection}{\numberline {4.1.5}Sonstiges}{12}{subsubsection.72}%
+\contentsline {subsection}{\numberline {4.2}Architekturdesign}{13}{subsection.73}%
+\contentsline {subsection}{\numberline {4.3}Entwurf der Benutzeroberfläche}{14}{subsection.77}%
+\contentsline {paragraph}{\nonumberline Frontend}{14}{paragraph*.79}%
+\contentsline {paragraph}{\nonumberline Backend}{14}{paragraph*.81}%
+\contentsline {paragraph}{\nonumberline Menüführung}{14}{paragraph*.83}%
+\contentsline {paragraph}{\nonumberline rendern der verschiedenen Typo3-Inhaltselemente}{15}{paragraph*.85}%
+\contentsline {subsubsection}{\numberline {4.3.1}Typo3 Datenverarbeitung durch Nuxt / Flussdiagramm}{15}{subsubsection.86}%
+\contentsline {subsection}{\numberline {4.4}Maßnahmen zur Qualitätssicherung}{15}{subsection.87}%
+\contentsline {subsection}{\numberline {4.5}Pflichtenheft}{16}{subsection.88}%
+\contentsline {section}{\numberline {5}Implementierungsphase}{16}{section.89}%
+\contentsline {subsection}{\numberline {5.1}Versionierungssystem Github}{16}{subsection.90}%
+\contentsline {subsection}{\numberline {5.2}Docker-Setup}{16}{subsection.92}%
+\contentsline {subsection}{\numberline {5.3}Ausspielen der Typo3 Daten}{17}{subsection.93}%
+\contentsline {subsection}{\numberline {5.4}Typoscript}{18}{subsection.96}%
+\contentsline {subsection}{\numberline {5.5}Skeleton-Extension / Layout}{18}{subsection.98}%
+\contentsline {paragraph}{\nonumberline Datenmodell:}{19}{paragraph*.100}%
+\contentsline {paragraph}{\nonumberline Backend:}{19}{paragraph*.108}%
+\contentsline {paragraph}{\nonumberline Ausspielen ans Frontend:}{20}{paragraph*.133}%
+\contentsline {paragraph}{\nonumberline Sections:}{20}{paragraph*.136}%
+\contentsline {subsection}{\numberline {5.6}Setup der Implementierung der Benutzeroberfläche}{21}{subsection.137}%
+\contentsline {subsubsection}{\numberline {5.6.1}Nuxt3 aufsetzen um DaisyUI installieren}{21}{subsubsection.138}%
+\contentsline {subsection}{\numberline {5.7}Navigation der Implementierung der Benutzeroberfläche}{21}{subsection.139}%
+\contentsline {subsubsection}{\numberline {5.7.1}Dynamische Seiten}{21}{subsubsection.140}%
+\contentsline {subsubsection}{\numberline {5.7.2}Verarbeitung der Typo3 Daten}{22}{subsubsection.141}%
+\contentsline {subsubsection}{\numberline {5.7.3}Setup Navigation}{24}{subsubsection.163}%
+\contentsline {subsubsection}{\numberline {5.7.4}Aufteilung Navigation}{24}{subsubsection.164}%
+\contentsline {subsubsection}{\numberline {5.7.5}TopNavigation.vue}{25}{subsubsection.165}%
+\contentsline {subsubsection}{\numberline {5.7.6}open() Funktion}{25}{subsubsection.170}%
+\contentsline {subsubsection}{\numberline {5.7.7}Slidemenu.vue}{25}{subsubsection.171}%
+\contentsline {subsection}{\numberline {5.8}Implementierung des Contents der Benutzeroberfläche}{26}{subsection.173}%
+\contentsline {subsubsection}{\numberline {5.8.1}TypoView.vue}{26}{subsubsection.174}%
+\contentsline {paragraph}{\nonumberline Daten-Mapping}{27}{paragraph*.176}%
+\contentsline {paragraph}{\nonumberline Darstellung}{28}{paragraph*.179}%
+\contentsline {paragraph}{\nonumberline Layout}{28}{paragraph*.182}%
+\contentsline {subsubsection}{\numberline {5.8.2}Section Komponente}{29}{subsubsection.184}%
+\contentsline {subsubsection}{\numberline {5.8.3}Content Komponenten}{29}{subsubsection.185}%
+\contentsline {paragraph}{\nonumberline Text und Bilder \& Textelement}{30}{paragraph*.188}%
+\contentsline {paragraph}{\nonumberline Überschrift}{31}{paragraph*.191}%
+\contentsline {paragraph}{\nonumberline Nur Bilder}{31}{paragraph*.194}%
+\contentsline {paragraph}{\nonumberline Trenner}{31}{paragraph*.197}%
+\contentsline {paragraph}{\nonumberline HTML}{32}{paragraph*.199}%
+\contentsline {subsubsection}{\numberline {5.8.4}Breadcrumbs}{32}{subsubsection.200}%
+\contentsline {subsection}{\numberline {5.9}finale Anwendung}{32}{subsection.202}%
+\contentsline {section}{\numberline {6}Abnahmephase}{33}{section.203}%
+\contentsline {section}{\numberline {7}Einführungsphase}{33}{section.204}%
+\contentsline {section}{\numberline {8}Dokumentation}{34}{section.205}%
+\contentsline {section}{\numberline {9}Fazit}{34}{section.206}%
+\contentsline {subsection}{\numberline {9.1}Soll-/Ist-Vergleich}{34}{subsection.207}%
+\contentsline {subsubsection}{\numberline {9.1.1}Abweichungen Bearbeitungszeitraum}{35}{subsubsection.209}%
+\contentsline {subsection}{\numberline {9.2}Lessons Learned}{35}{subsection.210}%
+\contentsline {subsection}{\numberline {9.3}Ausblick}{35}{subsection.211}%
+\contentsline {section}{\nonumberline Literaturverzeichnis}{36}{section*.213}%
+\contentsline {section}{\nonumberline Eidesstattliche Erklärung}{37}{section*.215}%
 \contentsline {section}{\numberline {A}Anhang}{i}{appendix.217}%
 \contentsline {subsection}{\numberline {A.1}FlussDiagramm}{i}{subsection.218}%
 \contentsline {subsection}{\numberline {A.2}tt\_content.php}{ii}{subsection.220}%
